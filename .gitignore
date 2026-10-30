@@ -1,0 +1,28 @@
+# 环境变量与密钥（绝对禁止上传）
+.env
+*.env
+!.env.example
+*.docx
+账号与密钥/
+
+# Python 与虚拟环境
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Streamlit 与本地缓存
+.streamlit/secrets.toml
+*.mp3
+*.wav
+*.m4a
+whisper_models/
+
+# 测试与临时文件
+.pytest_cache/
+.coverage
+htmlcov/
