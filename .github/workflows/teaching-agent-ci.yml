@@ -1,0 +1,58 @@
+name: teaching-agent-ci
+
+on:
+  push:
+    paths:
+      - "teaching-agent/**"
+      - ".github/workflows/teaching-agent-ci.yml"
+  pull_request:
+    paths:
+      - "teaching-agent/**"
+      - ".github/workflows/teaching-agent-ci.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: teaching-agent
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: teaching-agent/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile core backend
+        run: |
+          python -m py_compile \
+            backend/api_server.py \
+            backend/v3core/student.py \
+            backend/v3core/judge.py
+
+      - name: Judge ledger / idempotency
+        run: python scripts/test_judge_ledger.py
+
+      - name: Learner note regression
+        run: python scripts/test_learner_note.py
+
+      - name: Planner contract
+        run: cd backend && python -m pytest agents/planner/test_contract.py -q
+
+      - name: Snapshot tests (93)
+        run: python -m pytest reference/teaching_teacher_v2/tests -q
+
+      - name: Starter kit tests (18)
+        run: cd starter_kit && python -m pytest tests -q
