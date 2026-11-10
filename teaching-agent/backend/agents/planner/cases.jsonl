@@ -1,0 +1,6 @@
+{"id": "c1", "goal": "两周把极限这一讲学扎实", "scope": ["lim"], "days": 14, "hours_per_day": 2, "level": "大学低年级", "profile_digest": "暂无历史，按零基础处理", "style": "systematic"}
+{"id": "c2", "goal": "三周过完导数与微分学应用", "scope": ["der", "app"], "days": 21, "hours_per_day": 2.5, "level": "大学低年级", "profile_digest": "极限基础尚可，中值定理没系统学过", "style": "systematic"}
+{"id": "c3", "goal": "一个月拿下积分（不定+定+应用）", "scope": ["int"], "days": 30, "hours_per_day": 2, "level": "大学低年级", "profile_digest": "换元法会一点，分部积分总用错", "style": "systematic"}
+{"id": "c4", "goal": "期末前两周补多元与二重积分", "scope": ["mv", "di"], "days": 14, "hours_per_day": 3, "level": "大学低年级", "profile_digest": "一元微积分基础扎实", "style": "crash"}
+{"id": "c5", "goal": "考研一轮：60天把高数主干过一遍", "scope": ["lim", "der", "app", "int", "mv", "di", "ode", "ser"], "days": 60, "hours_per_day": 3, "level": "大学低年级", "profile_digest": "零散学过，不成体系", "style": "systematic"}
+{"id": "c6", "goal": "定向补三个卡住的知识点", "scope": ["lim.lhopital", "app.lagrange", "int.def.by_parts"], "days": 10, "hours_per_day": 1.5, "level": "大学低年级", "profile_digest": "洛必达会用但总错在条件，拉格朗日不会构造辅助函数，分部积分选错 u", "style": "weakness_first"}

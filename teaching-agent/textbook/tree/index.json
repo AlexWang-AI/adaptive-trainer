@@ -1,0 +1,160 @@
+{
+  "lecture_1": {
+    "title": "函数极限与连续",
+    "blocks": 5,
+    "kps": 22,
+    "conclusions": 25,
+    "tiers": {
+      "must": 2,
+      "high": 2,
+      "edge": 1
+    }
+  },
+  "lecture_2": {
+    "title": "数列极限",
+    "blocks": 4,
+    "kps": 13,
+    "conclusions": 8,
+    "tiers": {
+      "must": 2,
+      "high": 1,
+      "edge": 1
+    }
+  },
+  "lecture_3": {
+    "title": "一元函数微分学的概念",
+    "blocks": 3,
+    "kps": 10,
+    "conclusions": 17,
+    "tiers": {
+      "must": 1,
+      "high": 2,
+      "edge": 0
+    }
+  },
+  "lecture_4": {
+    "title": "一元函数微分学的计算",
+    "blocks": 4,
+    "kps": 13,
+    "conclusions": 23,
+    "tiers": {
+      "must": 2,
+      "high": 2,
+      "edge": 0
+    }
+  },
+  "lecture_5": {
+    "title": "一元函数微分学的应用（一）几何应用",
+    "blocks": 5,
+    "kps": 16,
+    "conclusions": 19,
+    "tiers": {
+      "must": 2,
+      "high": 2,
+      "edge": 1
+    }
+  },
+  "lecture_6": {
+    "title": "一元函数微分学的应用（二）中值定理、微分等式与微分不等式",
+    "blocks": 4,
+    "kps": 16,
+    "conclusions": 21,
+    "tiers": {
+      "must": 2,
+      "high": 2,
+      "edge": 0
+    }
+  },
+  "lecture_7": {
+    "title": "一元函数微分学的应用（三）物理应用与经济应用",
+    "blocks": 2,
+    "kps": 6,
+    "conclusions": 5,
+    "tiers": {
+      "must": 0,
+      "high": 2,
+      "edge": 0
+    }
+  },
+  "lecture_8": {
+    "title": "一元函数积分学的概念与性质",
+    "blocks": 4,
+    "kps": 11,
+    "conclusions": 16,
+    "tiers": {
+      "must": 3,
+      "high": 1,
+      "edge": 0
+    }
+  },
+  "lecture_9": {
+    "title": "一元函数积分学的计算",
+    "blocks": 5,
+    "kps": 12,
+    "conclusions": 10,
+    "tiers": {
+      "must": 4,
+      "high": 1,
+      "edge": 0
+    }
+  },
+  "lecture_10": {
+    "title": "一元函数积分学的应用（一）几何应用",
+    "blocks": 4,
+    "kps": 11,
+    "conclusions": 17,
+    "tiers": {
+      "must": 2,
+      "high": 2,
+      "edge": 0
+    }
+  },
+  "lecture_11": {
+    "title": "一元函数积分学的应用（二）积分等式与积分不等式",
+    "blocks": 2,
+    "kps": 5,
+    "conclusions": 3
+  },
+  "lecture_12": {
+    "title": "一元函数积分学的应用（三）物理应用与经济应用",
+    "blocks": 2,
+    "kps": 7,
+    "conclusions": 9
+  },
+  "lecture_13": {
+    "title": "多元函数微分学",
+    "blocks": 4,
+    "kps": 14,
+    "conclusions": 19
+  },
+  "lecture_14": {
+    "title": "二重积分",
+    "blocks": 4,
+    "kps": 12,
+    "conclusions": 31
+  },
+  "lecture_15": {
+    "title": "常微分方程",
+    "blocks": 4,
+    "kps": 10,
+    "conclusions": 16
+  },
+  "lecture_16": {
+    "title": "无穷级数",
+    "blocks": 5,
+    "kps": 15,
+    "conclusions": 32
+  },
+  "lecture_17": {
+    "title": "多元函数积分学的预备知识（仅数学一）",
+    "blocks": 5,
+    "kps": 16,
+    "conclusions": 20
+  },
+  "lecture_18": {
+    "title": "多元函数积分学（仅数学一）",
+    "blocks": 5,
+    "kps": 18,
+    "conclusions": 27
+  }
+}

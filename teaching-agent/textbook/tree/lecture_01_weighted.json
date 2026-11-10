@@ -1,0 +1,998 @@
+{
+  "lecture": 1,
+  "title": "函数极限与连续",
+  "blocks": [
+    {
+      "name": "计算（求极限的方法）",
+      "evidence": "掌握极限的性质及四则运算法则，掌握利用两个重要极限求极限的方法",
+      "nodes": [
+        {
+          "name": "极限四则运算规则",
+          "evidence": "掌握极限的性质及四则运算法则",
+          "examples": [
+            "例1.14",
+            "例1.21",
+            "例1.25",
+            "例1.27",
+            "例1.20",
+            "例1.38"
+          ],
+          "children": [
+            {
+              "name": "适用条件：各项极限均存在且分母极限不为零",
+              "evidence": "掌握极限的性质及四则运算法则"
+            },
+            {
+              "name": "常见易错：分母极限为零时不能直接使用",
+              "evidence": "掌握极限的性质及四则运算法则"
+            },
+            {
+              "name": "一个存在一个不存在时，加减结果不存在或∞；",
+              "evidence": "① $f(x),   g(x)$ 中恰有一个不存在核值.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "lim x·sin(1/x)=0（x→0），即无穷小乘有界振荡量极限为0",
+              "evidence": "此时 $A = 0$ ，可以将“-1到1之间振荡”的情形压缩成0，故 $\\lim_{x \\to 0} x \\sin \\frac{1}{x} = 0$ 有界振荡=0.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "lim f(x)/g(x)=lim f(x)·1/g(x)，讨论与乘法类似（A=0可压…",
+              "evidence": "C. $\\lim_{x \\to x_0} \\frac{f(x)}{g(x)} = \\lim_{x \\to x_0} f(x) \\cdot \\frac{1}{g(x)}$ ，讨论与b. 类似.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "两个均不存在时需具体分析（如振荡+振荡可能仍不存在），不能一概而论",
+              "evidence": "②f(x)，g(x)均不存在核值.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "洛必达法则",
+          "evidence": "①洛必达法则；②泰勒公式",
+          "examples": [
+            "例1.30",
+            "例1.24",
+            "例1.28",
+            "例1.32"
+          ],
+          "children": [
+            {
+              "name": "适用条件：0/0或∞/∞型未定式",
+              "evidence": "①洛必达法则；②泰勒公式"
+            },
+            {
+              "name": "易错点：验证条件后再求导，避免循环",
+              "evidence": "①洛必达法则；②泰勒公式"
+            },
+            {
+              "name": "能等价无穷小或恒等变形化简时优先，不要盲目洛必达；洛必达后若振荡不收敛需换法",
+              "evidence": "如果你考虑用洛必达法则，那么就舍近求远了",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "泰勒公式",
+          "evidence": "①洛必达法则；②泰勒公式",
+          "examples": [
+            "例1.34",
+            "例1.35"
+          ],
+          "children": [
+            {
+              "name": "常用展开式：sinx, tanx, ln(1+x)等",
+              "evidence": "当 $x \\to 0$ 时，sinx\\~x,tan $x \\sim x, \\ln(x + \\sqrt{x^2 + 1}) \\sim x,$"
+            },
+            {
+              "name": "易错点：展开阶数不足导致错误",
+              "evidence": "①洛必达法则；②泰勒公式"
+            },
+            {
+              "name": "eˣ = 1 + x + x²/2! + … + xⁿ/n! + o(xⁿ)",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "sin x = x − x³/3! + x⁵/5! − …（奇次项）",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "cos x = 1 − x²/2! + x⁴/4! − …（偶次项）",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "ln(1+x) = x − x²/2 + x³/3 − …（−1<x≤1）",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "(1+x)^α = 1 + αx + α(α−1)x²/2! + …",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "1/(1−x) = 1 + x + x² + …（|x|<1）",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "arctan x = x − x³/3 + x⁵/5 − …",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "tan x = x + x³/3 + 2x⁵/15 + …",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "余项：佩亚诺 o(xⁿ) 用于求极限；拉格朗日 f⁽ⁿ⁺¹⁾(ξ)xⁿ⁺¹/(n+1)! 用于估计误差",
+              "evidence": "泰勒公式",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "无穷小的运算",
+          "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限",
+          "examples": [
+            "例1.13",
+            "例1.14"
+          ],
+          "children": [
+            {
+              "name": "等价无穷小替换：乘除可换，加减慎用",
+              "evidence": "会用等价无穷小量求极限"
+            },
+            {
+              "name": "常见等价无穷小：x→0时sinx~x, tanx~x, ln(1+x)~x等",
+              "evidence": "当 $x \\to 0$ 时，sinx\\~x,tan $x \\sim x, \\ln(x + \\sqrt{x^2 + 1}) \\sim x,$"
+            },
+            {
+              "name": "[ln(x+√(x^2+1))]'=1/√(x^2+1)，∫1/√(x^2+1)dx=…",
+              "evidence": "② $\\left[ \\ln \\left( x + \\sqrt{x^2 + 1} \\right) \\right]' = \\frac{1}{\\sqrt{x^2 + 1}}$ 于是 $\\int \\frac{1}{\\sqrt{x^{2} + 1}} \\mathrm{d}x = \\ln\\left( x + \\sqrt{x^{2} + 1} \\right) + C$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "该等价无穷小由洛必达法则推出；",
+              "evidence": "①当x→0时, $\\ln \\left( x + \\sqrt{x^{2} + 1} \\right) \\sim x$ 即当 $x \\to 0$ 时，反双曲正弦函数 $\\ln(x + \\sqrt{x^2 + 1})$ 与x是等价无穷小 洛必达法则推出",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法（高阶/低阶/同阶/等价）",
+              "evidence": "⑧理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "泰勒公式应用时的展开原则",
+          "evidence": "①洛必达法则；②泰勒公式",
+          "examples": [
+            "例1.10",
+            "例1.11",
+            "例1.35"
+          ],
+          "children": [
+            {
+              "name": "上下同阶原则：分子分母展开到同阶",
+              "evidence": "①洛必达法则；②泰勒公式"
+            },
+            {
+              "name": "加减幂次最低原则：加减法中展开到最低次幂",
+              "evidence": "①洛必达法则；②泰勒公式"
+            }
+          ]
+        },
+        {
+          "name": "两个重要极限",
+          "evidence": "掌握利用两个重要极限求极限的方法",
+          "examples": [
+            "例1.32",
+            "例1.33",
+            "例2.8",
+            "例1.15",
+            "例1.36"
+          ],
+          "children": [
+            {
+              "name": "第一重要极限：lim_{x→0} sinx/x = 1",
+              "evidence": "掌握利用两个重要极限求极限的方法"
+            },
+            {
+              "name": "第二重要极限：lim_{x→∞} (1+1/x)^x = e",
+              "evidence": "掌握利用两个重要极限求极限的方法"
+            },
+            {
+              "name": "把 ln(e+1/x)-1 化为 ln(1+1/(ex))，再用等价无穷小，避免洛…",
+              "evidence": "又如 $\\lim_{x \\to \\infty} x \\left[ \\ln \\left( \\mathrm{e} + \\frac{1}{x} \\right) - 1 \\right] = \\lim_{x \\to \\infty} x \\cdot \\frac{1}{\\mathrm{e}x} = \\frac{1}{\\mathrm{e}}$ .如果你考虑用洛必达法则，那么就舍近求远了",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "lim_{x→∞} x[ln(e+1/x)-1]=1/e，并注明用洛必达则舍近…",
+              "evidence": "又如 $\\lim_{x \\to \\infty} x \\left[ \\ln \\left( \\mathrm{e} + \\frac{1}{x} \\right) - 1 \\right] = \\lim_{x \\to \\infty} x \\cdot \\frac{1}{\\mathrm{e}x} = \\frac{1}{\\mathrm{e}}$ .如果你考虑用洛必达法则，那么就舍近求远了",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "夹逼准则",
+          "evidence": "掌握极限存在的两个准则，并会利用它们求极限（仅数学一、数学二），了解极限的性质及 极限存在的两个准则（仅数学三）",
+          "examples": [
+            "例1.29",
+            "例2.9",
+            "例2.10"
+          ],
+          "children": [
+            {
+              "name": "适用场景：n项和、连乘等",
+              "evidence": "掌握极限存在的两个准则，并会利用它们求极限（仅数学一、数学二），了解极限的性质及 极限存在的两个准则（仅数学三）"
+            },
+            {
+              "name": "易错点：放缩后两端极限需相等",
+              "evidence": "掌握极限存在的两个准则，并会利用它们求极限（仅数学一、数学二），了解极限的性质及 极限存在的两个准则（仅数学三）"
+            },
+            {
+              "name": "单调有界数列必有极限（单调有界准则）",
+              "evidence": "⑦掌握极限存在的两个准则，并会利用它们求极限（仅数学一、数学二）",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "极限存在的两个准则，数学一、二要求掌握并会用来求极限，数学三仅为了解",
+              "evidence": "⑦掌握极限存在的两个准则，并会利用它们求极限（仅数学一、数学二），了解极限的性质及 极限存在的两个准则（仅数学三）",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "七种未定式的计算",
+          "evidence": "七种未定式中，都是超实数的状态……考研的函数极限计算题一般归纳为七种未定式",
+          "examples": [
+            "例1.14",
+            "例1.15",
+            "例1.24",
+            "例1.28",
+            "例1.31",
+            "例1.32"
+          ],
+          "children": [
+            {
+              "name": "0/0 型：洛必达或泰勒展开；先判类型再求导",
+              "evidence": "教材「七种未定式的计算」小节（2367 行起）",
+              "children": []
+            },
+            {
+              "name": "∞/∞ 型：洛必达或抓大头（同除最高阶）",
+              "evidence": "教材「七种未定式的计算」小节（2367 行起）",
+              "children": []
+            },
+            {
+              "name": "0·∞ 型：把 ∞ 下放到分母，简单因式才下放",
+              "evidence": "教材「七种未定式的计算」小节（2367 行起）",
+              "children": []
+            },
+            {
+              "name": "∞-∞ 型：通分或有理化（教材给两种思路）",
+              "evidence": "教材「七种未定式的计算」小节（2367 行起）",
+              "children": []
+            },
+            {
+              "name": "0⁰ 型：恒等变形 u^v = e^{v·ln u} 后求指数极限",
+              "evidence": "教材「七种未定式的计算」小节（2367 行起）",
+              "children": []
+            },
+            {
+              "name": "1^∞ 型：用 lim u^v = e^{lim v(u-1)}",
+              "evidence": "教材「七种未定式的计算」小节（2367 行起）",
+              "children": []
+            },
+            {
+              "name": "∞⁰ 型：恒等变形取对数后求指数极限",
+              "evidence": "教材「七种未定式的计算」小节（2367 行起）",
+              "children": []
+            },
+            {
+              "name": "x=e^{ln x}(x>0)，u^v=e^{v ln u}(u>0)，作为幂…",
+              "evidence": "(6) 常用公式: $x = \\mathrm{e}^{\\ln x}(x > 0), \\quad u^{\\nu} = \\mathrm{e}^{\\ln u^{\\nu}} = \\mathrm{e}^{\\nu \\ln u}(u > 0)$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "x=e^{ln x}(x>0)，u^v=e^{ln u^v}=e^{v ln u}(u…",
+              "evidence": "(6) 常用公式: $x = \\mathrm{e}^{\\ln x}(x > 0), \\quad u^{\\nu} = \\mathrm{e}^{\\ln u^{\\nu}} = \\mathrm{e}^{\\nu \\ln u}(u > 0)$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "极限的四则运算法则：若lim f(x)=A, lim g(x)=B，则lim [f(x)±g(x)]=A±B, lim [f(x)g(x)]=AB, lim f(x)/g(x)=A/B (B≠0)",
+          "evidence": "掌握极限的性质及四则运算法则"
+        },
+        {
+          "level": "primary",
+          "statement": "两个重要极限：lim_{x→0} sinx/x = 1, lim_{x→∞} (1+1/x)^x = e",
+          "evidence": "掌握利用两个重要极限求极限的方法"
+        },
+        {
+          "level": "primary",
+          "statement": "夹逼准则：若存在N，当n>N时，y_n≤x_n≤z_n，且lim y_n = lim z_n = a，则lim x_n = a",
+          "evidence": "掌握极限存在的两个准则，并会利用它们求极限（仅数学一、数学二），了解极限的性质及 极限存在的两个准则（仅数学三）"
+        },
+        {
+          "level": "secondary",
+          "statement": "当x→0时，sinx~x, tanx~x, ln(x+√(x^2+1))~x",
+          "evidence": "当 $x \\to 0$ 时，sinx\\~x,tan $x \\sim x, \\ln(x + \\sqrt{x^2 + 1}) \\sim x,$"
+        },
+        {
+          "level": "secondary",
+          "statement": "洛必达法则：对于0/0或∞/∞型未定式，lim f(x)/g(x) = lim f'(x)/g'(x)（在满足条件时）",
+          "evidence": "①洛必达法则；②泰勒公式"
+        },
+        {
+          "level": "secondary",
+          "statement": "泰勒公式展开原则：上下同阶，加减幂次最低",
+          "evidence": "①洛必达法则；②泰勒公式"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "洛必达、泰勒、重要极限及七种未定式是考研极限计算的核心，几乎年年出现。"
+    },
+    {
+      "name": "函数极限的概念与性质",
+      "evidence": "## Ŀ¼",
+      "nodes": [
+        {
+          "name": "函数极限的性质（唯一/局部有界/保号）",
+          "evidence": "掌握极限的性质及四则运算法则，掌握利用两个重要极限求极限的方法；",
+          "examples": [
+            "例1.18"
+          ],
+          "children": [
+            {
+              "name": "极限的唯一性",
+              "evidence": "掌握极限的性质及四则运算法则，掌握利用两个重要极限求极限的方法；"
+            },
+            {
+              "name": "极限的局部有界性",
+              "evidence": "掌握极限的性质及四则运算法则，掌握利用两个重要极限求极限的方法；"
+            },
+            {
+              "name": "极限的保号性",
+              "evidence": "掌握极限的性质及四则运算法则，掌握利用两个重要极限求极限的方法；"
+            },
+            {
+              "name": "补『函数极限的ε-δ定义』与『24种极限定义（6×4）』节点",
+              "evidence": "注函数极限一共有24个定义，其中自变量趋近方式有6种，函数趋近方式有4种，如表所示.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『若lim f(x)存在，则f(x)在x0某去心邻域内有界』的条件与结论",
+              "evidence": "(1) 唯一性. →极限是谁呢？是标准实数部分，是唯一的。",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "A>0推f(x)>0，反之不成立",
+              "evidence": "(1) 唯一性. →极限是谁呢？是标准实数部分，是唯一的。",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『分段函数分段点分别求左右极限』节点，注明常考类型为指数函数与带绝对值函数",
+              "evidence": "⑤分段函数分段点两侧表达式不同，需分别求左、右极限.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "δ邻域U(x0,δ)、去心邻域U̇(x0,δ)、右邻域U+(x0,δ)、左…",
+              "evidence": "①δ邻域.设 $x _ { 0 }$ 是数轴上一个点， $\\delta$ 是某一正数，则称 $(x_{0} - \\delta, x_{0} + \\delta)$ 为点 $x _ { 0 }$ 的δ邻域",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补24种定义节点，列出自变量6种（x→x0, x→x0+, x→x0-, x→∞, x→+∞…",
+              "evidence": "注函数极限一共有24个定义，其中自变量趋近方式有6种，函数趋近方式有4种，如表所示.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "无穷小的定义",
+          "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；",
+          "examples": [
+            "例1.20",
+            "例2.7"
+          ],
+          "children": [
+            {
+              "name": "无穷小的定义",
+              "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；"
+            }
+          ]
+        },
+        {
+          "name": "无穷小的性质",
+          "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；",
+          "examples": [
+            "例1.20"
+          ],
+          "children": [
+            {
+              "name": "无穷小的基本性质",
+              "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；"
+            }
+          ]
+        },
+        {
+          "name": "无穷小的比阶",
+          "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；",
+          "examples": [
+            "例1.19",
+            "例1.23"
+          ],
+          "children": [
+            {
+              "name": "无穷小比阶的定义",
+              "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；"
+            }
+          ]
+        },
+        {
+          "name": "常用的等价无穷小（记忆）",
+          "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；",
+          "examples": [
+            "例1.19",
+            "例1.21",
+            "例1.22",
+            "例1.27",
+            "例2.8",
+            "例1.18"
+          ],
+          "children": [
+            {
+              "name": "sin x ~ x（x→0）",
+              "evidence": "当 x→0 时，常用的等价无穷小有 sin x ~ x, tan x ~ x, arcsin x ~ x, arctan x ~ x；sin x ∼ x",
+              "children": []
+            },
+            {
+              "name": "tan x ~ x（x→0）",
+              "evidence": "当 x→0 时，常用的等价无穷小有 sin x ~ x, tan x ~ x, arcsin x ~ x, arctan x ~ x；tan x ~ x",
+              "children": []
+            },
+            {
+              "name": "arcsin x ~ x（x→0）",
+              "evidence": "当 x→0 时，常用的等价无穷小有 sin x ~ x, tan x ~ x, arcsin x ~ x, arctan x ~ x；arcsin x ~ x",
+              "children": []
+            },
+            {
+              "name": "arctan x ~ x（x→0）",
+              "evidence": "当 x→0 时，常用的等价无穷小有 sin x ~ x, tan x ~ x, arcsin x ~ x, arctan x ~ x；arctan x ∼ x",
+              "children": []
+            },
+            {
+              "name": "ln(1+x) ~ x（x→0）",
+              "evidence": "当 x→0 时，常用的等价无穷小有 sin x ~ x, tan x ~ x, arcsin x ~ x, arctan x ~ x；ln(1 +x) ~ x",
+              "children": []
+            },
+            {
+              "name": "eˣ−1 ~ x（x→0）",
+              "evidence": "当 x→0 时，常用的等价无穷小有 sin x ~ x, tan x ~ x, arcsin x ~ x, arctan x ~ x；ex −1~ x",
+              "children": []
+            },
+            {
+              "name": "aˣ−1 ~ x·ln a（x→0）",
+              "evidence": "当 x→0 时，常用的等价无穷小有 sin x ~ x, tan x ~ x, arcsin x ~ x, arctan x ~ x；a^{x}-1∼ x ln a",
+              "children": []
+            },
+            {
+              "name": "1−cos x ~ ½x²（x→0）",
+              "evidence": "当 x→0 时，常用的等价无穷小有 sin x ~ x, tan x ~ x, arcsin x ~ x, arctan x ~ x；1-cos x ∼ ½x²",
+              "children": []
+            },
+            {
+              "name": "(1+x)^α−1 ~ αx（x→0）",
+              "evidence": "当 x→0 时，常用的等价无穷小有 sin x ~ x, tan x ~ x, arcsin x ~ x, arctan x ~ x；(1+x)^{a}-1∼ ax",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "无穷大的定义",
+          "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；",
+          "examples": [
+            "例2.4",
+            "例2.7"
+          ],
+          "children": [
+            {
+              "name": "无穷大的定义",
+              "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "函数极限存在的充要条件是左极限与右极限都存在且相等。",
+          "evidence": "理解极限的概念，理解函数左极限与右极限的概念以及函数极限存在与左极限、右极限之间的关系；"
+        },
+        {
+          "level": "primary",
+          "statement": "极限具有唯一性、局部有界性和保号性。",
+          "evidence": "掌握极限的性质及四则运算法则，掌握利用两个重要极限求极限的方法；"
+        },
+        {
+          "level": "primary",
+          "statement": "无穷小量是极限为零的变量，无穷大量是绝对值无限增大的变量。",
+          "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；"
+        },
+        {
+          "level": "secondary",
+          "statement": "常用等价无穷小替换公式（如sinx~x, tanx~x, 1-cosx~x^2/2等）可用于简化极限计算。",
+          "evidence": "理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；"
+        }
+      ],
+      "role": "核心",
+      "tier": "must",
+      "tier_reason": "极限性质、无穷小比阶与等价无穷小是年年必考的基础考点。"
+    },
+    {
+      "name": "函数的概念与特性",
+      "evidence": "《考研数学基础30讲》（下称《30讲》）按照《全国硕士研究生招生考试数学考试大纲》，并结合考研数学命题趋势编写，其中高等数学分册分为18讲，线性代数分册分为6讲，概率论与数理统计分册分为6讲，共30讲。学完这些内容，即可达到传统意义上的“基",
+      "nodes": [
+        {
+          "name": "反函数",
+          "evidence": "③理解复合函数及分段函数的概念，了解反函数及隐函数的概念；",
+          "examples": [
+            "例1.3",
+            "例1.12",
+            "例1.2"
+          ],
+          "children": [
+            {
+              "name": "反函数的概念与存在条件",
+              "evidence": "了解反函数及隐函数的概念"
+            },
+            {
+              "name": "反函数记号互换后图像才关于y=x对称",
+              "evidence": "只有把 $y = f(x)$ 的反函数 $x = f^{-1}(y)$ 写成 $y = f^{-1}(x)$ 后，它们的图形才关于y=x对称.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "讨论有界性须先给定区间I，同一函数在不同区间有界性可不同",
+              "evidence": "有界还是无界的讨论首先需指明区间I，不知区间，无法谈论有界性.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "若存在x0使lim f(x)=∞，则f(x)在I上无界",
+              "evidence": "只要在区间I上或其端点处存在点 $x_{0}$ ，使得 $\\lim_{x \\to x_0} f(x)$ 的值为无穷大，则没有任何两条直线 $y = - M$ 和 $y = M$ 可以把I上的 $f(x)$ 包起来”，这就叫无界.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "记住 y=ln(x+√(x²+1))、y=(eˣ−e⁻ˣ)/2、y=(eˣ+e⁻ˣ)…",
+              "evidence": "三个重要函数 $y = \\ln(x + \\sqrt{x^2 + 1}) \\quad \\textcircled{2} y = \\frac{e^x - e^{-x}}{2} \\quad \\textcircled{3} y = \\frac{e^x + e^{-x}}{2}$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "改为：只要在区间I上或其端点处存在点x₀使lim f(x)=∞，则f(x)在I上无界",
+              "evidence": "只要在区间I上或其端点处存在点 $x_{0}$ ，使得 $\\lim_{x \\to x_0} f(x)$ 的值为无穷大，则没有任何两条直线 $y = - M$ 和 $y = M$ 可以把I上的 $f(x)$ 包起来",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "几何上看图形能否被 y=−M 与 y=M 包住；解析上找正数M使|f(x)|≤M",
+              "evidence": "从几何上看，如果在给定的区间，函数y=f(x)的图形能够被直线y=-M和 $y = M$ “完全包起来”，则为有界；从解析上说，如果找到某个正数M，使得 $\\left| f(x) \\right| \\leq M$ ，则为有界",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "分段函数 f(x)=x(x≥0), 1/x(x<0) 的反函数为其本身，但f(x)不…",
+              "evidence": "有反函数的函数不一定是单调函数.比如",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "复合函数",
+          "evidence": "③理解复合函数及分段函数的概念，了解反函数及隐函数的概念；",
+          "examples": [
+            "例1.1",
+            "例1.26",
+            "例1.2",
+            "例1.4",
+            "例1.5",
+            "例1.16"
+          ],
+          "children": [
+            {
+              "name": "复合函数的概念与分解",
+              "evidence": "理解复合函数及分段函数的概念"
+            },
+            {
+              "name": "复合函数定义要求 g(D)⊂D₁，u 为中间变量",
+              "evidence": "函数 $u = g(x)$ 在D上有定义，且 $g ( D ) \\subset D _ { 1 }$ ，则由",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "隐函数",
+          "evidence": "③理解复合函数及分段函数的概念，了解反函数及隐函数的概念；",
+          "examples": [],
+          "children": [
+            {
+              "name": "隐函数的概念",
+              "evidence": "了解反函数及隐函数的概念"
+            },
+            {
+              "name": "隐函数要求唯一y；求y(x0)时若不易解出则用观察法（画图看交点）",
+              "evidence": "能确定隐函数就不能是多值函数，这是基本概念",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "如 x+y³−1=0 可显化为 y=∛(1−x)；",
+              "evidence": "如 $x + y^{3} - 1 = 0$ 就表示一个隐函数，且可显化为 $y = \\sqrt[3]{1 - x}$",
+              "children": [],
+              "source": "critic"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "本讲例题清单均为函数概念、性质、极限与连续等内容，没有涉及隐函数概念或隐函数求值的例题。"
+        },
+        {
+          "name": "函数的四种特性（有界/单调/周期/奇偶）",
+          "evidence": "②了解函数的有界性、单调性、周期性和奇偶性；",
+          "examples": [
+            "例1.17",
+            "例1.6",
+            "例1.7",
+            "例1.8",
+            "例1.9",
+            "例1.10"
+          ],
+          "children": [
+            {
+              "name": "有界性的定义与判定",
+              "evidence": "了解函数的有界性、单调性、周期性和奇偶性"
+            },
+            {
+              "name": "单调性的定义与判定",
+              "evidence": "了解函数的有界性、单调性、周期性和奇偶性"
+            },
+            {
+              "name": "周期性的定义与判定",
+              "evidence": "了解函数的有界性、单调性、周期性和奇偶性"
+            },
+            {
+              "name": "奇偶性的定义与判定",
+              "evidence": "了解函数的有界性、单调性、周期性和奇偶性"
+            },
+            {
+              "name": "为单调性、周期性、奇偶性各补判定要点（如奇偶性判定、周期判定），并注明特性与微积分工具的联系",
+              "evidence": "考研中怎么去使用这些特性呢？微积分是利用极限这个工具研究函数、函数的导数及积分的四种特性",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "secondary",
+          "statement": "单值函数的判定：函数可以一对一，也可以多对一，这叫单值函数；若一个x对应多个y，则为多值函数，不在函数定义中。",
+          "evidence": "所以函数可以一对一，也可以多对一，这叫单值函数"
+        },
+        {
+          "level": "secondary",
+          "statement": "铅直画线法：若任一条铅直线与f(x)至多有一个交点，则f(x)为单值函数。",
+          "evidence": "用铅直画线法作铅直线，若任一条铅直线与f(x)至多有一个交点，则f(x)为单值函数."
+        }
+      ],
+      "role": "基础",
+      "tier": "high",
+      "tier_reason": "反函数、复合函数及四种特性是后续极限与导数的基础，常以小题或综合题形式出现。"
+    },
+    {
+      "name": "函数的连续与间断",
+      "evidence": "五函数的连续与间断\n无定义点（必间断）:>①讨论间断点只看分段点（未必间断）②连续与间断的判别本质上是极限计算",
+      "nodes": [
+        {
+          "name": "连续点的定义",
+          "evidence": "设函数f(x)在点 $x _ { 0 }$ 的某一邻域内有定义，且有 $\\lim_{x \\to x_0} f(x) = f(x_0)$ ，则称函数f(x)在点 $x _ { 0 }$ 处连续.",
+          "examples": [
+            "例1.36",
+            "例1.18"
+          ],
+          "children": [
+            {
+              "name": "用极限定义判别连续：$\\lim_{x \\to x_0} f(x) = f(x_0)$",
+              "evidence": "设函数f(x)在点 $x _ { 0 }$ 的某一邻域内有定义，且有 $\\lim_{x \\to x_0} f(x) = f(x_0)$ ，则称函数f(x)在点 $x _ { 0 }$ 处连续."
+            },
+            {
+              "name": "左、右极限判别：$\\lim_{x \\to x_0^+} f(x) = \\lim_{x \\to x_0…",
+              "evidence": "$\\lim_{x \\to x_0^+} f(x) = \\lim_{x \\to x_0^-} f(x) = f(x_0) \\Leftrightarrow f(x)$ 在点 $x_{0}$ 处连续."
+            },
+            {
+              "name": "连续性的四则运算、复合与反函数连续性法则",
+              "evidence": "设f(x)与g(x)都在点 $x = x_{0}$ 处连续，则 $f(x) \\pm g(x)$ 与f(x)g(x)在点$x = x_{0}$ 处连续，当 $g(x_0) \\neq 0$ 时， $f(x) / g(x)$ 在点 $x = x_{0}$ 处也连续"
+            },
+            {
+              "name": "连续点邻域保号性：$f(x_0)>0$ 或 $<0$ 时局部同号",
+              "evidence": "设f(x)在点 $x = x_{0}$ 处连续，且 $f(x_{0}) > 0$ 或 $f(x_{0}) < 0$ 则存在 $\\delta > 0$ 使得当 $\\left| x - x_{0} \\right| < \\delta$ 时，$f(x) > 0$ (或 $f(x) < 0$"
+            },
+            {
+              "name": "a处右连续，b处左连续』这一要点",
+              "evidence": "区间 $\\left[ a , b \\right]$ 上连续，是指a处（左端点）右连续，b处（右端点）左连续.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "存在δ>0，当|x-x0|<δ时f(x)>0（或<0）",
+              "evidence": "则存在 $\\delta > 0$ 使得当 $\\left| x - x_{0} \\right| < \\delta$ 时，$f(x) > 0$ (或 $f(x) < 0$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『当g(x0)≠0时f/g在x0处也连续』",
+              "evidence": "当 $g(x_0) \\neq 0$ 时， $f(x) / g(x)$ 在点 $x = x_{0}$ 处也连续",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "y=f(x)在区间Ix上单调且连续，则反函数在对应区间连续且有相同单调性",
+              "evidence": "设 $y = f(x)$ 在区间 $I_{x}$ 上单调且连续，则反函数 $x = \\varphi(y)$ 在对应的区间必有反函数$I_{y}=\\left\\{ y \\mid y=f(x), x \\in I_{x} \\right\\}$ 上连续且有相同的单调性",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "将保号性要点补全为『存在δ>0，当|x-x0|<δ时f(x)>0（或f(x)<0）』",
+              "evidence": "设f(x)在点 $x = x_{0}$ 处连续，且 $f(x_{0}) > 0$ 或 $f(x_{0}) < 0$ 则存在 $\\delta > 0$ 使得当 $\\left| x - x_{0} \\right| < \\delta$ 时，$f(x) > 0$ (或 $f(x) < 0$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "间断点的定义与分类",
+          "evidence": "以下设函数f(x)在点 $x _ { 0 }$ 的某去心邻域内有定义\n讨论间断点只看无定义点和分段点，一个初等函数在其定义区间内都是连续的.",
+          "examples": [
+            "例1.38",
+            "例1.37"
+          ],
+          "children": [
+            {
+              "name": "讨论间断点的前提：只看无定义点和分段点",
+              "evidence": "讨论间断点只看无定义点和分段点，一个初等函数在其定义区间内都是连续的."
+            },
+            {
+              "name": "可去间断点：$\\lim_{x \\to x_0} f(x) = A \\neq f(x_0)$（$f(x…",
+              "evidence": "若 $\\lim_{x \\to x_0} f(x) = A \\neq f(x_0)(f(x_0)$ 甚至可以无定义)，则 $x   =   x _ { _ 0 }$ 称为可去间断点. (可补间断点)"
+            },
+            {
+              "name": "跳跃间断点：左右极限都存在但不相等",
+              "evidence": "若 $\\lim_{x \\to x_0^-} f(x)$ 与 $\\lim_{x \\to x_0^+} f(x)$ 都存在，但 $\\lim_{x \\to x_0^-} f(x) \\neq \\lim_{x \\to x_0^+} f(x)$ ，则 $x   =   x _ { _ 0 }$ 称为跳跃间断点"
+            },
+            {
+              "name": "无穷间断点与振荡间断点（第二类）",
+              "evidence": "若 $\\lim_{x \\to x_0} f(x) = \\infty$ 或 $\\lim_{x \\to x_0^+} f(x) = \\infty$ 或 $\\lim_{x \\to x_0^-} f(x) = \\infty$ ，则 $x   =   x _ { _ 0 }$ 称为无穷间断点"
+            },
+            {
+              "name": "补『初等函数在其定义区间内连续，故间断点只可能出现在无定义点与分段点』",
+              "evidence": "讨论间断点只看无定义点和分段点，一个初等函数在其定义区间内都是连续的.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『间断点不考虑区间端点，无单侧间断概念』的注意点",
+              "evidence": "在间断点中，无单侧间断的概念（考研数学中）.区间端点是不考虑间断的.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "将『初等函数在其定义区间内都是连续的，故间断点只可能出现在无定义点与分段点』列为正式要点",
+              "evidence": "讨论间断点只看无定义点和分段点，一个初等函数在其定义区间内都是连续的.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "函数f(x)在点x0处连续的定义：f(x)在x0的某邻域内有定义，且lim_{x→x0}f(x)=f(x0)",
+          "evidence": "设函数f(x)在点 $x _ { 0 }$ 的某一邻域内有定义，且有 $\\lim_{x \\to x_0} f(x) = f(x_0)$ ，则称函数f(x)在点 $x _ { 0 }$ 处连续."
+        },
+        {
+          "level": "primary",
+          "statement": "f(x)在x0处连续等价于左极限、右极限都等于f(x0)",
+          "evidence": "$\\lim_{x \\to x_0^+} f(x) = \\lim_{x \\to x_0^-} f(x) = f(x_0) \\Leftrightarrow f(x)$ 在点 $x_{0}$ 处连续."
+        },
+        {
+          "level": "primary",
+          "statement": "可去间断点：lim_{x→x0}f(x)=A≠f(x0)（f(x0)甚至可以无定义）",
+          "evidence": "若 $\\lim_{x \\to x_0} f(x) = A \\neq f(x_0)(f(x_0)$ 甚至可以无定义)，则 $x   =   x _ { _ 0 }$ 称为可去间断点. (可补间断点)"
+        },
+        {
+          "level": "primary",
+          "statement": "跳跃间断点：左右极限都存在但lim_{x→x0^-}f(x)≠lim_{x→x0^+}f(x)",
+          "evidence": "若 $\\lim_{x \\to x_0^-} f(x)$ 与 $\\lim_{x \\to x_0^+} f(x)$ 都存在，但 $\\lim_{x \\to x_0^-} f(x) \\neq \\lim_{x \\to x_0^+} f(x)$ ，则 $x   =   x _ { _ 0 }$ 称为跳跃间断点"
+        },
+        {
+          "level": "primary",
+          "statement": "无穷间断点：lim_{x→x0}f(x)=∞或单侧极限为∞",
+          "evidence": "若 $\\lim_{x \\to x_0} f(x) = \\infty$ 或 $\\lim_{x \\to x_0^+} f(x) = \\infty$ 或 $\\lim_{x \\to x_0^-} f(x) = \\infty$ ，则 $x   =   x _ { _ 0 }$ 称为无穷间断点"
+        },
+        {
+          "level": "secondary",
+          "statement": "可去间断点与跳跃间断点统称第一类间断点；无穷间断点与振荡间断点属于第二类间断点",
+          "evidence": "可去间断点和跳跃间断点统称为第一类间断点"
+        },
+        {
+          "level": "secondary",
+          "statement": "跳跃间断点的类型与f(x0)的值无关",
+          "evidence": "注按此定义，跳跃间断点和 $f(x_{0})$ 的值无关."
+        },
+        {
+          "level": "secondary",
+          "statement": "连续函数四则运算、复合、反函数仍连续",
+          "evidence": "设 $u = \\varphi(x)$ 在点 $x = x_{0}$ 处连续， $y = f(u)$ 在点 $u = u_{0}$ 处连续，且$u_{0} = \\varphi(x_{0})$ $f[\\varphi(x)]$ 在点 $x = x_{0}$ 处连续"
+        },
+        {
+          "level": "secondary",
+          "statement": "连续点处函数值非零则邻域内保号",
+          "evidence": "设f(x)在点 $x = x_{0}$ 处连续，且 $f(x_{0}) > 0$ 或 $f(x_{0}) < 0$ 则存在 $\\delta > 0$ 使得当 $\\left| x - x_{0} \\right| < \\delta$ 时，$f(x) > 0$ (或 $f(x) < 0$"
+        }
+      ],
+      "role": "核心",
+      "tier": "high",
+      "tier_reason": "间断点分类与连续性判断是高频小题考点，两三年一次。"
+    },
+    {
+      "name": "函数的图像",
+      "evidence": "以上是第1讲的全面的知识结构.学完这一讲，做完这一讲的题目之后，回过头来看这个知识结构，相信大家会有完全不同的认识.",
+      "nodes": [
+        {
+          "name": "基本初等函数与初等函数",
+          "evidence": "④掌握基本初等函数的性质及其图形，了解初等函数的概念；",
+          "examples": [
+            "例1.3",
+            "例1.12"
+          ],
+          "children": [
+            {
+              "name": "基本初等函数的图像与性质",
+              "evidence": "考生应记住这两个函数的图像."
+            },
+            {
+              "name": "反双曲正弦函数",
+              "evidence": "函数 $y = \\ln \\left( x + \\sqrt{x^{2} + 1} \\right)$ 叫作反双曲正弦函数，其图像如图1-3(a)所示."
+            },
+            {
+              "name": "双曲正弦函数",
+              "evidence": "函数 $y = \\frac{e^{x} - e^{- x}}{2}$叫作双曲正弦函数，其图像如图1-3(b)所示."
+            },
+            {
+              "name": "双曲余弦函数",
+              "evidence": "$y = \\frac{e^{x} + e^{- x}}{2}$ 叫作双曲余弦函数，其图像如图1-4所示，它是偶函数，是一种特殊的悬链线."
+            },
+            {
+              "name": "双曲正弦函数 $y=\\frac{e^x-e^{-x}}{2}$ 的图像与性质节点（奇函数…",
+              "evidence": "函数 $y = \\frac{e^{x} - e^{- x}}{2}$叫作双曲正弦函数，其图像如图1-3(b)所示.考生应记住这两个函数的图像.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "利用奇性 $\\int_{-1}^{1}[\\ln(x+\\sqrt{x^2+1}…",
+              "evidence": "由于 $y = \\ln \\left( x + \\sqrt{x^{2} + 1} \\right)$ 是奇函数，于是 $\\int_{- 1}^{1}\\left\\lbrack \\ln\\left( x + \\sqrt{x^{2} + 1} \\right) + x^{2} \\right\\rbrack dx = \\int_{- 1}^{1}x^{2}dx = \\frac{2}{3}$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『基本初等函数六类』枚举节点：常数函数、幂函数、指数函数、对数函数、三角函数、反三角函数",
+              "evidence": "基本初等函数:常数函数、幂函数、指数函数、对数函数、三角函数和反三角函数",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "见 $\\sqrt{u},\\sqrt[3]{u}$ 用 $u$；",
+              "evidence": "①见到 $\\sqrt{u}   ,   \\sqrt[3]{u}$ 时，可用u来研究最值.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补反正切、反余切函数节点及其性质要点，尤其 $\\arctan x+\\operatorname…",
+              "evidence": "(5)性质 $\\arctan x + \\arccos x = \\frac{\\pi}{2} ( - \\infty < x < + \\infty )$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "定义域均为(-∞,+∞)；值域 arctan 为(-π/2,π/2)、arccot…",
+              "evidence": "(4)有界性:两个函数在其定义域内有界 $-\\frac{\\pi}{2} < \\arctan x < \\frac{\\pi}{2}, \\quad 0 < \\arccos x < \\pi$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "分段函数",
+          "evidence": "③理解复合函数及分段函数的概念，了解反函数及隐函数的概念；",
+          "examples": [
+            "例1.5",
+            "例5.12",
+            "例1.16",
+            "例1.38"
+          ],
+          "children": [
+            {
+              "name": "分段函数的复合",
+              "evidence": "画出内层函数的图形，数形结合"
+            },
+            {
+              "name": "求 g[f(x)] 时数与形结合，先由内层 f(x) 的分段确定其值域区间，再代…",
+              "evidence": "分析 数与形结合.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "反双曲正弦函数 $y = \\ln(x + \\sqrt{x^2 + 1})$ 是奇函数，其图像关于原点对称。",
+          "evidence": "由于 $y = \\ln \\left( x + \\sqrt{x^{2} + 1} \\right)$ 是奇函数"
+        },
+        {
+          "level": "primary",
+          "statement": "双曲余弦函数 $y = \\frac{e^{x} + e^{- x}}{2}$ 是偶函数，其图像关于y轴对称。",
+          "evidence": "$y = \\frac{e^{x} + e^{- x}}{2}$ 叫作双曲余弦函数，其图像如图1-4所示，它是偶函数"
+        },
+        {
+          "level": "secondary",
+          "statement": "当 $x \\to 0$ 时，$\\ln(x + \\sqrt{x^2 + 1}) \\sim x$。",
+          "evidence": "当x→0时, $\\ln \\left( x + \\sqrt{x^{2} + 1} \\right) \\sim x$"
+        },
+        {
+          "level": "secondary",
+          "statement": "$\\left[ \\ln \\left( x + \\sqrt{x^2 + 1} \\right) \\right]' = \\frac{1}{\\sqrt{x^2 + 1}}$，因此 $\\int \\frac{1}{\\sqrt{x^{2} + 1}} \\mathrm{d}x = \\ln\\left( x + \\sqrt{x^{2} + 1} \\right) + C$。",
+          "evidence": "$\\left[ \\ln \\left( x + \\sqrt{x^2 + 1} \\right) \\right]' = \\frac{1}{\\sqrt{x^2 + 1}}$ 于是 $\\int \\frac{1}{\\sqrt{x^{2} + 1}} \\mathrm{d}x = \\ln\\left( x + \\sqrt{x^{2} + 1} \\right) + C$"
+        }
+      ],
+      "role": "基础",
+      "tier": "edge",
+      "tier_reason": "基本初等函数图像与分段函数主要作为辅助工具，单独命题较少。"
+    }
+  ]
+}

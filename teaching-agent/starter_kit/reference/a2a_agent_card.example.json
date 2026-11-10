@@ -1,0 +1,31 @@
+{
+  "protocolVersion": "1.0",
+  "name": "mathneuron-teaching-agent",
+  "description": "考研数学一讲课智能体：讲一层、练两题、确定性判题、跨会话学生模型。",
+  "url": "http://127.0.0.1:8010/a2a",
+  "preferredTransport": "JSONRPC",
+  "version": "0.1.0",
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "extendedAgentCard": false
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["text/markdown", "application/json"],
+  "skills": [
+    {
+      "id": "teach-kp",
+      "name": "讲一个知识点",
+      "description": "输入 kp_id 和学生画像，输出讲义 + 2 道题。",
+      "tags": ["teaching", "math"],
+      "examples": ["讲 der.basic，大学低年级"]
+    },
+    {
+      "id": "judge-answer",
+      "name": "判一道题",
+      "description": "输入题目、独立答案键、学生答案，输出可解释判分。",
+      "tags": ["judge", "deterministic"],
+      "examples": ["判断 2x 是否等于 2*x"]
+    }
+  ]
+}

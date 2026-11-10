@@ -1,0 +1,34 @@
+{
+  "tools": [
+    {
+      "name": "get_kp_pack",
+      "description": "按 kp_id 取知识点最小教学包：要点、例子、常见误解、例题引用。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {"kp_id": {"type": "string"}},
+        "required": ["kp_id"]
+      }
+    },
+    {
+      "name": "judge_answer",
+      "description": "用独立答案键做确定性判题，返回 correct/layer/reason。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "question_id": {"type": "string"},
+          "student_answer": {"type": "string"}
+        },
+        "required": ["question_id", "student_answer"]
+      }
+    },
+    {
+      "name": "get_due_reviews",
+      "description": "取某学生今天到期的复习知识点。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {"student_id": {"type": "string"}},
+        "required": ["student_id"]
+      }
+    }
+  ]
+}

@@ -6,6 +6,32 @@
 
 ---
 
+## 0. 2026-11 汇总：`teaching-agent/`
+
+这个仓库现在是一个双项目仓库：
+
+| 目录 | 项目 | 技术栈 | 入口 |
+|---|---|---|---|
+| 根目录 | **Adaptive Trainer**（原有 Streamlit 自适应学习原型） | Streamlit + LangGraph | `ui/app.py` |
+| `teaching-agent/` | **MathNeuron 讲课智能体**（2026-11 当前主系统） | Next.js 16 + FastAPI + LangGraph | `teaching-agent/README.md` |
+
+`teaching-agent/` 汇总了当前讲课系统最完整的代码与资料：
+
+- 232 知识点 / 18 讲 / 71 分支的教材树与课程表；
+- lesson-only LangGraph + `/api/judge` 旁路判题 + 显式学生模型 + 1/3/7 天复习；
+- 61 页新人上手指南（Markdown / DOCX / PDF）；
+- 2026 多智能体前沿调研、系统评估、代码审核/迭代记录；
+- 可离线跑通的 `starter_kit`（18 个测试）与早期 93 测试快照。
+
+直接开始：
+
+```powershell
+cd teaching-agent
+# 详细步骤见 teaching-agent/README.md
+```
+
+---
+
 ## 1. 项目定位
 
 Adaptive Trainer 是一个面向个人的闭环学习系统，不是普通的问答机器人。它强调三件事：

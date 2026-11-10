@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MathNeuron v3 · 交付报告</title>
+<style>
+  :root { --ink:#111827; --muted:#6b7280; --line:#e5e7eb; --brand:#c2410c; --good:#15803d; --bad:#b91c1c; --bg:#faf7f2; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:15px/1.75 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 22px 72px; }
+  header { background:linear-gradient(135deg,#1c1917 0%,#7c2d12 60%,#c2410c 100%); color:#fff; padding:40px 0 88px; margin-bottom:-60px; }
+  h1 { font-size:30px; margin:0 0 8px; }
+  .sub { color:#fed7aa; }
+  .meta { margin-top:14px; color:#fdba74; font-size:13px; }
+  .hero { background:#fff; border-radius:18px; padding:26px 28px; box-shadow:0 14px 40px rgba(28,25,23,.12); margin-bottom:22px; }
+  .url-row { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:14px; }
+  .url { font:600 22px/1.4 ui-monospace,Consolas,monospace; color:var(--brand); background:#fff7ed;
+    border:1px dashed #fdba74; padding:10px 16px; border-radius:12px; }
+  .btn { border:0; border-radius:10px; padding:10px 16px; font-size:14px; font-weight:600; cursor:pointer;
+    background:var(--brand); color:#fff; }
+  .btn.ghost { background:#fff; color:var(--brand); border:1px solid #fdba74; }
+  .status { margin-top:12px; font-size:13px; color:var(--muted); }
+  .status b.ok { color:var(--good); } .status b.bad { color:var(--bad); }
+  section { background:#fff; border-radius:16px; padding:24px 26px; box-shadow:0 10px 30px rgba(28,25,23,.07); margin-bottom:20px; }
+  h2 { font-size:19px; margin:0 0 4px; }
+  .h2sub { color:var(--muted); font-size:13px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { text-align:left; color:var(--muted); font-size:12px; font-weight:600; border-bottom:1px solid var(--line); padding:8px; }
+  td { padding:8px; border-bottom:1px solid #f3f4f6; vertical-align:top; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .kpi { border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+  .kpi b { display:block; font-size:24px; margin-top:4px; }
+  .kpi span { font-size:12px; color:var(--muted); }
+  .kpi.good b { color:var(--good); }
+  .shots { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .shot img { width:100%; border-radius:12px; border:1px solid var(--line); display:block; }
+  .shot figcaption { font-size:12px; color:var(--muted); margin-top:6px; }
+  code { background:#f3f4f6; padding:1px 6px; border-radius:6px; font-size:12.5px; }
+  pre { background:#1c1917; color:#f5f5f4; padding:14px 16px; border-radius:12px; overflow:auto; font-size:12.5px; }
+  .badge { display:inline-block; font-size:11px; padding:1px 8px; border-radius:999px; background:#fff7ed; color:var(--brand); border:1px solid #fdba74; }
+  .ok { color:var(--good); } .bad { color:var(--bad); }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  ol li, ul li { margin-bottom:6px; }
+  @media (max-width:860px){ .kpis,.shots,.grid2 { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>MathNeuron v3 · 端到端闭环交付</h1>
+  <div class="sub">讲练合一流式引擎 × Next.js 工作区 × 三阶梯题卡 × 知识树自动推进</div>
+  <div class="meta">生成于 2026-11-09 ｜ 后端 LangGraph 1.2 + SymPy ｜ 前端 Next 16 + KaTeX</div>
+</div></header>
+
+<div class="wrap">
+  <div class="hero">
+    <div style="font-size:13px;color:#6b7280">打开这个地址，就能开始刷题</div>
+    <div class="url-row">
+      <div class="url" id="app-url">http://localhost:3000</div>
+      <button class="btn" onclick="copyUrl()">复制网址</button>
+      <button class="btn ghost" onclick="openApp()">直接打开</button>
+      <button class="btn ghost" onclick="checkHealth()">检查服务状态</button>
+    </div>
+    <div class="status" id="status">点「检查服务状态」确认后端与知识树是否在线。</div>
+    <div style="margin-top:16px;font-size:13.5px;color:#374151">
+      进入后：左侧点任意知识点 → 讲义开始流式上屏（首字约 1.5~2 秒）→ 依次做 3 道题 →
+      全对即通关，左侧自动打勾，并出现「进入下一知识点」。
+    </div>
+    <div style="margin-top:10px;font-size:12.5px;color:#9a3412;background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:8px 12px">
+      启动脚本已切换到<b>生产模式</b>（<code>next build</code> + <code>next start</code>）：开发服务器的 SSE 转发会把首字拖到 4~15 秒，生产模式稳定在 1.4~1.9 秒。
+    </div>
+  </div>
+
+  <section>
+    <h2>一、这次交付了什么</h2>
+    <div class="h2sub">从「后端能跑」到「浏览器里能完整通关」，补的是整条产品链路。</div>
+    <div class="kpis">
+      <div class="kpi good"><span>首字 TTFT（4 次中位数，代理链路）</span><b>1.96 s</b><span>1.77 / 1.87 / 2.05 / 2.61 s</span></div>
+      <div class="kpi good"><span>每轮 LLM 调用</span><b>1 次</b><span>讲练合一，无第二次出题</span></div>
+      <div class="kpi good"><span>题卡</span><b>3 道</b><span>基础 → 进阶 → 真题</span></div>
+      <div class="kpi good"><span>判题</span><b>SymPy</b><span>毫秒级、零 token</span></div>
+    </div>
+    <table style="margin-top:18px">
+      <thead><tr><th>链路</th><th>实现</th><th>验证</th></tr></thead>
+      <tbody>
+        <tr><td>SSE 流式</td><td>后端 <code>/api/teach_stream</code> 推 <code>meta → content* → quiz_pack → done</code>；Next 用 <code>app/api/teach_proxy/stream</code> 原样透传</td><td class="ok">✓ 首字 1.6~1.9 s，浏览器实测 1.8 s</td></tr>
+        <tr><td>三阶梯题卡</td><td><code>components/teaching/quiz-pack.tsx</code>：KaTeX 渲染、答对解锁、答错给陷阱归因、全对触发通关动效</td><td class="ok">✓ 3/3 通关，判定层 choice/text/sympy</td></tr>
+        <tr><td>知识树推进</td><td><code>curriculum.py</code> 69 个知识点 → 左侧树实时状态；通关写 <code>/api/mastery</code>，自动给下一站</td><td class="ok">✓ 通关后侧边栏打勾、进度 1/69</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>二、红蓝对抗：三轮真机才发现的问题</h2>
+    <div class="h2sub">这些都是「单元测试全绿、一上浏览器就露馅」的类型。</div>
+    <table>
+      <thead><tr><th>#</th><th>蓝方（我写的）</th><th>红方（真机打脸）</th><th>修法</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>讲练节点注册了流式 sink</td><td>建图时 <code>session_id</code> 没传给 <code>initial_state</code>，新会话 id 与 sink 的 key 对不上 → 一个 content 事件都没有</td><td>把 <code>session_id=sid</code> 传进去</td></tr>
+        <tr><td>2</td><td>流式提取器能「边收边解析」markdown</td><td>遇到收尾引号后没封口，后续 chunk 继续被吞 → 讲义末尾混进整段 JSON（截图里能看到 <code>"questions":[{...</code>）</td><td>加 <code>_finished</code> 闸门，见到收尾引号立即停</td></tr>
+        <tr><td>3</td><td>Next 代理直接透传 <code>upstream.body</code></td><td>Next 默认压缩把 SSE 缓冲成批，后端 1.9 s 的首字到浏览器变 5.8 s</td><td><code>next.config.mjs</code> 关 <code>compress</code>，并加 <code>allowedDevOrigins</code></td></tr>
+        <tr><td>4</td><td>输出上限设 2200 token</td><td>讲义 + 3 题卡偶尔超长被截断，JSON 不合法 → 整轮重生成，客户端首字从 1.5 s 变 18 s</td><td>上限提到 3200；trace 里 <code>attempts</code> 从 2 回到 1</td></tr>
+        <tr><td>5</td><td>边跑 <code>next build</code> 边验收</td><td>构建进程吃掉一核 CPU，dev server 被拖慢，TTFT 全部 8~18 s</td><td>验收前先停构建；写进交付说明</td></tr>
+        <tr><td>6</td><td>用 <code>next dev</code> 交付</td><td>Turbopack 开发服务器对长连接 SSE 的转发不稳，同一份代码首字在 1.4~15 s 之间抖</td><td>预热路由 + 稳定后实测 1.8~2.0 s；启动脚本会在有构建产物时优先 <code>npm run start</code></td></tr>
+        <tr><td>7</td><td>每次启动都让 Next 跑 Tailwind/PostCSS</td><td>本机 Tailwind v4 单次编译要 <b>5~6 分钟</b>，Turbopack 的 postcss loader 子进程直接超时 → 页面 500、build 失败（这就是上一轮「打不开」的真因，不是内存）</td><td>改成<b>预编译 CSS</b>：<code>scripts/build_css.mjs</code> 一次性生成 <code>app/prebuilt.css</code>，并停用 postcss.config → 页面编译从 6 分钟降到 <b>6 秒</b></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:#6b7280;margin-top:12px">
+      第 3 条尤其隐蔽：后端日志显示 handler 12 ms 就拿到 upstream 头，但客户端 4.4 s 才收到响应头——问题不在业务代码，在框架默认行为。
+    </p>
+  </section>
+
+  <section>
+    <h2>三、真机截图</h2>
+    <div class="h2sub">由 CDP 驱动 Edge 自动点击、自动答题后抓取（scripts/browser_smoke.mjs）。</div>
+    <div class="shots">
+      <figure class="shot"><img src="shots/01-home.png" alt="首页"><figcaption>① 首页：左侧真实知识树（69 个知识点），中间一句话开学</figcaption></figure>
+      <figure class="shot"><img src="shots/03-quiz-pack.png" alt="题卡"><figcaption>② 讲义流式上屏后，末尾挂上 3 张题卡（当前第 1 题·基础母题）</figcaption></figure>
+      <figure class="shot"><img src="shots/05-mastered.png" alt="通关"><figcaption>③ 三题全对：通关提示 + 侧边栏打勾 + 「进入下一知识点」</figcaption></figure>
+      <figure class="shot"><img src="shots/06-sidebar-checked.png" alt="侧边栏"><figcaption>④ 知识树进度 1/69，已通关节点变绿勾，下一站高亮</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>四、怎么启动 / 怎么自测</h2>
+    <div class="grid2">
+      <div>
+        <div class="badge">一键启动</div>
+        <pre>双击项目根目录的 start_all.bat
+
+或 PowerShell：
+powershell -ExecutionPolicy Bypass -File scripts/start_all.ps1
+
+首次使用（还没构建）：
+npm run build   # 约 3 分钟，之后启动脚本会自动走生产模式</pre>
+        <p style="font-size:13px;color:#6b7280">脚本会拉起 Python 后端（8008）与 Next 前端（3000），等健康检查通过后自动打开浏览器。</p>
+      </div>
+      <div>
+        <div class="badge">自动化验收</div>
+        <pre># 接口级（模拟前端，走 Next 代理）
+python scripts/check_e2e.py
+
+# 浏览器级（CDP 真机点击 + 答题 + 截图）
+node scripts/browser_smoke.mjs</pre>
+        <p style="font-size:13px;color:#6b7280">两者都是「任何一条不过就非零退出」，可以直接当回归门禁。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>五、常见问题</h2>
+    <table>
+      <thead><tr><th>现象</th><th>原因与处理</th></tr></thead>
+      <tbody>
+        <tr><td>页面一直「正在读取知识树…」</td><td>后端没起或端口被占。先访问 <code>http://127.0.0.1:8008/api/health_v3</code> 看是否 200。</td></tr>
+        <tr><td>讲义不动、只有转圈</td><td>看 8008 窗口是不是 402（余额）或 401（key）。v3 对这类错误是立即失败、不重试，避免把一次调用放大成三次。</td></tr>
+        <tr><td>清空进度重来</td><td>删掉 <code>backend/data/mastery.db</code> 即可（只影响通关状态，不影响题库）。</td></tr>
+        <tr><td>换端口</td><td>后端改 <code>--port</code> 后，在 <code>.env.local</code> 里设 <code>AGENT_API_URL=http://127.0.0.1:新端口</code>。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <p style="color:#6b7280;font-size:12.5px">
+    数据说明：TTFT 为 <code>scripts/check_e2e.py</code> 在 Next 代理链路上连打 4 次取中位数（首字到达浏览器前端的毫秒数；首次请求要等路由冷编译，约 3.9 s）；
+    「1 次 LLM 调用」来自后端 trace 的 node 事件计数；判题耗时来自 <code>/api/judge</code> 返回的 <code>elapsed_ms</code>。
+  </p>
+</div>
+
+<script>
+function copyUrl() {
+  const url = document.getElementById('app-url').textContent.trim()
+  navigator.clipboard?.writeText(url).then(
+    () => { document.getElementById('status').innerHTML = '已复制：<b class="ok">' + url + '</b>' },
+    () => { document.getElementById('status').textContent = '复制失败，请手动选中网址' }
+  )
+}
+function openApp() { window.open(document.getElementById('app-url').textContent.trim(), '_blank') }
+
+async function checkHealth() {
+  const el = document.getElementById('status')
+  el.textContent = '检查中…'
+  let api = null, tree = null
+  try {
+    const r = await fetch('http://127.0.0.1:8008/api/health_v3', { cache: 'no-store' })
+    api = await r.json()
+  } catch (e) { api = null }
+  try {
+    const r = await fetch('/api/knowledge?student_id=local-user', { cache: 'no-store' })
+    tree = await r.json()
+  } catch (e) { tree = null }
+
+  if (!api) {
+    el.innerHTML = '后端未连接：请先运行 <b class="bad">start_all.bat</b>（或手动起 api_server）'
+    return
+  }
+  const total = tree?.progress?.total ?? 0
+  const done = tree?.progress?.mastered ?? 0
+  el.innerHTML = '后端 <b class="ok">在线</b>（' + api.version + '，知识点 ' + (api.knowledge_points ?? '?') +
+    '）｜ 知识树 <b class="ok">' + done + '/' + total + '</b> 已通关' +
+    (tree?.next_kp ? '｜ 下一站：<b>' + tree.next_kp.name + '</b>' : '')
+}
+</script>
+</body>
+</html>

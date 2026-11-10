@@ -1,0 +1,513 @@
+{
+  "lecture": 2,
+  "title": "数列极限",
+  "blocks": [
+    {
+      "name": "四则运算与夹逼",
+      "evidence": "| 考题 | 计算函数极限 |",
+      "nodes": [
+        {
+          "name": "极限四则运算规则",
+          "evidence": "掌握极限的性质及四则运算法则",
+          "examples": [
+            "例2.2",
+            "例2.6",
+            "例2.8",
+            "例1.14",
+            "例1.15",
+            "例1.19"
+          ],
+          "children": [
+            {
+              "name": "各极限存在时，和差积商的极限等于极限的和差积商（分母极限非零）",
+              "evidence": "掌握极限的性质及四则运算法则"
+            }
+          ]
+        },
+        {
+          "name": "夹逼准则（放缩方向）",
+          "evidence": "掌握极限存在的两个准则，并会利用它们求极限",
+          "examples": [
+            "例1.29",
+            "例2.10"
+          ],
+          "children": [
+            {
+              "name": "三步：找两端数列 → 证不等式 → 两端极限相等",
+              "evidence": "夹逼准则",
+              "children": []
+            },
+            {
+              "name": "何时用：n 项和、含 [ ] 取整、含 n 次根号、无法直接求通项",
+              "evidence": "夹逼准则",
+              "children": []
+            },
+            {
+              "name": "放缩原则：只需放缩到「极限相同」的两端，不必夹得紧",
+              "evidence": "夹逼准则",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "n 项和型夹逼",
+          "evidence": "③常用 $1 + r + r^{2} + \\cdots + r^{n - 1} = \\frac{1 - r^{n}}{1 - r} \\quad (r \\neq 1).$ →有限项和不会发散，收敛和发散的概念，只在无穷项时会涉及",
+          "examples": [
+            "例2.9"
+          ],
+          "children": [
+            {
+              "name": "对 n 项和进行放缩，找到两端易于求极限的表达式",
+              "evidence": "掌握极限存在的两个准则，并会利用它们求极限"
+            },
+            {
+              "name": "常用放缩：分母放大/缩小，分子放大/缩小",
+              "evidence": "掌握极限存在的两个准则，并会利用它们求极限"
+            },
+            {
+              "name": "分母统一放大/缩小：n·最大项 ≤ Σ ≤ n·最大项",
+              "evidence": "夹逼",
+              "children": []
+            },
+            {
+              "name": "分子放大/缩小：各项换成最大/最小项",
+              "evidence": "夹逼",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "常见放缩不等式",
+          "evidence": "考: $e^{x_{n}} - 1 = e^{x_{n}} - e^{0}$ .神秘的数字 $1 \\neq 0$ 这个是解题时常见的包装统一美 后面就可以用“拉格朗日中值定理”的学习捅破这层“窗户纸”",
+          "examples": [
+            "例6.19"
+          ],
+          "children": [
+            {
+              "name": "x−1 < [x] ≤ x（取整函数）",
+              "evidence": "x-1<[x]≤x",
+              "children": []
+            },
+            {
+              "name": "0 ≤ ln(1+t) ≤ t（t≥0）",
+              "evidence": "ln(1+t)",
+              "children": []
+            },
+            {
+              "name": "1 ≤ n^{1/n} ≤ 1+√(2/n)",
+              "evidence": "放缩",
+              "children": []
+            },
+            {
+              "name": "sin x < x < tan x（0<x<π/2）",
+              "evidence": "放缩",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "极限的四则运算法则：若 lim f(x) 和 lim g(x) 都存在，则 lim [f(x) ± g(x)] = lim f(x) ± lim g(x)，lim [f(x)g(x)] = lim f(x) · lim g(x)，当 lim g(x) ≠ 0 时，lim [f(x)/g(x)] = lim f(x) / lim g(x)。",
+          "evidence": "掌握极限的性质及四则运算法则"
+        },
+        {
+          "level": "primary",
+          "statement": "四则运算法则成立的前提：各部分极限都存在（商还需分母极限≠0）",
+          "evidence": "四则运算"
+        },
+        {
+          "level": "secondary",
+          "statement": "不存在±不存在、0·∞ 等情形要具体分析，不能套法则",
+          "evidence": "四则运算"
+        },
+        {
+          "level": "secondary",
+          "statement": "夹逼三步：找两端 → 证不等式 → 两端极限相等",
+          "evidence": "夹逼"
+        }
+      ],
+      "role": "高频",
+      "tier": "must",
+      "tier_reason": "夹逼准则及n项和型夹逼是考研高频计算与证明题型，几乎年年涉及。"
+    },
+    {
+      "name": "单调有界与海涅定理",
+      "evidence": "掌握数列极限存在的两个准则，并会利用它们求极限",
+      "nodes": [
+        {
+          "name": "单调有界准则",
+          "evidence": "单调有界准则证明极限存在",
+          "examples": [
+            "例2.15",
+            "例2.11",
+            "例2.12",
+            "例2.14"
+          ],
+          "children": [
+            {
+              "name": "单调有界准则的内容",
+              "evidence": "单调有界准则证明极限存在"
+            },
+            {
+              "name": "条件①存在n0使 yn≤xn≤zn ②yn,zn→a，则 xn→a；",
+              "evidence": "如果数列 $\\left\\{ x _ { n } \\right\\} , \\left\\{ y _ { n } \\right\\}$ 及{z}满足下列条件:",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "①验 n=1 成立；②设 n=k 成立；",
+              "evidence": "①验n=1成立；> ②设n=k成立；★ b. 利用数学归纳法 ③证n=k+1成立",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "取 xn=1/(nπ) 得 f(xn)=0，取 xn'=1/((2n+1/2)π)…",
+              "evidence": "若取 $x_{n}=\\frac{1}{n\\pi}\\rightarrow0,n\\rightarrow\\infty$ ，则 $f(x_{n}) = n\\pi \\cdot \\sin(n\\pi) = 0$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "数列是下标为整数的函数，是离散点不能求导，故须先经海涅定理转为连续变量函数极限",
+              "evidence": "因为我们把数列理解成一个下标为整数的函数，所以它是一个一个离散的点，不能求导",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "当 n→∞ 时 (1+1/n)^n - e 与 a/n 等价无穷小，则 a=-e…",
+              "evidence": "当 $n \\to \\infty$ 时 若 $\\left( 1 + \\frac{1}{n} \\right)^n - e$ 与 $\\frac{a}{n}$ 是等价无穷小， 则 $a = - \\frac { e } { 2 }$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "x→0 取 xn=1/n；x→+∞ 取 xn=n；",
+              "evidence": "常考①当x→0时，取 $x_{n}=\\frac{1}{n}$ 即若 $\\lim_{x \\to 0} f(x) = A$ $\\lim_{n \\to \\infty} f\\left(\\frac{1}{n}\\right) = A$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "递推数列的单调性与有界性证明",
+          "evidence": "单调有界准则证明极限存在",
+          "examples": [
+            "例2.1",
+            "例2.13",
+            "例2.12",
+            "例2.14"
+          ],
+          "children": [
+            {
+              "name": "证明递推数列的单调性",
+              "evidence": "单调有界准则证明极限存在"
+            },
+            {
+              "name": "证明递推数列的有界性",
+              "evidence": "单调有界准则证明极限存在"
+            },
+            {
+              "name": "x2>x1 且 f'>0 则单调增；x2<x1 且 f'>0 则单调减；",
+              "evidence": "当 $x_{2} > x_{1}$ 时，数列 $\\left\\{ x_{n} \\right\\}$ 单调增加，若 $f^{\\prime}(x) > 0,   x \\in$ 区间I，则数列 $\\left\\{ x_{n} \\right\\}$ 单调",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "a. (x_{n+1}-x_n) 与0比较，或 x_{n+1}/x_n 与1比较（同…",
+              "evidence": "a. $\\frac{x_{n + 1} - x_{n}}{ \\downarrow} \\quad (<)$ 0或 $\\frac{x_{n + 1}}{x_{n}} > 1$ (同号).",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "d. 若 x_n - x_{n-1} 与 x_{n-1} - x_{n-2} 同号…",
+              "evidence": "d. $x _ { n } - x _ { n - 1 }$ 与 $x_{n - 1} - x_{n - 2}$ 同号，则 $\\left\\{ x_{n} \\right\\}$ 单调.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "c. 利用重要不等式（见夹逼准则的注）证明单调性",
+              "evidence": "★ c. 利用重要不等式（见夹逼准则的注(2)）.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "海涅定理（归结原则）",
+          "evidence": "海涅定理是联系数列极限与函数极限的桥梁",
+          "examples": [
+            "例2.7",
+            "例2.8",
+            "例2.3"
+          ],
+          "children": [
+            {
+              "name": "将数列极限转化为函数极限",
+              "evidence": "将原来的数列极限转化成函数极限"
+            },
+            {
+              "name": "海涅定理的常用取点方式",
+              "evidence": "①当x→0时，取 $x_{n}=\\frac{1}{n}$"
+            },
+            {
+              "name": "用途一：数列极限 → 函数极限（用洛必达等工具）",
+              "evidence": "海涅",
+              "children": []
+            },
+            {
+              "name": "用途二：反证极限不存在——取两条子列得不同极限",
+              "evidence": "海涅",
+              "children": []
+            },
+            {
+              "name": "取点技巧：xₙ=1/n（→0）、xₙ=nπ（sin 取 0）、xₙ=π/2+2nπ（取 1）",
+              "evidence": "海涅",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "收敛速度问题",
+          "evidence": "③常用 $1 + r + r^{2} + \\cdots + r^{n - 1} = \\frac{1 - r^{n}}{1 - r} \\quad (r \\neq 1).$ →有限项和不会发散，收敛和发散的概念，只在无穷项时会涉及",
+          "examples": [
+            "例1.23"
+          ],
+          "children": [
+            {
+              "name": "等价无穷小比较收敛速度",
+              "evidence": "若 $\\left( 1 + \\frac{1}{n} \\right)^n - e$ 与 $\\frac{a}{n}$ 是等价无穷小"
+            },
+            {
+              "name": "比较 xₙ 与 1/n^p：若 xₙ~1/n^p 则 p 越大收敛越快",
+              "evidence": "收敛速度",
+              "children": []
+            },
+            {
+              "name": "与等价无穷小配合：先做等价替换再比阶",
+              "evidence": "收敛速度",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "海涅定理（归结原则）：设f(x)在U(x0,δ)内有定义，则lim_{x→x0} f(x)=A存在当且仅当对任何以x0为极限的数列{xn}（xn≠x0），lim_{n→∞} f(xn)=A存在。",
+          "evidence": "设f(x) 在 $\\mathring{U}(x_0,\\delta)$ 内有定义，则 $\\lim_{x \\to x_0} f(x) = A$ 存在 $\\Leftrightarrow$ 对任何 $\\mathring{U}(x_0,   \\delta)$ 内以 $x _ { 0 }$ 为极限的数列$\\left\\{ x_{n} \\right\\} \\left( x_{n} \\neq x_{0} \\right)$ ，极限 $\\lim_{n \\to \\infty} f(x_n) = A$ 存在."
+        },
+        {
+          "level": "primary",
+          "statement": "单调有界准则：单调有界数列必有极限。",
+          "evidence": "单调有界准则证明极限存在"
+        },
+        {
+          "level": "secondary",
+          "statement": "当x→0时，取xn=1/n，若lim_{x→0} f(x)=A，则lim_{n→∞} f(1/n)=A。",
+          "evidence": "①当x→0时，取 $x_{n}=\\frac{1}{n}$ 即若 $\\lim_{x \\to 0} f(x) = A$ $\\lim_{n \\to \\infty} f\\left(\\frac{1}{n}\\right) = A$"
+        },
+        {
+          "level": "secondary",
+          "statement": "当x→+∞时，取xn=n，若lim_{x→+∞} f(x)=A，则lim_{n→∞} f(n)=A。",
+          "evidence": "②当 $x \\rightarrow +\\infty$ 时，取 $x_{n} = n$ 即若 $\\lim_{x \\to +\\infty} f(x) = A$ $\\lim_{n \\to \\infty} f(n) = A$"
+        },
+        {
+          "level": "secondary",
+          "statement": "当xn→a且xn≠a时，若lim_{x→a} f(x)=A，则lim_{n→∞} f(xn)=A。",
+          "evidence": "③当 $x_{n} \\rightarrow a$ 目 $x_{n} \\neq a$ 时，若 $\\lim_{x \\to a} f(x) = A$ 则 $\\lim_{n \\to \\infty} f(x_n) = A$"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "单调有界准则证明递推数列收敛是经典必考题型，海涅定理也常出现在概念题中。"
+    },
+    {
+      "name": "利用性质求极限",
+      "evidence": "掌握极限的性质及四则运算法则，掌握利用两个重要极限求极限的方法",
+      "nodes": [
+        {
+          "name": "唯一性",
+          "evidence": "违背了函数极限的唯一性（不存在）",
+          "examples": [],
+          "children": [],
+          "no_example": true,
+          "no_example_reason": "“唯一性”在本讲主要指极限唯一性（左右极限不等则极限不存在），但清单中例题主要涉及数列有界性、单调有界准则、夹逼准则、归"
+        },
+        {
+          "name": "有界性",
+          "evidence": "了解函数的有界性、单调性、周期性和奇偶性",
+          "examples": [
+            "例1.6",
+            "例1.17",
+            "例2.4",
+            "例2.5"
+          ],
+          "children": [
+            {
+              "name": "讨论有界性需指明区间",
+              "evidence": "有界还是无界的讨论首先需指明区间I，不知区间，无法谈论有界性"
+            }
+          ]
+        },
+        {
+          "name": "保号性",
+          "evidence": "故 $\\lim_{x \\to 0} \\frac{f(x)}{x^2} = -\\frac{1}{2} < 0$ ，由极限的局部保号性可知，在 $x = 0$ 的某去心邻域内有 $\\frac{f(x)}{x^{2}} < 0$ ，即 $f(x) < 0$ ，从而选(D).",
+          "examples": [
+            "例1.18"
+          ],
+          "children": [
+            {
+              "name": "极限保号性：极限值>0则附近函数值>0",
+              "evidence": "掌握极限的性质及四则运算法则"
+            },
+            {
+              "name": "利用保号性判断函数符号或不等式",
+              "evidence": "掌握极限的性质及四则运算法则"
+            }
+          ]
+        },
+        {
+          "name": "性质在判定中的应用",
+          "evidence": "掌握极限的性质及四则运算法则，掌握利用两个重要极限求极限的方法",
+          "examples": [
+            "例1.7",
+            "例1.8",
+            "例1.13"
+          ],
+          "children": [
+            {
+              "name": "利用极限性质判定极限存在性",
+              "evidence": "掌握极限存在的两个准则，并会利用它们求极限"
+            },
+            {
+              "name": "利用四则运算法则求极限",
+              "evidence": "掌握极限的性质及四则运算法则"
+            },
+            {
+              "name": "利用两个重要极限求极限",
+              "evidence": "掌握利用两个重要极限求极限的方法"
+            },
+            {
+              "name": "无穷小/无穷大概念、无穷小比较（高阶/同阶/等价）、用等价无穷小…",
+              "evidence": "⑧理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限；",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "左极限=右极限』",
+              "evidence": "⑤理解极限的概念，理解函数左极限与右极限的概念以及函数极限存在与左极限、右极限之间的关系；",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补充正式节点『极限存在的两个准则（夹逼准则、单调有界准则）』，并注明仅数学一、数学二要求掌握…",
+              "evidence": "⑦掌握极限存在的两个准则，并会利用它们求极限（仅数学一、数学二），了解极限的性质及 极限存在的两个准则（仅数学三）",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补充正式节点『左极限与右极限的概念及极限存在的充要条件：左极限=右极限』",
+              "evidence": "⑤理解极限的概念，理解函数左极限与右极限的概念以及函数极限存在与左极限、右极限之间的关系",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补充正式节点『无穷小与无穷大』：概念、无穷小比较（高阶/同阶/等价）、用等价无穷小求极限",
+              "evidence": "⑧理解无穷小量、无穷大量的概念，掌握无穷小量的比较方法，会用等价无穷小量求极限",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "函数极限存在，则极限值唯一。",
+          "evidence": "违背了函数极限的唯一性（不存在）"
+        },
+        {
+          "level": "primary",
+          "statement": "极限的保号性：若lim_{x→x0} f(x)=A>0，则存在δ>0，当0<|x-x0|<δ时，f(x)>0。",
+          "evidence": "掌握极限的性质及四则运算法则"
+        },
+        {
+          "level": "secondary",
+          "statement": "保号性可用于判断符号：极限>0 ⇒ 局部>0",
+          "evidence": "保号性"
+        },
+        {
+          "level": "secondary",
+          "statement": "有界性讨论必须指明区间",
+          "evidence": "有界性"
+        }
+      ],
+      "role": "核心",
+      "tier": "high",
+      "tier_reason": "唯一性、有界性、保号性常作为选择题或证明题的工具，两三年出现一次。"
+    },
+    {
+      "name": "数列的概念与表示",
+      "evidence": "《30讲》高等数学分册配套了《零基础通关讲义》，旨在全面夯实考生知识结构中的数学基础知识，分为六个部分，分别是:基本逻辑、解析式的概念与运算、方程与不等式、函数、数列及其单调性、坐标系及其变换。",
+      "nodes": [
+        {
+          "name": "通项与递推表示",
+          "evidence": "把分母写成一样的:小 $\\leqslant \\sum_{i = 1}^{n}\\frac{i}{n^{2} + n + i} \\leqslant  大$ 通项",
+          "examples": [
+            "例1.1",
+            "例1.2",
+            "例1.3",
+            "例1.4",
+            "例1.5",
+            "例1.9"
+          ],
+          "children": [
+            {
+              "name": "通项公式法",
+              "evidence": "对应法则与所用的自变量无关，如 f(x) = x^{2} ，则 f\\left(\\frac{1}{x}\\right)=\\left(\\frac{1}{x}\\right)^2"
+            },
+            {
+              "name": "递推公式法",
+              "evidence": "用所给关系式，造出方程组，解出所需的量."
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "若函数 $y=f(x)$ 严格单调，则它必有反函数 $x=f^{-1}(y)$。",
+          "evidence": "严格单调函数必有反函数"
+        },
+        {
+          "level": "primary",
+          "statement": "反函数与原函数满足 $f[f^{-1}(x)]=x$ 且 $f^{-1}[f(x)]=x$。",
+          "evidence": "重要关系: $\\begin{cases}f[f^{-1}(x)] = x, \\\\f^{-1}[f(x)] = x.\\end{cases}$"
+        },
+        {
+          "level": "secondary",
+          "statement": "只有把反函数 $x=f^{-1}(y)$ 写成 $y=f^{-1}(x)$ 后，其图形才与原函数 $y=f(x)$ 的图形关于 $y=x$ 对称。",
+          "evidence": "只有把 $y = f(x)$ 的反函数 $x = f^{-1}(y)$ 写成 $y = f^{-1}(x)$ 后，它们的图形才关于y=x对称."
+        },
+        {
+          "level": "secondary",
+          "statement": "有反函数的函数不一定是单调函数。",
+          "evidence": "有反函数的函数不一定是单调函数."
+        },
+        {
+          "level": "secondary",
+          "statement": "判断函数是否具有反函数可用水平画线法：在符合铅直画线法的条件下，若任一条水平直线与 $f(x)$ 至多有一个交点，则 $f(x)$ 有反函数。",
+          "evidence": "水平画线法——在符合铅直画线法的条件下，作水平直线，若任一条水平直线与f(x)至多有一个交点，则f(x)有反函数."
+        },
+        {
+          "level": "secondary",
+          "statement": "由复合函数 $f[g(x)]$ 求内层 $g(x)$ 时，可把 $g(x)$ 视为整体，如 $\\varphi^2(x)=g(x)$ 则 $\\varphi(x)=\\pm\\sqrt{g(x)}$。",
+          "evidence": "若 $\\varphi^{2}(x)=g(x)$ ，则 $\\varphi ( x ) = \\pm { \\sqrt { g ( x ) } }$"
+        }
+      ],
+      "role": "基础",
+      "tier": "edge",
+      "tier_reason": "通项与递推表示是基础概念，直接命题少，多作为其他考点的载体。"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MathNeuron 产品升级方案 v1（待确认）</title>
+<style>
+  :root { --ink:#111827; --muted:#6b7280; --line:#e5e7eb; --brand:#c2410c; --good:#15803d; --warn:#b45309; --bad:#b91c1c; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#faf7f2; color:var(--ink);
+    font:15px/1.8 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+  .wrap { max-width:1040px; margin:0 auto; padding:0 22px 80px; }
+  header { background:linear-gradient(135deg,#1c1917,#7c2d12 60%,#c2410c); color:#fff; padding:38px 0 80px; margin-bottom:-56px; }
+  h1 { font-size:28px; margin:0 0 8px; }
+  .sub { color:#fed7aa; font-size:14px; }
+  .meta { margin-top:14px; color:#fdba74; font-size:12.5px; }
+  section { background:#fff; border-radius:16px; padding:24px 26px; box-shadow:0 10px 30px rgba(28,25,23,.07); margin-bottom:20px; }
+  h2 { font-size:19px; margin:0 0 4px; }
+  h3 { font-size:15.5px; margin:20px 0 6px; }
+  .h2sub { color:var(--muted); font-size:13px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin-top:8px; }
+  th { text-align:left; color:var(--muted); font-size:12px; font-weight:600; border-bottom:1px solid var(--line); padding:8px; }
+  td { padding:8px; border-bottom:1px solid #f3f4f6; vertical-align:top; }
+  code { background:#f3f4f6; padding:1px 6px; border-radius:6px; font-size:12.5px; }
+  .tag { display:inline-block; font-size:11px; padding:1px 8px; border-radius:999px; }
+  .t-done { background:#dcfce7; color:#166534; }
+  .t-now { background:#fff7ed; color:#9a3412; border:1px solid #fdba74; }
+  .t-next { background:#eef2ff; color:#3b4f9e; }
+  .t-later { background:#f3f4f6; color:#4b5563; }
+  ul { margin:6px 0 0 18px; padding:0; }
+  li { margin-bottom:5px; }
+  .callout { border-left:3px solid var(--brand); background:#fff7ed; padding:10px 14px; border-radius:0 10px 10px 0; font-size:13.5px; }
+  .q { background:#f9fafb; border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin-top:10px; }
+  .q b { color:var(--brand); }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media (max-width:820px){ .grid2 { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>MathNeuron 产品升级方案 v1</h1>
+  <div class="sub">从「能刷题」到「看得见提分」——三轮迭代与需要你拍板的五件事</div>
+  <div class="meta">2026-11-10 ｜ 基于已上线的 v3 讲练闭环 ｜ 待确认后进入开发</div>
+</div></header>
+
+<div class="wrap">
+
+<section>
+  <h2>一、先说结论</h2>
+  <div class="h2sub">你提的六件事这一轮已经改完并跑过浏览器验收；下面的方案是在此之上的产品设计。</div>
+  <table>
+    <thead><tr><th>你的诉求</th><th>状态</th><th>怎么做的</th></tr></thead>
+    <tbody>
+      <tr><td>侧边提问分支，不污染主对话</td><td><span class="tag t-done">已上线</span></td><td>旁路 <code>/api/side_ask</code>，只带「当前题 + 讲义片段 + 侧问历史」，不进主图、不写主 history</td></tr>
+      <tr><td>思维链诊断 + 错题本</td><td><span class="tag t-done">已上线</span></td><td>题卡上「说说我的思路」→ <code>/api/diagnose</code> 拆步骤、找最早断点、给纠正动作，落 <code>mistakes.db</code>；侧栏可看错题本</td></tr>
+      <tr><td>语音转文字</td><td><span class="tag t-done">已上线</span></td><td>侧问输入框与诊断框都接了 Web Speech（zh-CN），说完可改再提交</td></tr>
+      <tr><td>自动推进下一题 / 下一考点</td><td><span class="tag t-done">已上线</span></td><td>答对 0.7 s 自动下一题（「下一关」按钮已删）；通关后 3 s 倒计时自动开下一站，可「先别切」</td></tr>
+      <tr><td>乱码 / 吐字不流畅</td><td><span class="tag t-done">已上线</span></td><td>三个真因：①重试后旧字未清（<code>reset</code> 未清打字机队列）②未闭合 <code>$…$</code> 闪现原始 LaTeX ③逐 4 字硬吐。已改为自适应吞吐 + 安全切分 + 重置清队列</td></tr>
+      <tr><td>重试导致卡顿</td><td><span class="tag t-done">已上线</span></td><td>题目引文校验从「严格子串」改「去标点后前 8 字对位」，实测 20% 的重生成降到 0（近 3 次全 attempt=1）</td></tr>
+    </tbody>
+  </table>
+  <div class="callout" style="margin-top:14px">
+    一句话产品判断：<b>你现在做的不是「AI 讲题工具」，而是「可验收的自主学习闭环」。</b>
+    闭环 = 诊断 → 规划 → 讲 → 练 → 改 → 验收。现在讲、练、改都有雏形，<b>缺的是「诊断」和「验收」的量化，以及「改」之后的复盘回流</b>。
+  </div>
+</section>
+
+<section>
+  <h2>二、当前体验的五个断点（按杀伤力排序）</h2>
+  <table>
+    <thead><tr><th>#</th><th>断点</th><th>用户感受</th><th>根因</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>错题只记了「错」，没记「为什么错」</td><td>下次遇到同类题还是错，感觉系统没变聪明</td><td>错题本只存题目+诊断，没有回流到出题策略</td></tr>
+      <tr><td>2</td><td>看不到「我到底在进步吗」</td><td>每天刷，但不知道离 90 分还有多远</td><td>只有知识点勾选，没有分数曲线、没有剩余轮次估算</td></tr>
+      <tr><td>3</td><td>通关即结束，没有复习</td><td>一周后全忘，前面的勾变成假象</td><td>没有间隔复习与遗忘曲线</td></tr>
+      <tr><td>4</td><td>题只有 3 道，练不够</td><td>刚有点感觉就没了</td><td>题卡是一次生成的，没有「再来一组」与变式</td></tr>
+      <tr><td>5</td><td>侧问虽好，但要主动点</td><td>卡住时不会想到去问</td><td>缺少「检测到你停了 30 秒」这类被动触发</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>三、三轮迭代</h2>
+  <div class="h2sub">每一轮都以「可验证的提分证据」收口，而不是堆功能。</div>
+
+  <h3>第 1 轮（1 周内）：让「改」形成回流 <span class="tag t-now">现在就能做</span></h3>
+  <ul>
+    <li><b>错题重练队列</b>：错题按 <code>1 天 / 3 天 / 7 天</code> 三次回流；答对两次才算真正消掉（写 <code>mastery</code> 时才允许打勾）。</li>
+    <li><b>诊断结果反向影响出题</b>：把 <code>misconception</code> 作为下一轮题卡的硬约束（「这轮必须出一道专门考这个误解的干扰项」）。</li>
+    <li><b>每轮结束给一张「本轮账本」</b>：讲了几层 / 做了几题 / 错在哪 / 断了哪一步 / 下次复习时间。</li>
+    <li><b>再练一组</b>：同一知识点一键续 3 道（复用 lesson 节点，只出题不重讲，约 4 s）。</li>
+  </ul>
+
+  <h3>第 2 轮（2~4 周）：让「进步」可量化 <span class="tag t-next">需要你确认数据口径</span></h3>
+  <ul>
+    <li><b>掌握度模型</b>：知识点维度 = f(答对率, 难度加权, 最近一次时间)；用 Laplace 平滑，避免「做 1 题=100%」。</li>
+    <li><b>能力雷达</b>：按考纲六大块（极限/微分/积分/多元/级数/微分方程）算掌握度，侧栏可视化。</li>
+    <li><b>提分曲线</b>：以「首次诊断分 → 当前能力分」为纵轴，每轮记录一次；同时给「到 90 分预计还需 X 轮 / Y 小时」的 <b>区间</b>（P50/P80），不给假精确。</li>
+    <li><b>考点热力图</b>：69 个知识点按考频×掌握度上色，一眼看出「高频没掌握」的红区。</li>
+  </ul>
+
+  <h3>第 3 轮（1~2 月）：从「练会」到「考得出」 <span class="tag t-later">后面再说</span></h3>
+  <ul>
+    <li><b>模考模式</b>：25 分钟一组真题，逐步撤掉脚手架（提示、解析先不给），测真实迁移。</li>
+    <li><b>错因归类统计</b>：「概念 60% / 方法 30% / 粗心 10%」——粗心类不再占错题本，避免噪声。</li>
+    <li><b>教师/家长视图</b>：只看热力图与本周变化，不看成篇对话。</li>
+    <li><b>多科扩展</b>：curriculum 换一份数据即可，架构不动。</li>
+  </ul>
+</section>
+
+<section>
+  <h2>四、提分过程怎么「可视化」（核心设计）</h2>
+  <div class="h2sub">不做花哨图表，只回答学生最关心的三个问题。</div>
+  <table>
+    <thead><tr><th>学生的问题</th><th>界面上给什么</th><th>数据来源</th></tr></thead>
+    <tbody>
+      <tr><td>我哪里有问题？</td><td>考点热力图 + 薄弱点前三（带考频标签）</td><td><code>student_kp</code> 掌握度 × <code>curriculum</code> 考频</td></tr>
+      <tr><td>我还要多久？</td><td>「预计还需 3~5 轮，约 1.5 小时」+ 进度条</td><td>历史每轮提分速率 + 剩余知识点数</td></tr>
+      <tr><td>我现在什么水平？</td><td>能力分（0-100，区间）+ 六大块雷达</td><td>每轮题卡的难度加权正确率</td></tr>
+    </tbody>
+  </table>
+  <div class="callout" style="margin-top:12px">
+    设计原则：<b>所有数字都必须可解释</b>。学生点任意一个分数，都能展开看到「哪几道题、哪几次作答、怎么算出来的」。做不到可解释，就不要显示。
+  </div>
+</section>
+
+<section>
+  <h2>五、为什么这样设计（几个关键取舍）</h2>
+  <div class="grid2">
+    <div>
+      <h3>✔ 旁路而不是并进主图</h3>
+      <p style="font-size:13.5px;margin:4px 0">侧问、诊断都不进主状态机。理由：主链路是「讲课→出题→判题」，多一个节点就多一份延迟和上下文污染，而这两个功能恰恰要求「独立上下文」。</p>
+      <h3>✔ 自动推进而不是弹窗</h3>
+      <p style="font-size:13.5px;margin:4px 0">用户要的是「丝滑」，不是「掌控每一步」。倒计时可取消，既减少点击又不剥夺控制感。</p>
+    </div>
+    <div>
+      <h3>✘ 不做「多智能体群聊」</h3>
+      <p style="font-size:13.5px;margin:4px 0">Cognition / Anthropic 的实证都指向同一结论：多 agent 只在「读并行」时有效，写操作必须单线程。教学是强依赖场景，群聊只会让上下文互相污染。</p>
+      <h3>✘ 不做自适应出题的「完全体」</h3>
+      <p style="font-size:13.5px;margin:4px 0">IRT/CDM 需要上千条作答数据，冷启动阶段用「考频 × 掌握度」的启发式更诚实，也更好解释。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>六、需要你拍板的五件事</h2>
+  <div class="h2sub">这五个决定会改变后面 2~4 周的工作量，建议逐条回我。</div>
+  <div class="q"><b>1. 掌握度的口径</b>：按「知识点」算（69 个，细但稀疏），还是按「章节」算（10 个大块，粗但稳）？我的建议：<b>先按章节给雷达，知识点只做热力图</b>。</div>
+  <div class="q"><b>2. 提分基准从哪来</b>：要不要在第 1 轮先做一次「诊断卷」（20 题，约 15 分钟）作为起点分？没有起点分，后面的曲线没有意义。</div>
+  <div class="q"><b>3. 复习节奏</b>：错题回流用 1/3/7 天，还是按「隔一次就复习」？前者更科学，后者更无感。</div>
+  <div class="q"><b>4. 模考模式要不要现在做</b>：它能显著提升「考得出」的可信度，但要额外设计计时、跳题、交卷、批改，约 1 周。</div>
+  <div class="q"><b>5. 数据边界</b>：诊断会存学生原话（可能包含个人信息）。<b>只存本机 sqlite、不上传</b>，还是允许匿名汇聚做错因统计？</div>
+</section>
+
+<section>
+  <h2>七、这一轮的验收记录</h2>
+  <table>
+    <thead><tr><th>项</th><th>结果</th></tr></thead>
+    <tbody>
+      <tr><td>接口验收 <code>check_e2e.py --samples 3</code></td><td>通过；TTFT 中位数 1.6~2.0 s；3 题卡；判题层 choice/sympy/text</td></tr>
+      <tr><td>浏览器验收 <code>browser_smoke.mjs</code></td><td>6/6 通过：知识树、流式首字 1.83 s、3 题卡、通关、侧栏打勾、<b>自动进入下一站</b></td></tr>
+      <tr><td>旁路助教</td><td><code>/api/side_ask</code> 200，回答只引用当前题与讲义片段</td></tr>
+      <tr><td>思路诊断</td><td><code>/api/diagnose</code> 200，能指出「先代值再求导」这类认知偏差，并落错题本</td></tr>
+      <tr><td>重试率</td><td>引文校验放宽后，最近 3 次生成全部 attempt=1（此前 20% 请求重试，单次多花 6~12 s）</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<p style="color:#6b7280;font-size:12.5px">
+  说明：本轮只改了体验与旁路能力，<b>没有动</b>主链路（讲练合一节点、SymPy 判题、知识树白名单）。
+  生产构建（<code>npm run build</code>）本轮未重新验证；当前交付形态是 <code>npm run dev</code> + 预编译 CSS。
+</p>
+</div>
+</body>
+</html>

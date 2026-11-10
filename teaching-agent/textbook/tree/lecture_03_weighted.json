@@ -1,0 +1,403 @@
+{
+  "lecture": 3,
+  "title": "一元函数微分学的概念",
+  "blocks": [
+    {
+      "name": "导数的定义与可导性",
+      "evidence": "f^{\\prime}(x_0) = \\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x}",
+      "nodes": [
+        {
+          "name": "导数定义（增量比极限）",
+          "evidence": "若函数增量Δy与自变量增量Δx的比值在 $\\Delta x   \\to   0$ 时的极限存在，即 $\\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x}$ 存在，则称函数 $y = f(x)$ 在点 $x _ { 0 }$ 处可导",
+          "examples": [
+            "例3.1",
+            "例3.2",
+            "例3.3",
+            "例3.9"
+          ],
+          "children": [
+            {
+              "name": "增量式与函数式等价",
+              "evidence": "f^{\\prime}(x_0) = \\lim_{x \\to x_0} \\frac{f(x) - f(x_0)}{x - x_0}"
+            },
+            {
+              "name": "导数的三种等价提法",
+              "evidence": "①y = f(x)在点 $x_{0}$ 处可导；②y = f(x)在点 $x_{0}$ 处导数存在；③ $f^{\\prime}(x_0) = A$ (A 为有限数)."
+            },
+            {
+              "name": "导数本质是极限，故可导⇔左右导数存在且相等，对应左右极限存在且相等",
+              "evidence": "这一点当然是与极限存在的充分必要条件(左、右极限均存在且相等)对应.因为从本质上来说，导数的定义就是一个极限问题",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "存在=点各自待着；连续=Y们充分靠近；可导=靠近速度一样或更快",
+              "evidence": "可导是说，它们不仅依偎在一起，而且Y们靠近y的速度不会比X们靠近x的速度慢，也就是速度一样或者速度更快",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "方法三关键为e^0-1=0且(e^0-2)…(e^0-n)≠0，并用(uv)'=u'…",
+              "evidence": "针对方法三，关键: \\mathrm{e}^{0}-1=0,\\left(\\mathrm{e}^{0}-2\\right)\\left(\\mathrm{e}^{0}-3\\right)\\cdots\\left(\\mathrm{e}^{0}-n\\right)\\neq0",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "0≤|(f(x)-f(0))/(x-0)|≤(1-cos x)/|x|，由lim(1…",
+              "evidence": "0 \\leqslant \\left| \\frac{f(x) - f(0)}{x - 0} \\right| \\leqslant \\frac{1 - \\cos x}{|x|}",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "f'(x0)存在↔左右导数均存在且相等，本质对应左右极限均存在且相等",
+              "evidence": "这一点当然是与极限存在的充分必要条件(左、右极限均存在且相等)对应.因为从本质上来说，导数的定义就是一个极限问题",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "可导↔有斜切线或水平切线，但无铅直切线",
+              "evidence": "在几何上:有斜着的切线或水平的切线，但是没有铅直切线",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "左导数与右导数",
+          "evidence": "这里， $f_{-}^{\\prime}(x_0), f_{+}^{\\prime}(x_0)$ 分别是f(x)在点 $x_{0}$ 处的左导数、右导数，统称为单侧导数.",
+          "examples": [
+            "例3.5",
+            "例3.6",
+            "例3.7"
+          ],
+          "children": [
+            {
+              "name": "单侧导数定义",
+              "evidence": "\\lim_{\\Delta x \\to 0^{+}} \\frac{f(x_{0} + \\Delta x) - f(x_{0})}{\\Delta x} \\xlongequal{记} f_{+}^{\\prime}(x_{0})"
+            },
+            {
+              "name": "可导的充要条件",
+              "evidence": "$f^{\\prime}(x_0)$ 存在↔其左导数 $f^{\\prime}_{-}(x_0)$ 与右导数 $f_{+}^{\\prime}(x_{0})$ 均存在且相等."
+            },
+            {
+              "name": "几何意义",
+              "evidence": "在几何上:有斜着的切线或水平的切线，但是没有铅直切线"
+            }
+          ]
+        },
+        {
+          "name": "可导与连续的关系",
+          "evidence": "函数在一点可导的必要条件:若f(x)在一点可导，则f(x)在该点连续.反之未必.",
+          "examples": [
+            "例3.3",
+            "例3.5"
+          ],
+          "children": [
+            {
+              "name": "可导必连续",
+              "evidence": "\\Rightarrow f(x_{0}) = \\lim_{\\Delta x \\to 0} f(x_{0} + \\Delta x)"
+            },
+            {
+              "name": "连续不一定可导",
+              "evidence": "如: $f(x) = \\left| x \\right|$ 在x=0处的情形."
+            },
+            {
+              "name": "连续与可导的直观解释",
+              "evidence": "函数连续是y和Y们充分靠近；导函数存在是y和Y们不仅充分靠近，且靠近的速度更快."
+            },
+            {
+              "name": "存在是y和Y们无牵无挂待着；连续是y和Y们充分靠近；",
+              "evidence": "函数存在是y和Y们无牵无挂地待在那里；函数连续是y和Y们充分靠近；导函数存在是y和Y们不仅充分靠近，且靠近的速度更快.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "用定义求导与判可导",
+          "evidence": "第三层次:夹逼准则找极限，此时极限是导数的定义",
+          "examples": [
+            "例3.1",
+            "例3.2",
+            "例3.3",
+            "例3.4",
+            "例3.6"
+          ],
+          "children": [
+            {
+              "name": "抽象函数判可导",
+              "evidence": "方法总结 f(x)是抽象函数，利用抽象函数和具体函数的关系式，通过具体函数的信息去求抽象函数的点信息."
+            },
+            {
+              "name": "多项式乘积求导",
+              "evidence": "关于多项式相乘函数在一个点处的导数问题 方法一 利用导数的定义"
+            },
+            {
+              "name": "抽象函数判可导可用夹逼准则，把增量比夹在已知具体函数之间求极限",
+              "evidence": "第三层次:夹逼准则找极限，此时极限是导数的定义",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "f(x)在x=a连续时，F(x)=f(x)|x-a|在x=a可导⇔f(a)=0",
+              "evidence": "设f(x)在 x = a 处连续， F(x) = f(x) | x - a | ，则 f(a) =0是 F(x)在 x = a 处可导的( ). 此题可当结论直接记住",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "导数定义：f'(x0)=lim_{Δx→0} [f(x0+Δx)-f(x0)]/Δx",
+          "evidence": "f^{\\prime}(x_0) = \\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x}"
+        },
+        {
+          "level": "primary",
+          "statement": "可导充要条件：左导数与右导数均存在且相等",
+          "evidence": "$f^{\\prime}(x_0)$ 存在↔其左导数 $f^{\\prime}_{-}(x_0)$ 与右导数 $f_{+}^{\\prime}(x_{0})$ 均存在且相等."
+        },
+        {
+          "level": "primary",
+          "statement": "可导必连续，连续不一定可导",
+          "evidence": "函数在一点可导的必要条件:若f(x)在一点可导，则f(x)在该点连续.反之未必."
+        },
+        {
+          "level": "secondary",
+          "statement": "可导偶函数的导数是奇函数，可导奇函数的导数是偶函数",
+          "evidence": "若f(x)是可导的偶函数，则f′(x)是奇函数"
+        },
+        {
+          "level": "secondary",
+          "statement": "可导周期函数的导数仍是同周期的周期函数",
+          "evidence": "若f(x)是可导的周期为T的周期函数，则f'(x)也是以T为周期的周期函数"
+        },
+        {
+          "level": "secondary",
+          "statement": "可导有界函数的导数不一定有界",
+          "evidence": "若f(x)是可导的有界函数，则f′(x)是有界函数"
+        },
+        {
+          "level": "secondary",
+          "statement": "无穷小量乘有界量等于无穷小量",
+          "evidence": "无穷小量  \\times  有界量  =  无穷小量"
+        }
+      ],
+      "role": "核心",
+      "tier": "must",
+      "tier_reason": "导数定义、左右导数与可导性判定是考研数学核心基础，几乎年年以选择、填空或证明形式出现。"
+    },
+    {
+      "name": "导数的几何意义",
+      "evidence": "函数 $y = f ( x )$ 在点 $x _ { 0 }$ 处的导数值 $f^{\\prime}(x_0)$ 就是曲线 $y = f(x)$ 在点 $(x_{0},y_{0})$ 处切线(见图3-10)的斜率k，即 $k = f^{\\prime}(x_0)$",
+      "nodes": [
+        {
+          "name": "切线斜率",
+          "evidence": "函数 $y = f ( x )$ 在点 $x _ { 0 }$ 处的导数值 $f^{\\prime}(x_0)$ 就是曲线 $y = f(x)$ 在点 $(x_{0},y_{0})$ 处切线(见图3-10)的斜率k，即 $k = f^{\\prime}(x_0)$",
+          "examples": [
+            "例3.8"
+          ],
+          "children": [
+            {
+              "name": "导数即切线斜率",
+              "evidence": "函数 $y = f ( x )$ 在点 $x _ { 0 }$ 处的导数值 $f^{\\prime}(x_0)$ 就是曲线 $y = f(x)$ 在点 $(x_{0},y_{0})$ 处切线(见图3-10)的斜率k，即 $k = f^{\\prime}(x_0)$"
+            },
+            {
+              "name": "切线方向与运动方向",
+              "evidence": "在此瞬间，切线的方向就是点 $\\left( x _ { 0 } , y _ { 0 } \\right)$ 运动的方向."
+            },
+            {
+              "name": "无穷导数在高等数学中视为导数不存在（有切线但无导数）",
+              "evidence": "学习“高等数学这门课程的考生，还是将无穷导数视为导数不存在为好，因为这是“高等数学里的“规矩”",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "曲线在点(x0,y0)处切线的方向就是点(x0,y0)运动的方向（如铁饼沿切线方向飞出）",
+              "evidence": "在此瞬间，切线的方向就是点 \\left( x _ { 0 } , y _ { 0 } \\right) 运动的方向",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "由f'(x0)得斜率k，写切线方程 y-y0=f'(x0)(x-x0)，令y=0求…",
+              "evidence": "由于 f^{\\prime}(1)=\\left.\\frac{\\mathrm{d}y}{\\mathrm{d}x}\\right|_{x=1}=nx^{n-1}\\Big|_{x=1}=n,\\;n=1,\\;2,\\;\\cdots ，故过点(1，1)的切线方程为 y - 1 = n(x - 1) ，令y=0得",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "f'(x0)是瞬时变化率，不是平均变化率",
+              "evidence": "注意:a是瞬时变化率，不是平均变化率。",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "切线方程与法线方程",
+          "evidence": "于是曲线y=f(x)在点 $(x_{0},y_{0})$ 处的切线方程为 $y - y_{0} = f^{\\prime}(x_{0})(x - x_{0})$",
+          "examples": [
+            "例3.8"
+          ],
+          "children": [
+            {
+              "name": "切线方程公式",
+              "evidence": "于是曲线y=f(x)在点 $(x_{0},y_{0})$ 处的切线方程为 $y - y_{0} = f^{\\prime}(x_{0})(x - x_{0})$"
+            },
+            {
+              "name": "法线方程公式",
+              "evidence": "法线方程为 $y - y_{0} = - \\frac{1}{f^{\\prime}(x_{0})}(x - x_{0})(f^{\\prime}(x_{0}) \\neq 0)$"
+            },
+            {
+              "name": "切线方程应用",
+              "evidence": "由于 $f^{\\prime}(1)=\\left.\\frac{\\mathrm{d}y}{\\mathrm{d}x}\\right|_{x=1}=nx^{n-1}\\Big|_{x=1}=n,\\;n=1,\\;2,\\;\\cdots$ ，故过点(1，1)的切线方程为 $y - 1 = n(x - 1)$"
+            }
+          ]
+        },
+        {
+          "name": "几何应用中的可导性",
+          "evidence": "在几何上:有斜着的切线或水平的切线，但是没有铅直切线",
+          "examples": [
+            "例1",
+            "例2",
+            "例3.7"
+          ],
+          "children": [
+            {
+              "name": "角点（尖点）不可导",
+              "evidence": "总结: $f_{+}^{\\prime}(x_{0}) \\neq f_{-}^{\\prime}(x_{0})$ ，出现角点（尖点），则f(x)在 $x_{0}$ 处不可导，没有切线；"
+            },
+            {
+              "name": "无穷导数有切线但无导数",
+              "evidence": "$\\textcircled{2} f(x)$ 在点 $x _ { 0 }$ 的导数是无穷导数时，在该点有切线但无导数."
+            },
+            {
+              "name": "垂直切线条件",
+              "evidence": "若曲线 $y = f(x)$ 在点 $P(x_{0},y_{0})$ 处有垂直于x轴的切线，则等价于 $f^{\\prime}(x_0) = +\\infty  或  -\\infty   (为无穷导数)$"
+            },
+            {
+              "name": "曲线在点P处有垂直于x轴的切线 ⇔ f'(x0)=+∞或-∞（无穷导数）",
+              "evidence": "若曲线 y = f(x) 在点 P(x_{0},y_{0}) 处有垂直于x轴的切线，则等价于 f^{\\prime}(x_0) = +\\infty  或  -\\infty   (为无穷导数)",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "函数在一点处的导数等于曲线在该点处切线的斜率。",
+          "evidence": "函数 $y = f ( x )$ 在点 $x _ { 0 }$ 处的导数值 $f^{\\prime}(x_0)$ 就是曲线 $y = f(x)$ 在点 $(x_{0},y_{0})$ 处切线(见图3-10)的斜率k，即 $k = f^{\\prime}(x_0)$"
+        },
+        {
+          "level": "primary",
+          "statement": "曲线在点(x0,y0)处的切线方程为 y - y0 = f'(x0)(x - x0)。",
+          "evidence": "于是曲线y=f(x)在点 $(x_{0},y_{0})$ 处的切线方程为 $y - y_{0} = f^{\\prime}(x_{0})(x - x_{0})$"
+        },
+        {
+          "level": "primary",
+          "statement": "曲线在点(x0,y0)处的法线方程为 y - y0 = -1/f'(x0)(x - x0)（f'(x0)≠0）。",
+          "evidence": "法线方程为 $y - y_{0} = - \\frac{1}{f^{\\prime}(x_{0})}(x - x_{0})(f^{\\prime}(x_{0}) \\neq 0)$"
+        },
+        {
+          "level": "secondary",
+          "statement": "导数存在则切线一定存在，但切线存在不一定导数存在。",
+          "evidence": "切线存在不代表导数存在，但导数存在切线一定存在"
+        },
+        {
+          "level": "secondary",
+          "statement": "若左右导数不相等（出现角点或尖点），则函数在该点不可导且没有切线。",
+          "evidence": "总结: $f_{+}^{\\prime}(x_{0}) \\neq f_{-}^{\\prime}(x_{0})$ ，出现角点（尖点），则f(x)在 $x_{0}$ 处不可导，没有切线；"
+        },
+        {
+          "level": "secondary",
+          "statement": "若函数在某点的导数为无穷大，则曲线在该点有垂直于x轴的切线，但导数不存在。",
+          "evidence": "$\\textcircled{2} f(x)$ 在点 $x _ { 0 }$ 的导数是无穷导数时，在该点有切线但无导数."
+        }
+      ],
+      "role": "高频",
+      "tier": "high",
+      "tier_reason": "切线斜率与切线/法线方程是常考小题，但多与导数计算结合，单独命题频率中等。"
+    },
+    {
+      "name": "微分的概念",
+      "evidence": "| 考题 | 一元函数微分学的概念 |",
+      "nodes": [
+        {
+          "name": "可微与可导等价",
+          "evidence": "$\\text{\" } f(x)$ 在点 $x_{0}$ 处可微”与“f(x)在点 $x_{0}$ 处可导”互为充要条件，故判别f(x)在点 $x_{0}$ 处是否可微可以转化为判别其在点 $x_{0}$ 处是否可导，这样的话考生会比较熟悉。",
+          "examples": [
+            "例3.10"
+          ],
+          "children": [
+            {
+              "name": "可微性判别的转化",
+              "evidence": "判别f(x)在点 $x_{0}$ 处是否可微可以转化为判别其在点 $x_{0}$ 处是否可导"
+            }
+          ]
+        },
+        {
+          "name": "一阶微分形式不变性",
+          "evidence": "函数的微分是函数增量的线性主部，且 $\\mathrm{d}y = y^{\\prime}\\mathrm{d}x = y^{\\prime}\\Delta x$ ，而 $\\mathrm{d}y = f^{\\prime}(x^{2})\\mathrm{d}(x^{2}) = 2xf^{\\prime}(x^{2})\\mathrm{d}x = 2xf^{\\prime}(x^{2})\\Delta x$",
+          "examples": [
+            "例3.11",
+            "例3.10"
+          ],
+          "children": [
+            {
+              "name": "复合函数微分公式",
+              "evidence": "$\\mathrm{d}y = f^{\\prime}(x^{2})\\mathrm{d}(x^{2}) = 2xf^{\\prime}(x^{2})\\mathrm{d}x = 2xf^{\\prime}(x^{2})\\Delta x$"
+            },
+            {
+              "name": "微分形式不变性的应用",
+              "evidence": "对复合函数 $y = f[g(x)]$ 求导，有 $y ^ { \\prime } = f ^ { \\prime } \\left[ g ( x ) \\right] \\cdot g ^ { \\prime } ( x )$"
+            }
+          ]
+        },
+        {
+          "name": "近似计算",
+          "evidence": "若f(x)在点 $x_{0}$ 处可微，则在点 $(x_{0},y_{0})$ 附近可以用切线段近似代替曲线段，这是可微的几何意义. (5) 图 3-15 可以较好地帮助考生理解以上论述",
+          "examples": [
+            "例3.11"
+          ],
+          "children": [
+            {
+              "name": "用微分近似增量",
+              "evidence": "当Δx足够小时，有 $\\Delta S \\approx 2 \\Delta x$"
+            },
+            {
+              "name": "线性主部近似函数增量",
+              "evidence": "用“简单的量”代替了“复杂的量”，且产生的误差又可以忽略不计"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "函数f(x)在点x0处可微的充要条件是f(x)在点x0处可导，且dy = f'(x0)dx。",
+          "evidence": "$\\text{\" } f(x)$ 在点 $x_{0}$ 处可微”与“f(x)在点 $x_{0}$ 处可导”互为充要条件"
+        },
+        {
+          "level": "secondary",
+          "statement": "可微的判别步骤：①写增量Δy；②写线性增量AΔx = f'(x0)Δx；③作极限lim_{Δx→0} (Δy - AΔx)/Δx，若极限为0则可微。",
+          "evidence": "①写增量 $\\Delta y = f(x_{0} + \\Delta x) - f(x_{0})$ i ②写线性增量 $A\\Delta x = f^{\\prime}(x_0)\\Delta x$ i ③作极限 $\\lim_{\\Delta x \\to 0} \\frac{\\Delta y - A\\Delta x}{\\Delta x} \\Leftrightarrow \\Delta y = A\\Delta x + o(\\Delta x)$"
+        },
+        {
+          "level": "secondary",
+          "statement": "可微的几何意义：在点(x0,y0)附近可以用切线段近似代替曲线段。",
+          "evidence": "若f(x)在点 $x_{0}$ 处可微，则在点 $(x_{0},y_{0})$ 附近可以用切线段近似代替曲线段，这是可微的几何意义."
+        },
+        {
+          "level": "secondary",
+          "statement": "一阶微分形式不变性：对于复合函数y = f(u)，dy = f'(u)du，无论u是自变量还是中间变量。",
+          "evidence": "$\\mathrm{d}y = f^{\\prime}(x^{2})\\mathrm{d}(x^{2}) = 2xf^{\\prime}(x^{2})\\mathrm{d}x = 2xf^{\\prime}(x^{2})\\Delta x$"
+        }
+      ],
+      "role": "核心",
+      "tier": "high",
+      "tier_reason": "可微与可导等价、一阶微分形式不变性常在选择填空考查，近似计算偶有涉及，属高频但非必考。"
+    }
+  ]
+}

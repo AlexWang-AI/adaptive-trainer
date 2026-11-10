@@ -1,0 +1,664 @@
+{
+  "lecture": 9,
+  "title": "一元函数积分学的计算",
+  "blocks": [
+    {
+      "name": "定积分的计算",
+      "evidence": "定积分的计算和方法",
+      "nodes": [
+        {
+          "name": "牛顿-莱布尼茨公式（含推广）",
+          "evidence": "掌握牛顿-莱布尼茨公式",
+          "examples": [
+            "例1.1",
+            "例9.12",
+            "例9.11"
+          ],
+          "children": [
+            {
+              "name": "基本公式直接应用",
+              "evidence": "掌握牛顿-莱布尼茨公式"
+            },
+            {
+              "name": "结合换元法或分部积分法",
+              "evidence": "掌握不定积分与定积分的换元积分法与分部积分法"
+            },
+            {
+              "name": "若f(x)在[a,b]上有原函数F(x)，则∫_a^b f(x)dx=F(b)…",
+              "evidence": "(1)若f(x)在[a,b]上有原函数 F(x)，则 $\\int_{a}^{b} f(x) \\mathrm{d}x = F(b) - F(a)$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "换元要三换——①被积函数要换；②积分变量要换；③上下限要换",
+              "evidence": "换元要三换:①被积函数要换:②积分变量要换:③上下限要换",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "∫tan x dx=-ln|cos x|+C；",
+              "evidence": "$\\int \\tan x \\mathrm{d}x = -\\ln \\left| \\cos x \\right| + C ; \\int \\cot x \\mathrm{d}x = \\ln \\left| \\sin x \\right| + C ;$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "∫a^x dx = a^x/ln a + C (a>0且a≠1)",
+              "evidence": "$\\int a^{x} \\mathrm{d}x = \\frac{a^{x}}{\\ln a} + C, a > 0$ 且 $a \\ne 1$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "为 ∫_a^b f = F1(c-0)-F1(a)+F2(b)-F2(c+0)，并补：若…",
+              "evidence": "= & F_{1}(c - 0) - F_{1}(a) + F_{2}(b) - F_{2}(c + 0)",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "∫sec x dx=ln|sec x+tan x|+C；",
+              "evidence": "以下10组公式，要牢记.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "改为 ∫sec x dx=ln|sec x+tan x|+C",
+              "evidence": "\\int \\sec x \\mathrm{d}x = \\ln \\left| \\sec x + \\tan x \\right| + C",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "tan/cot/a^x 公式，并补要点：所有积分计算通过各种方法最后都化为基本积分公式",
+              "evidence": "所有的积分计算通过各种方法最后都化为基本积分公式。",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "对称区间与周期性简化",
+          "evidence": "其中前一项因为被积函数是奇函数，故在对称区间上的积分应为0；后一项因为被积函数在对称区间上是偶函数",
+          "examples": [
+            "例9.16",
+            "例9.13",
+            "例9.18",
+            "例9.17"
+          ],
+          "children": [
+            {
+              "name": "对称区间奇偶性简化",
+              "evidence": "定积分的计算和方法"
+            },
+            {
+              "name": "周期性简化",
+              "evidence": "定积分的计算和方法"
+            }
+          ]
+        },
+        {
+          "name": "点火公式（Wallis）",
+          "evidence": "叫华里士公式，利用华里士公式可快速计算某些特殊的定积分",
+          "examples": [
+            "例9.12",
+            "例9.17",
+            "例9.18"
+          ],
+          "children": [
+            {
+              "name": "公式本体：∫₀^{π/2} sinⁿx dx = (n-1)/n·(n-3)/(n-2)·…·(末项)",
+              "evidence": "华里士公式，利用华里士公式可快速计算某些特殊的定积分",
+              "children": []
+            },
+            {
+              "name": "奇偶规则：n 偶数末项带 π/2；n 奇数末项为 1",
+              "evidence": "n为正偶数.",
+              "children": []
+            },
+            {
+              "name": "推广：∫₀^π 为 2 倍；∫₀^{2π} 按奇偶取 0 或 4 倍",
+              "evidence": "∫₀^π sin⁹x dx = 2∫₀^{π/2} sin⁹x dx",
+              "children": []
+            },
+            {
+              "name": "算例：∫₀^{π/2} sin⁸x dx = 7/8·5/6·3/4·1/2·π/2 = 35π/2…",
+              "evidence": "∫₀^{π/2} sin⁸x dx = 7/8·5/6·3/4·1/2·π/2",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "牛顿-莱布尼茨公式：∫_a^b f(x)dx = F(b) - F(a)，其中F'(x)=f(x)。",
+          "evidence": "掌握牛顿-莱布尼茨公式"
+        },
+        {
+          "level": "primary",
+          "statement": "基本积分公式：∫x^k dx = x^{k+1}/(k+1) + C (k≠-1)；∫1/x dx = ln|x| + C；∫e^x dx = e^x + C；∫sin x dx = -cos x + C；∫cos x dx = sin x + C等。",
+          "evidence": "以下10组公式，要牢记"
+        },
+        {
+          "level": "secondary",
+          "statement": "对称区间上奇函数积分为0，偶函数积分为2倍半区间积分。",
+          "evidence": "定积分的计算和方法"
+        },
+        {
+          "level": "secondary",
+          "statement": "周期函数在任意长度为周期的区间上积分值相同。",
+          "evidence": "定积分的计算和方法"
+        },
+        {
+          "level": "secondary",
+          "statement": "点火公式（Wallis公式）：∫_0^{π/2} sin^n x dx = ∫_0^{π/2} cos^n x dx = (n-1)!!/n!! · π/2 (n为偶数) 或 (n-1)!!/n!! (n为奇数)。",
+          "evidence": "记住2次方即可，3次方不用再记"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "牛顿-莱布尼茨公式与对称性、周期性简化年年必用，Wallis公式为高频小题结论。"
+    },
+    {
+      "name": "变限积分的计算",
+      "evidence": "变限积分的计算和结论",
+      "nodes": [
+        {
+          "name": "变限积分求导公式",
+          "evidence": "我们称上面公式中的x为“求导变量”，t为“积分变量”.当被积函数中只含“积分变量时，才能用求导公式，若被积函数中有“求导变量”x，则必须通过恒等变形(比如变量代换等其移出被积函数，才能使用变限积分求导公式.f(xt)中令xt=u（x当作常量）",
+          "examples": [
+            "例9.20",
+            "例14.6",
+            "例9.19",
+            "例9.21"
+          ],
+          "children": [
+            {
+              "name": "求导公式的直接应用",
+              "evidence": "由于 $y^{\\prime} = \\mathrm{e}^{\\sin^{2}x} \\cdot \\cos x, \\left. y^{\\prime} \\right|_{x = 0} = 1$"
+            },
+            {
+              "name": "被积函数含求导变量时需先移出",
+              "evidence": "若被积函数中有“求导变量”x，则必须通过恒等变形(比如变量代换等其移出被积函数，才能使用变限积分求导公式"
+            },
+            {
+              "name": "求导变量与积分变量的区分",
+              "evidence": "我们称上面公式中的x为“求导变量”，t为“积分变量”.当被积函数中只含“积分变量时，才能用求导公式"
+            },
+            {
+              "name": "若被积函数含求导变量x，通过恒等变形（如变量代换）移出，例如f(xt)中令xt=u（x…",
+              "evidence": "若被积函数中有“求导变量”x，则必须通过恒等变形(比如变量代换等其移出被积函数，才能使用变限积分求导公式.f(xt)中令xt=u（x当作常量）",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "变限积分与极限综合",
+          "evidence": "变限积分求导公式见“四、变限积分的计算”",
+          "examples": [
+            "例9.21"
+          ],
+          "children": [
+            {
+              "name": "结合洛必达法则求极限",
+              "evidence": "变限积分求导公式见“四、变限积分的计算”"
+            }
+          ]
+        },
+        {
+          "name": "变限积分与方程/不等式",
+          "evidence": "变限积分求导公式见“四、变限积分的计算”",
+          "examples": [
+            "例9.19",
+            "例9.21"
+          ],
+          "children": [
+            {
+              "name": "利用变限积分构造方程或不等式",
+              "evidence": "变限积分求导公式见“四、变限积分的计算”"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "变限积分求导公式：$F^{\\prime}(x)=\\frac{\\mathrm{d}}{\\mathrm{d}x}\\left[\\int_{\\varphi_{1}(x)}^{\\varphi_{2}(x)}f(t)\\mathrm{d}t\\right]=f\\left[\\varphi_{2}(x)\\right]\\varphi_{2}^{\\prime}(x)-f\\left[\\varphi_{1}(x)\\right]\\varphi_{1}^{\\prime}(x)$",
+          "evidence": "F^{\\prime}(x)=\\frac{\\mathrm{d}}{\\mathrm{d}x}\\left[\\int_{\\varphi_{1}(x)}^{\\varphi_{2}(x)}f(t)\\mathrm{d}t\\right]=f\\left[\\varphi_{2}(x)\\right]\\varphi_{2}^{\\prime}(x)-f\\left[\\varphi_{1}(x)\\right]\\varphi_{1}^{\\prime}(x)"
+        },
+        {
+          "level": "secondary",
+          "statement": "若被积函数中含有求导变量x，必须通过恒等变形（如变量代换）将其移出被积函数后才能使用变限积分求导公式",
+          "evidence": "若被积函数中有“求导变量”x，则必须通过恒等变形(比如变量代换等其移出被积函数，才能使用变限积分求导公式"
+        }
+      ],
+      "role": "高频",
+      "tier": "must",
+      "tier_reason": "变限积分求导及与极限、方程的综合是考研高频必考题型，几乎年年涉及。"
+    },
+    {
+      "name": "换元与分部积分",
+      "evidence": "掌握不定积分与定积分的换元积分法与分部积分法",
+      "nodes": [
+        {
+          "name": "换元法（三角代换/根式代换）",
+          "evidence": "③根式代换——当被积函数含有根式 $\\sqrt[n]{ax + b}, \\sqrt{\\frac{ax + b}{cx + d}}, \\sqrt{ae^{bx} + c}$ 等时，一般令根式 $\\underline { { \\underline { { \\sqrt { * } } } = \\underline { { t } } } }$",
+          "examples": [
+            "例9.3",
+            "例9.4",
+            "例9.5",
+            "例9.1",
+            "例9.2",
+            "例9.6"
+          ],
+          "children": [
+            {
+              "name": "根式代换：带√且无平方项，整体代换令其为u",
+              "evidence": "带√ 且无平方项，整体代换令其为 u"
+            },
+            {
+              "name": "复杂函数直接代换：令复杂函数等于t",
+              "evidence": "可考虑直接令复杂函数等于t"
+            },
+            {
+              "name": "带√且有平方项，令 x=a sin t 或 x=tan t 消根号』",
+              "evidence": "分析 带 $\\leftharpoondown$ 且有平方项→三角代换 $x = \\tan t \\rightarrow$ 消 $\\leftharpoondown$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "将『三角代换：带√且有平方项，令 x=a sin t 或 x=tan t 消根号』作为正式子…",
+              "evidence": "分析 带 $\\leftharpoondown$ 且有平方项→三角代换 $x = \\tan t \\rightarrow$ 消 $\\leftharpoondown$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "∫u v^{(n+1)}dx = u v^{(n)} - u'v^{(n-1)} +…",
+              "evidence": "$\\int u v ^ { ( n + 1 ) } \\mathrm { d } x = u v ^ { ( n ) } - u ^ { \\prime } v ^ { ( n - 1 ) } + u ^ { n } v ^ { ( n - 2 ) } - \\cdots + ( - 1 ) ^ { n } u ^ { ( n ) } v + ( - 1 ) ^ { n + 1 } \\int u ^ { ( n + 1 ) } v \\mathrm { d } x .$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "当被积函数含 a^x、e^x、ln x、arcsin x、arctan x 等时，可考虑…",
+              "evidence": "⑤复杂函数的直接代换——当被积函数中含有 $a^{x}   ,   \\mathbf{e}^{x}$ ，lnx，arcsin x，arctan x等时，可考虑直接令复杂函数等于t",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "令 u=√(e^x-1)，则 x=ln(1+u²)，dx=2u/(1+u²)du，再…",
+              "evidence": "令 $u = \\sqrt{\\mathrm{e}^{x} - 1}$ ，则 $x = \\ln(1 + u^{2})$ , dx $\\frac{2u}{1 + u^{2}}\\mathrm{d}u$ ，从而",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "分部积分法（选 u 原则）",
+          "evidence": "积分后会“简单”些的函数宜取作ν；微分后会“简单”些的函数宜取作μ",
+          "examples": [
+            "例9.4",
+            "例9.5",
+            "例9.6",
+            "例9.7",
+            "例9.14",
+            "例9.15"
+          ],
+          "children": [
+            {
+              "name": "①P_n(x)e^{kx},P_n(x)sin ax,P_n(x)cos a…",
+              "evidence": "(1) 被积函数为 $P_{n}(x)\\mathrm{e}^{kx}, P_{n}(x)\\sin ax, P_{n}(x)\\cos ax$ 等形式时，一般来说选取 $u = P_{n}(x)$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "∫u v^{(n+1)}dx = uv^{(n)} - u'v^…",
+              "evidence": "$\\int u v ^ { ( n + 1 ) } \\mathrm { d } x = u v ^ { ( n ) } - u ^ { \\prime } v ^ { ( n - 1 ) } + u ^ { n } v ^ { ( n - 2 ) } - \\cdots + ( - 1 ) ^ { n } u ^ { ( n ) } v + ( - 1 ) ^ { n + 1 } \\int u ^ { ( n + 1 ) } v \\mathrm { d } x .$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "∫e^{ax}sin bx dx = (a e^{ax}sin bx - b e^{…",
+              "evidence": "$\\int \\mathrm{e}^{ax} \\sin bx   dx = \\frac{\\left| \\left( \\mathrm{e}^{ax} \\right)^{\\prime} \\left( \\sin bx \\right)^{\\prime} \\right|}{\\mathrm{e}^{ax} \\sin bx} + C = \\frac{a\\mathrm{e}^{ax} \\sin bx - b\\mathrm{e}^{ax} \\cos bx}{a^{2} + b^{2}} + C$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "公式 ∫u dv = uv - ∫v du；",
+              "evidence": "注1这个方法主要适用于求 udν比较困难，而vdu 比较容易的情形.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "被积函数为 P_n(x)ln x、P_n(x)arcsin x、P_n(x)arc…",
+              "evidence": "(3) 被积函数为 $P_{n}(x)\\ln x,\\;P_{n}(x)\\arcsin x,\\;P_{n}(x)\\arctan x$ 等形式时，一般分别选取 $u = \\ln x , u = \\arcsin x , u = \\arctan x.$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "积分后会『简单』些的函数宜取作v；微分后会『简单』些的函数宜取作u；",
+              "evidence": "注2积分后会“简单”些的函数宜取作ν；微分后会“简单”些的函数宜取作μ.故u，ν的选取原则为",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "∫e^{ax}cos bx dx = (a e^{ax}cos bx + b e^{…",
+              "evidence": "$\\int \\mathrm{e}^{ax} \\cos bx   dx = \\frac{\\left| \\left( \\mathrm{e}^{ax} \\right)^{\\prime} \\left( \\cos bx \\right)^{\\prime} \\right|}{\\mathrm{e}^{ax} \\cos bx} + C = \\frac{a\\mathrm{e}^{ax} \\cos bx + b\\mathrm{e}^{ax} \\sin bx}{a^2 + b^2} + C$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "换元法基本公式：$\\int f(x)\\,\\mathrm{d}x \\xlongequal{x=g(u)} \\int f[g(u)]g'(u)\\,\\mathrm{d}u$，要求 $x=g(u)$ 单调可导，最后用反函数回代。",
+          "evidence": "本质:f(x)比较复杂，ぬ V $\\sqrt{ \\mathrm{e}^{x} + 1 } , \\sqrt{ \\frac{2x + 1}{x + 1} } , \\sqrt{ \\frac{1}{\\mathrm{e}^{2x} + 1} }$"
+        },
+        {
+          "level": "primary",
+          "statement": "三角代换：含 $\\sqrt{a^2-x^2}$ 令 $x=a\\sin t$，含 $\\sqrt{a^2+x^2}$ 令 $x=a\\tan t$，含 $\\sqrt{x^2-a^2}$ 令 $x=a\\sec t$，以消去根号。",
+          "evidence": "①三角函数代换——当被积函数含有如下根式时，可作三角函数代换，这里 $a > 0$"
+        },
+        {
+          "level": "primary",
+          "statement": "根式代换：含 $\\sqrt[n]{ax+b}$、$\\sqrt{\\frac{ax+b}{cx+d}}$、$\\sqrt{ae^{bx}+c}$ 等时，令整个根式 $\\sqrt{*}=t$；同时含 $\\sqrt[n]{ax+b}$ 与 $\\sqrt[m]{ax+b}$ 时取 $l=\\mathrm{lcm}(m,n)$，令 $\\sqrt[l]{ax+b}=t$。",
+          "evidence": "③根式代换——当被积函数含有根式 $\\sqrt[n]{ax + b}, \\sqrt{\\frac{ax + b}{cx + d}}, \\sqrt{ae^{bx} + c}$ 等时，一般令根式 $\\underline { { \\underline { { \\sqrt { * } } = \\underline { { t } } } } }$"
+        },
+        {
+          "level": "primary",
+          "statement": "分部积分公式：$\\int u\\,\\mathrm{d}v = uv - \\int v\\,\\mathrm{d}u$，适用于 $u\\,\\mathrm{d}v$ 难算而 $v\\,\\mathrm{d}u$ 易算的情形。",
+          "evidence": "注1这个方法主要适用于求 udν比较困难，而vdu 比较容易的情形."
+        },
+        {
+          "level": "secondary",
+          "statement": "选 $u$ 原则：$P_n(x)\\mathrm{e}^{kx}$、$P_n(x)\\sin ax$、$P_n(x)\\cos ax$ 取 $u=P_n(x)$；$P_n(x)\\ln x$、$P_n(x)\\arcsin x$、$P_n(x)\\arctan x$ 分别取 $u=\\ln x,\\arcsin x,\\arctan x$；$\\mathrm{e}^{ax}\\sin bx$、$\\mathrm{e}^{",
+          "evidence": "(1) 被积函数为 $P_{n}(x)\\mathrm{e}^{kx}, P_{n}(x)\\sin ax, P_{n}(x)\\cos ax$ 等形式时，一般来说选取 $u = P_{n}(x)$"
+        },
+        {
+          "level": "secondary",
+          "statement": "分部积分推广公式：$\\int u v^{(n+1)}\\mathrm{d}x = uv^{(n)} - u'v^{(n-1)} + u''v^{(n-2)} - \\cdots + (-1)^n u^{(n)}v + (-1)^{n+1}\\int u^{(n+1)}v\\,\\mathrm{d}x$。",
+          "evidence": "则有\n\n$$\n\\int u v ^ { ( n + 1 ) } \\mathrm { d } x = u v ^ { ( n ) } - u ^ { \\prime } v ^ { ( n - 1 ) } + u ^ { n } v ^ { ( n - 2 ) } - \\cdots + ( - 1 ) ^ { n } u ^ { ( n ) } v + ( - 1 ) ^ { n + 1 } \\int"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "换元法与分部积分是考研积分计算的核心方法，年年出现于各类题型。"
+    },
+    {
+      "name": "基本积分公式与凑微分",
+      "evidence": "需要牢记，是所有积分计算的基础！！！所有的积分计算通过各种方法最后都化为基本积分公式。",
+      "nodes": [
+        {
+          "name": "基本积分表",
+          "evidence": "$\\int f[g(x)]g^{\\prime}(x)\\mathrm{d}x = \\int f[g(x)]\\mathrm{d}[g(x)] = \\int f(u)\\mathrm{d}u$ →若可以代入基本积分公式，则结束",
+          "examples": [
+            "例9.1",
+            "例9.2",
+            "例9.3",
+            "例9.7",
+            "例9.10",
+            "例9.11"
+          ],
+          "children": [
+            {
+              "name": "∫x^k dx = x^(k+1)/(k+1) + C（k≠−1）",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫1/x dx = ln|x| + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫eˣ dx = eˣ + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫aˣ dx = aˣ/ln a + C（a>0, a≠1）",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫sin x dx = −cos x + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫cos x dx = sin x + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫sec²x dx = tan x + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫csc²x dx = −cot x + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫sec x·tan x dx = sec x + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫csc x·cot x dx = −csc x + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫1/(1+x²) dx = arctan x + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫1/√(1−x²) dx = arcsin x + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫tan x dx = −ln|cos x| + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫cot x dx = ln|sin x| + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫sec x dx = ln|sec x + tan x| + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫csc x dx = ln|csc x − cot x| + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫dx/(x²+a²) = (1/a)arctan(x/a) + C",
+              "evidence": "基本积分表",
+              "children": []
+            },
+            {
+              "name": "∫dx/√(x²±a²) = ln|x+√(x²±a²)| + C",
+              "evidence": "基本积分表",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "幂函数积分公式：$\\int x^k\\mathrm{d}x=\\frac{1}{k+1}x^{k+1}+C\\ (k\\neq -1)$",
+          "evidence": "①∫xkdx = xk+1 +C, k≠−1"
+        },
+        {
+          "level": "primary",
+          "statement": "$\\int \\frac{1}{x}\\mathrm{d}x=\\ln|x|+C$",
+          "evidence": "② $\\int \\frac{1}{x} \\mathrm{d}x = \\ln |x| + C"
+        },
+        {
+          "level": "primary",
+          "statement": "指数函数积分：$\\int a^x\\mathrm{d}x=\\frac{a^x}{\\ln a}+C\\ (a>0,a\\neq1)$，特例 $\\int e^x\\mathrm{d}x=e^x+C$",
+          "evidence": "$\\int a^{x} \\mathrm{d}x = \\frac{a^{x}}{\\ln a} + C, a > 0$ 且 $a \\ne 1$"
+        },
+        {
+          "level": "primary",
+          "statement": "凑微分法：$\\int f[g(x)]g'(x)\\mathrm{d}x=\\int f(u)\\mathrm{d}u$，能代入基本积分公式则结束",
+          "evidence": "$\\int f[g(x)]g^{\\prime}(x)\\mathrm{d}x = \\int f[g(x)]\\mathrm{d}[g(x)] = \\int f(u)\\mathrm{d}u$ →若可以代入基本积分公式，则结束"
+        },
+        {
+          "level": "secondary",
+          "statement": "常用凑微分：$x\\mathrm{d}x=\\frac12\\mathrm{d}(x^2)$，$\\frac{\\mathrm{d}x}{x^2}=\\mathrm{d}(-\\frac1x)$，$\\frac{\\mathrm{d}x}{\\sqrt{x}}=2\\mathrm{d}(\\sqrt{x})$",
+          "evidence": "①由于 $x\\mathrm{d}x = \\frac{1}{2}\\mathrm{d}(x^{2})$"
+        },
+        {
+          "level": "secondary",
+          "statement": "易错：$k=-1$ 不能用幂公式；$\\int a^x\\mathrm{d}x$ 分母是 $\\ln a$ 而非 $a$",
+          "evidence": "$\\int a^{x} \\mathrm{d}x = \\frac{a^{x}}{\\ln a} + C, a > 0$ 且 $a \\ne 1$"
+        }
+      ],
+      "role": "基础",
+      "tier": "must",
+      "tier_reason": "基本积分表是积分计算的地基，几乎每年都以小题或大题步骤形式直接考查。"
+    },
+    {
+      "name": "有理函数与特殊类型积分",
+      "evidence": "会求有理函数、三角函数有理式和简单无理函数的积分",
+      "nodes": [
+        {
+          "name": "有理函数的部分分式分解",
+          "evidence": "会求有理函数、三角函数有理式和简单无理函数的积分",
+          "examples": [
+            "例9.8",
+            "例9.9",
+            "例9.10"
+          ],
+          "children": [
+            {
+              "name": "部分分式分解步骤",
+              "evidence": "会求有理函数、三角函数有理式和简单无理函数的积分"
+            },
+            {
+              "name": "常见分解形式",
+              "evidence": "会求有理函数、三角函数有理式和简单无理函数的积分"
+            },
+            {
+              "name": "①一次单因式→A/(ax+b)；",
+              "evidence": "① $\\mathcal { Q } _ { m } ( x )$ 的一次单因式 $ax + b$ 产生一项 $\\frac{A}{ax + b}$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "设分解式后通分去分母得恒等式，用取特殊值法和比较同次幂系数法求待定系数",
+              "evidence": "在(\\*)式中，令x=1，得 $1 = 2A,\\; A = \\frac{1}{2}$ ；令 $x = 0$ ，得 $0 = A - C,\\ C = \\frac{1}{2}$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "对(Ax+B)/(px²+qx+r)型拆成『凑分子为分母导数』+『配方后arctan』两…",
+              "evidence": "$\\int \\frac{x - 1}{x^{2} + 1}\\mathrm{d}x = \\int \\frac{1}{2}\\frac{2x}{x^{2} + 1}\\mathrm{d}x - \\int \\frac{1}{x^{2} + 1}\\mathrm{d}x = \\frac{1}{2}\\ln(x^{2} + 1) - \\arctan x + C .$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "t=tan(x/2)，sin x=2t/(1+t²)，cos x=(1-t²)/(1+t…",
+              "evidence": "a. 令 $t = \\tan \\frac{x}{2}$ $\\sin x = \\frac{2t}{1 + t^{2}}$ $\\cos x = \\frac{1 - t^{2}}{1 + t^{2}}$ (万能公式)",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "③二次单因式→(Ax+B)/(px²+qx+r)；",
+              "evidence": "③ $\\mathcal { Q } _ { m } ( x )$ 的二次单因式 $px^{2}+qx+r$ 产生一项 $\\frac{Ax + B}{px^{2} + qx + r}$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "如 x²/(x+1)=(x²-1+1)/(x+1)=x-1+1/(x…",
+              "evidence": "比如: $\\frac{x^{2}}{x + 1} = \\frac{x^{2} - 1 + 1}{x + 1} = x - 1 + \\frac{1}{x + 1}$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "三角函数有理式",
+          "evidence": "会求有理函数、三角函数有理式和简单无理函数的积分",
+          "examples": [
+            "例9.1",
+            "例9.2"
+          ],
+          "children": [
+            {
+              "name": "万能代换",
+              "evidence": "会求有理函数、三角函数有理式和简单无理函数的积分"
+            },
+            {
+              "name": "三角恒等变形",
+              "evidence": "会求有理函数、三角函数有理式和简单无理函数的积分"
+            },
+            {
+              "name": "R=-R(-sin,cos)令cos x=t；",
+              "evidence": "若 $R(\\sin x,\\cos x)=R(-\\sin x,-\\cos x)$ ，令 tan x =t 凑微分.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "代换后 ∫R(sin,cos)dx=∫P(t)/Q(t)dt 化为有理函数积分；",
+              "evidence": "$\\int R(\\sin x,\\cos x)\\mathrm{d}x=\\int R\\left(\\frac{2t}{1+t^{2}},\\frac{1-t^{2}}{1+t^{2}}\\right)\\frac{2}{1+t^{2}}\\mathrm{d}t=\\int\\frac{P_{n}(t)}{Q_{m}(t)}\\mathrm{d}t$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "无理函数积分",
+          "evidence": "会求有理函数、三角函数有理式和简单无理函数的积分",
+          "examples": [
+            "例9.3"
+          ],
+          "children": [
+            {
+              "name": "根式代换",
+              "evidence": "当被积函数含有根式 $\\sqrt[n]{ax + b}, \\sqrt{\\frac{ax + b}{cx + d}}, \\sqrt{ae^{bx} + c}$ 等时，一般令根式 $\\underline { { \\underline { { \\sqrt { * } } } = \\underline { { t } } } }$"
+            },
+            {
+              "name": "三角代换",
+              "evidence": "当被积函数含有如下根式时，可作三角函数代换，这里 $a > 0$"
+            },
+            {
+              "name": "倒代换",
+              "evidence": "当被积函数分母的幂次比分子高两次及两次以上时，作倒代换，令 $x = \\frac{1}{t}$"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "分部积分公式：∫u dv = uv - ∫v du",
+          "evidence": "$\\int\\limits_{\\substack{u \\mathrm{d}v \\\\ \\mathrm{ 难算 }}} = uv - \\int v\\mathrm{d}u$"
+        },
+        {
+          "level": "secondary",
+          "statement": "当被积函数含有根式√[n]{ax+b}等时，令根式=t",
+          "evidence": "当被积函数含有根式 $\\sqrt[n]{ax + b}, \\sqrt{\\frac{ax + b}{cx + d}}, \\sqrt{ae^{bx} + c}$ 等时，一般令根式 $\\underline { { \\underline { { \\sqrt { * } } } = \\underline { { t } } } }$"
+        },
+        {
+          "level": "secondary",
+          "statement": "当被积函数分母的幂次比分子高两次及两次以上时，作倒代换x=1/t",
+          "evidence": "当被积函数分母的幂次比分子高两次及两次以上时，作倒代换，令 $x = \\frac{1}{t}$"
+        }
+      ],
+      "role": "高频",
+      "tier": "high",
+      "tier_reason": "部分分式与三角有理式积分两三年一考，无理函数积分相对低频但常作为综合题一环。"
+    }
+  ]
+}

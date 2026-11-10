@@ -1,0 +1,46 @@
+﻿# secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# node
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# runtime data / student privacy
+backend/data/
+backend/runs/
+backend/logs/
+data/
+runs/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+backend/runs/*.jsonl
+runs/*.jsonl
+
+# logs / os
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# parent repo .gitignore ignores *.docx; keep the handbook Word file
+!docs/handbook/*.docx
+

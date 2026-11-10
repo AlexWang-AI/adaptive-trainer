@@ -1,0 +1,735 @@
+{
+  "lecture": 16,
+  "title": "无穷级数",
+  "blocks": [
+    {
+      "name": "幂级数",
+      "evidence": "若 $\\sum_{n = 0}^{\\infty}u_{_{n}}(x)$ 的一般项 $u_{n}(x)$ 是x的n次幂函数，即 $u_{n}(x) = a_{n}x^{n}$ 或 $u_{n}(x)=a_{n}(x-x_{0})^{n}$ ，则称 $\\sum_{n = 0}^{\\infty}u_{_{n}}(x)$ 为幂级数",
+      "nodes": [
+        {
+          "name": "收敛半径与收敛区间",
+          "evidence": "定义3 若R≥0满足条件:①当 $\\left| x \\right| { < } R$ 时， $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 绝对收敛；②当 $\\mid x \\mid > R$ 时， $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 发散.则称R为幂级数 $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 的收敛半径，区间(-R，R)称为 $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 的收敛区间.",
+          "examples": [
+            "例16.22",
+            "例16.23",
+            "例16.24",
+            "例16.25",
+            "例16.26",
+            "例16.27"
+          ],
+          "children": [
+            {
+              "name": "阿贝尔定理求收敛半径",
+              "evidence": "当幂级数 $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 在点 $x = x_{1}(x_{1} \\neq 0)$ 处收敛时，对于满足 $\\boxed{x} < \\boxed{x_1}$ 的一切x，幂级数$\\diamond ( - \\left|   x _ { \\parallel }   \\right| ,   \\left|   x _ { \\parallel }   \\right| )$ 区间内绝对收敛；当幂级数 $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 在点 $x = x_{2}(x_{2} \\neq 0)$ 处发散时，对于满足 $\\left| x \\right| > \\left| x_{2} \\right|$ 的一切x，幂级数发散."
+            },
+            {
+              "name": "端点敛散性单独判别",
+              "evidence": "在两个端点R和-R处的敛散性如何呢？阿贝尔没有讲就去世了"
+            },
+            {
+              "name": "具体型级数求收敛域",
+              "evidence": "关于收敛域，我们会遇到两种题:①具体型级数的收敛域；②抽象型问题，已知一个级数的收敛域，去推导另外一个级数的收敛域，这两个级数之间是有关系的，要通过关系转化找到答案."
+            },
+            {
+              "name": "抽象型级数收敛域推导",
+              "evidence": "根据阿贝尔定理，已知 $\\sum_{n = 0}^{\\infty}a_{n}(x - x_{0})^{n}$ 在某点 $x_{1}(x_{1} \\neq x_{0})$ 的敛散性，确定该幂级数的收敛半径收敛区间关于 $X _ { 0 }$ 对称。 $x _ { 0 }$ 为收敛中心点可分为以下三种情况"
+            },
+            {
+              "name": "补子节点『比值/根值法为充分条件，极限不存在时分a_{2k}与a_{2k+1}讨论』",
+              "evidence": "注2上述(1)，(2)的方法只是充分的，即当 $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 的收敛半径存在时，极限 $\\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|$ $\\lim_{n \\to \\infty} \\sqrt[n]{|a_n|}$可能不存在 分 $a _ { 2 k }$ 与 $a _ { 2 k + 1 }$ 两种情况讨论",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "L3补『端点处比值/根值判别法极限为1而失效，故只能代入按数项级数判别』",
+              "evidence": "比值判别法里面，有$\\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n} \\left\\{ \\begin{aligned} &< 1, \\\\ &= 1, \\\\ &> 1, \\end{aligned} \\right.$ 收敛， 判别法失效，发散.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "L3补『①找R⇒确定(-R,R)，中心不在原点平移；②单独讨论-R,R；",
+              "evidence": "①找R⇒中心点在原点时，确定(-R，R)，若中心点不在原点，平移即可；②看-R，R(端点情况，单独讨论）",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "幂级数的运算（逐项求导/积分）",
+          "evidence": "若 $\\sum_{n = 0}^{\\infty}u_{_{n}}(x)$ 的一般项 $u_{n}(x)$ 是x的n次幂函数，即 $u_{n}(x) = a_{n}x^{n}$ 或 $u_{n}(x)=a_{n}(x-x_{0})^{n}$ ，则称 $\\sum_{n = 0}^{\\infty}u_{_{n}}(x)$ 为幂级数",
+          "examples": [
+            "例16.35",
+            "例16.24",
+            "例16.26",
+            "例16.28",
+            "例16.30",
+            "例16.31"
+          ],
+          "children": [
+            {
+              "name": "逐项求导保持收敛半径",
+              "evidence": "收敛点往外扩定可以找到一个确定的点R，使得级数在(-R，R)内绝对收敛，在 $(-\\infty, -R)$发散点往里收$(R, +\\infty)$ 上发散."
+            },
+            {
+              "name": "逐项积分保持收敛半径",
+              "evidence": "收敛点往外扩定可以找到一个确定的点R，使得级数在(-R，R)内绝对收敛，在 $(-\\infty, -R)$发散点往里收$(R, +\\infty)$ 上发散."
+            }
+          ]
+        },
+        {
+          "name": "和函数的求法",
+          "evidence": "若要让无数个函数加起来等于确定的某个函数，那么要先确定这个“某个函数”的形式.",
+          "examples": [
+            "例16.28",
+            "例16.29",
+            "例16.30",
+            "例16.31",
+            "例16.11",
+            "例16.12"
+          ],
+          "children": [
+            {
+              "name": "利用逐项求导求和函数",
+              "evidence": "收敛点往外扩定可以找到一个确定的点R，使得级数在(-R，R)内绝对收敛，在 $(-\\infty, -R)$发散点往里收$(R, +\\infty)$ 上发散."
+            },
+            {
+              "name": "利用逐项积分求和函数",
+              "evidence": "收敛点往外扩定可以找到一个确定的点R，使得级数在(-R，R)内绝对收敛，在 $(-\\infty, -R)$发散点往里收$(R, +\\infty)$ 上发散."
+            }
+          ]
+        },
+        {
+          "name": "函数展开成幂级数（泰勒/间接法）",
+          "evidence": "一个函数如果写成它的幂级数的形式，跟这个泰勒公式展开后的泰勒级数是什么关系呢？我们下一个定论:它们是完全一样的.这就是“泰勒展开式的唯一性”.",
+          "examples": [
+            "例16.36",
+            "例16.37"
+          ],
+          "children": [
+            {
+              "name": "泰勒展开唯一性",
+              "evidence": "在收敛的条件下，把一个函数展开成幂函数形式，它的展开形式是唯一的，无论是在 $x = 0$ 处展开，还是在 $x = x_{0}$ 处展开，只要确定了展开点，那么展开表达式是具有唯一性的，不管用什么方法展开."
+            },
+            {
+              "name": "系数公式",
+              "evidence": "于是，这里的 $a_{n} = \\frac{f^{(n)}(x_{0})}{n!}$ (在 $x = x_{0}$ 处展开), $a_{n} = \\frac{f^{(n)}(0)}{n!}$ (在x=0处展开)"
+            },
+            {
+              "name": "间接法展开",
+              "evidence": "一个函数只要它是任意阶可导的，就可以写成如下形式"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "阿贝尔定理：若幂级数在x1处收敛，则对满足|x|<|x1|的x绝对收敛；若在x2处发散，则对满足|x|>|x2|的x发散。",
+          "evidence": "当幂级数 $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 在点 $x = x_{1}(x_{1} \\neq 0)$ 处收敛时，对于满足 $\\boxed{x} < \\boxed{x_1}$ 的一切x，幂级数$\\diamond ( - \\left|   x _ { \\parallel }   \\right| ,   \\left|   x _ { \\parallel }   \\right| )$ 区间内绝对收敛；当幂级数 $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 在点 $x = x_{2}(x_{2} \\neq 0)$ 处发散时，对于满足 $\\left| x \\right| > \\left| x_{2} \\right|$ 的一切x，幂级数发散."
+        },
+        {
+          "level": "primary",
+          "statement": "收敛半径定义：若R≥0满足①当|x|<R时绝对收敛；②当|x|>R时发散，则R为收敛半径，(-R,R)为收敛区间。",
+          "evidence": "定义3 若R≥0满足条件:①当 $\\left| x \\right| { < } R$ 时， $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 绝对收敛；②当 $\\mid x \\mid > R$ 时， $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 发散.则称R为幂级数 $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 的收敛半径，区间(-R，R)称为 $\\sum_{n = 0}^{\\infty}a_{n}x^{n}$ 的收敛区间."
+        },
+        {
+          "level": "primary",
+          "statement": "泰勒展开唯一性：在收敛条件下，函数展开成幂级数的形式唯一，系数由泰勒公式确定。",
+          "evidence": "在收敛的条件下，把一个函数展开成幂函数形式，它的展开形式是唯一的，无论是在 $x = 0$ 处展开，还是在 $x = x_{0}$ 处展开，只要确定了展开点，那么展开表达式是具有唯一性的，不管用什么方法展开."
+        },
+        {
+          "level": "secondary",
+          "statement": "若幂级数在x1处收敛，则收敛半径R≥|x1-x0|；若在x1处发散，则R≤|x1-x0|。",
+          "evidence": "(1)若在 $x _ { 1 }$ 处收敛，则收敛半径 $R \\geqslant \\left| x_{1} - x_{0} \\right|$ .假设 $R < \\left| x_{1} - x_{0} \\right|$ 则由阿贝尔定理， $x _ { 1 }$ 处发散， $A \\bot B R \\geq \\left| x _ { 1 } - x _ { 0 } \\right|$ 7 (2) 若在 $x _ { 1 }$ 处发散，则收敛半径 $R \\leqslant \\left| x_{1} - x_{0} \\right|$"
+        },
+        {
+          "level": "secondary",
+          "statement": "端点处的敛散性必须单独判别，不能由阿贝尔定理确定。",
+          "evidence": "从此以后，再也没有任何方法告诉我们两个端点的敛散性情况了，只能将这两个端点代入级数中，按数项级数的方法认认真真地判断，而这两个端点是考研数学中必考无疑的，这就是我们追悔莫及的原因"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "收敛半径、和函数及函数展开是级数大题的核心，几乎年年考。"
+    },
+    {
+      "name": "数项级数的概念与性质",
+      "evidence": "叫作无穷级数，简称级数，其中 $u _ { n }$ 叫作该级数的通项.",
+      "nodes": [
+        {
+          "name": "级数收敛与和的定义（部分和极限）",
+          "evidence": "若 $\\lim_{n \\to \\infty} S_n = S$ (一个存在的有限数)，则称 $\\sum_{n = 1}^{\\infty}u_{n}$ 收敛，并称S为该收敛级数 $\\sum_{n = 1}^{\\infty}u_{n}$ 的和；若 $\\lim_{n \\to \\infty} S_n$ 不存在，则称 $\\sum_{n = 1}^{\\infty}u_{n}$ 发散.",
+          "examples": [
+            "例16.1",
+            "例16.2",
+            "例16.3"
+          ],
+          "children": [
+            {
+              "name": "求部分和数列的极限判定敛散性",
+              "evidence": "①写 $S_{n}=u_{1}+u_{2}+\\cdots+u_{n}$ 叫数项级数的前n项和 ②求 $\\operatorname* { l i m } _ { n \\to \\infty } S _ { n }$"
+            },
+            {
+              "name": "几何级数的敛散性判别",
+              "evidence": "当 $\\left| q \\right| < 1$ 时， $\\sum_{n = 1}^{\\infty}aq^{n - 1}$ 收敛: 反之，当 $\\left| q \\right| \\geqslant 1$ 时， $\\sum_{n = 1}^{\\infty}aq^{n - 1}$ 是发散的"
+            },
+            {
+              "name": "利用部分和性质证明收敛（如奇偶子列）",
+              "evidence": "故 $\\lim_{n \\to \\infty} S_{2n} = \\lim_{n \\to \\infty} S_{2n+1} = S$ .所以 $\\lim_{n \\to \\infty} S_n = S$ ，即 $\\sum_{n = 1}^{\\infty}u_{n} = S$"
+            },
+            {
+              "name": "∑(u_{n+1}-u_n) 收敛 ⇔ lim u_n 存在，证明用 S_n=u_…",
+              "evidence": "例16.1 证明: $\\sum_{n = 1}^{\\infty}(u_{n + 1} - u_{n})$ 收敛 $\\Leftrightarrow \\lim_{n \\to \\infty} u_n$ 存在.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "q>1 时 q^n→+∞；q=1 时 S_n=na 极限不存在；",
+              "evidence": "若 $q = - 1$ ，则 $\\sum_{n = 1}^{\\infty}aq^{n - 1} = a + ( - a) + a + ( - a) + \\cdots$ ，这是一个十分著名且有趣的级数",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "若 ∑u_n、∑v_n 均收敛，则对任意常数 a,b，∑(au_n±bv_n) 收敛且…",
+              "evidence": "性质1 若级数 $\\sum_{n = 1}^{\\infty}u_{n}, \\sum_{n = 1}^{\\infty}v_{n}$ 均收敛，则任给常数a，b，有 $\\sum_{n = 1}^{\\infty}(au_{n} \\pm bv_{n})$ 也收敛",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "收敛的必要条件（通项趋于 0）",
+          "evidence": "★性质4 若 $\\sum_{n = 1}^{\\infty}u_{n}$ 收敛，则 $\\lim_{n \\to \\infty} u_n = 0$",
+          "examples": [
+            "例16.13",
+            "例16.4"
+          ],
+          "children": [
+            {
+              "name": "利用通项极限判断发散",
+              "evidence": "其逆否命题:若 $\\lim_{n \\to \\infty} u_n \\neq 0$ $\\sum_{n = 1}^{\\infty}u_{n}$ 必发散"
+            },
+            {
+              "name": "通项趋于0不保证收敛（反例）",
+              "evidence": "即使$\\lim_{n \\to \\infty} u_{n} = 0$ 也不能保证 $\\sum_{n = 1}^{\\infty}u_{n}$ 收敛，见例 16.13."
+            },
+            {
+              "name": "利用 $u_n=S_n-S_{n-1}$ 转化问题",
+              "evidence": "注2 $u _ { n }$ 的妙用:当n>1时， $u_{n} = S_{n} - S_{n - 1}$ ."
+            }
+          ]
+        },
+        {
+          "name": "基本性质（线性/去括号/加括号）",
+          "evidence": "性质1 若级数 $\\sum_{n = 1}^{\\infty}u_{n}, \\sum_{n = 1}^{\\infty}v_{n}$ 均收敛，则任给常数a，b，有 $\\sum_{n = 1}^{\\infty}(au_{n} \\pm bv_{n})$ 也收敛",
+          "examples": [
+            "例16.17",
+            "例16.20"
+          ],
+          "children": [
+            {
+              "name": "线性运算性质",
+              "evidence": "记忆口诀:若 $\\sum_{n = 1}^{\\infty}u_{n} , \\quad \\sum_{n = 1}^{\\infty}v_{n}$ 均收敛，则其线性组合也收敛"
+            },
+            {
+              "name": "收敛±发散、发散±发散的敛散性",
+              "evidence": "注(1)收敛±发散=发散；(2)发散±发散=不一定."
+            },
+            {
+              "name": "改变有限项不影响敛散性",
+              "evidence": "★性质2 改变级数任意有限项，不会改变该级数的敛散性"
+            },
+            {
+              "name": "加括号对敛散性的影响",
+              "evidence": "★性质3 收敛级数的项任意加括号后所得的新级数仍收敛，且其和不变."
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "级数收敛的定义：部分和数列的极限存在且有限。",
+          "evidence": "若 $\\lim_{n \\to \\infty} S_n = S$ (一个存在的有限数)，则称 $\\sum_{n = 1}^{\\infty}u_{n}$ 收敛，并称S为该收敛级数 $\\sum_{n = 1}^{\\infty}u_{n}$ 的和；若 $\\lim_{n \\to \\infty} S_n$ 不存在，则称 $\\sum_{n = 1}^{\\infty}u_{n}$ 发散."
+        },
+        {
+          "level": "primary",
+          "statement": "几何级数 $\\sum_{n=1}^{\\infty} aq^{n-1}$ 当 $|q|<1$ 时收敛于 $\\frac{a}{1-q}$，当 $|q|\\ge 1$ 时发散。",
+          "evidence": "$\\left\\{ \\sum_{n = 1}^{\\infty} a q^{n - 1} \\right\\}$ 发散， 收敛，其和为 $\\frac{a}{1 - q}, \\quad |q| < 1,$ $\\left| q \\right| { \\geqslant } 1 ,$ 其中 $a \\neq 0$"
+        },
+        {
+          "level": "primary",
+          "statement": "级数收敛的必要条件是通项趋于0。",
+          "evidence": "★性质4 若 $\\sum_{n = 1}^{\\infty}u_{n}$ 收敛，则 $\\lim_{n \\to \\infty} u_n = 0$"
+        },
+        {
+          "level": "primary",
+          "statement": "收敛级数满足线性运算性质。",
+          "evidence": "性质1 若级数 $\\sum_{n = 1}^{\\infty}u_{n}, \\sum_{n = 1}^{\\infty}v_{n}$ 均收敛，则任给常数a，b，有 $\\sum_{n = 1}^{\\infty}(au_{n} \\pm bv_{n})$ 也收敛，且 $\\sum_{n = 1}^{\\infty}(au_{n} \\pm bv_{n}) = a\\sum_{n = 1}^{\\infty}u_{n} \\pm b\\sum_{n = 1}^{\\infty}v_{n}$"
+        },
+        {
+          "level": "primary",
+          "statement": "改变级数任意有限项不改变其敛散性。",
+          "evidence": "★性质2 改变级数任意有限项，不会改变该级数的敛散性"
+        },
+        {
+          "level": "primary",
+          "statement": "收敛级数加括号后仍收敛且和不变。",
+          "evidence": "★性质3 收敛级数的项任意加括号后所得的新级数仍收敛，且其和不变."
+        },
+        {
+          "level": "secondary",
+          "statement": "若加括号后所得级数发散，则原级数发散。",
+          "evidence": "(1)若加括号后得到的新级数发散，则原级数必然发散(逆否命题)."
+        },
+        {
+          "level": "secondary",
+          "statement": "若加括号后所得级数收敛，不能断言原级数收敛。",
+          "evidence": "(2)若加括号后得到的新级数收敛，不能断言原级数一定收敛.如级数 $\\sum_{n = 1}^{\\infty} (-1)^{n - 1} a$ 其中常数$a \\neq 0$ ，若从第一项起，两项两项地加括号，可得 $(a - a) + (a - a) + \\cdots = 0$ 收敛，但原级数是发散的."
+        },
+        {
+          "level": "secondary",
+          "statement": "通项趋于0不是级数收敛的充分条件。",
+          "evidence": "即使$\\lim_{n \\to \\infty} u_{n} = 0$ 也不能保证 $\\sum_{n = 1}^{\\infty}u_{n}$ 收敛，见例 16.13."
+        },
+        {
+          "level": "secondary",
+          "statement": "收敛±发散=发散；发散±发散=不一定。",
+          "evidence": "注(1)收敛±发散=发散；(2)发散±发散=不一定."
+        }
+      ],
+      "role": "核心",
+      "tier": "must",
+      "tier_reason": "级数敛散性定义与必要条件几乎年年以选择或解答形式出现。"
+    },
+    {
+      "name": "交错级数与任意项级数",
+      "evidence": "若级数各项正负相间出现，则称这样的级数为交错级数",
+      "nodes": [
+        {
+          "name": "莱布尼茨判别法",
+          "evidence": "注(1)若 $u_{n} = f(n)$ ，且f(·)可导，则可连续化为f(x)，通过 $f^{\\prime}(x)$ 的正负，判别 $u _ { n }$ 的单调性(2)莱布尼茨判别法只是充分条件，不是必要条件.“瓦解敌人，各个击破”",
+          "examples": [
+            "例16.14",
+            "例16.15",
+            "例16.16"
+          ],
+          "children": [
+            {
+              "name": "判别单调不增的方法",
+              "evidence": "a.将 $u_{_{n + 1}} - u_{_n}$ 与0比较，或将 $\\frac{u_{n + 1}}{u_{n}}$ 与1比较: b $u_{n}=f(n) \\to f(x)$ ，然后判断f'(x)的正负，从而得到 $\\{ u _ { _ n } \\}$ 的单调性."
+            },
+            {
+              "name": "莱布尼茨判别法仅是充分条件",
+              "evidence": "莱布尼茨判别法只是充分条件，不是必要条件."
+            },
+            {
+              "name": "不满足单调性时拆项处理",
+              "evidence": "将原级数“拆”开，瓦解敌人，各个击破，不失为好的办法"
+            },
+            {
+              "name": "$\\sum(-1)^n\\frac{2+(-1)^n}{2^n}$ 中u_n不单调…",
+              "evidence": "不满足①，但交错级数$\\sum_{n = 1}^{\\infty}( - 1)^{n}\\frac{2 + ( - 1)^{n}}{2^{n}} = \\sum_{n = 1}^{\\infty}\\frac{1 + ( - 1)^{n} \\cdot 2}{2^{n}} = \\sum_{n = 1}^{\\infty}\\left\\lbrack \\frac{1}{2^{n}} + \\frac{( - 1)^{n}}{2^{n - 1}} \\right\\rbrack$ 为两个收敛级数之和，故交错级数收敛",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "莱布尼茨：uₙ 单调递减且 →0，则交错级数收敛，且 |S−Sₙ| ≤ uₙ₊₁",
+              "evidence": "莱布尼茨",
+              "children": []
+            },
+            {
+              "name": "绝对收敛 ⇒ 收敛；条件收敛时不能随意重排",
+              "evidence": "绝对收敛",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "绝对收敛与条件收敛",
+          "evidence": "定义1 设 $\\sum _ { n = 1 } ^ { \\infty } u _ { n }$ 为任意项级数，若 $\\sum_{n = 1}^{\\infty}\\left| u_{n} \\right|$ 收敛，则称 $\\sum_{n = 1}^{\\infty}u_{n}$ 绝对收敛.",
+          "examples": [
+            "例16.14",
+            "例16.17",
+            "例16.18",
+            "例16.19",
+            "例16.20",
+            "例16.21"
+          ],
+          "children": [
+            {
+              "name": "绝对收敛的判别",
+              "evidence": "若 $\\sum_{n = 1}^{\\infty}|u_{n}|$ 收敛（即任意项级数 $\\sum_{n = 1}^{\\infty}u_{n}$ 绝对收敛)，则 $\\sum_{n = 1}^{\\infty}u_{n}$ 必收敛"
+            },
+            {
+              "name": "条件收敛的判别",
+              "evidence": "定义2 设 $\\sum_{n = 1}^{\\infty}u_{n}$ 为任意项级数，若 $\\sum_{n = 1}^{\\infty}u_{n}$ 收敛，但 $\\sum_{n = 1}^{\\infty} \\left| u_{n} \\right|$ 发散，则称 $\\sum_{n = 1}^{\\infty}u_{n}$ 条件收敛"
+            },
+            {
+              "name": "经典例子：交错调和级数",
+              "evidence": "级数 $\\sum_{n = 1}^{\\infty} (-1)^{n - 1} \\bullet \\frac{1}{n}$ 叫作交错调和级数，这是一个经典且常用的例子，请考生知悉"
+            },
+            {
+              "name": "u_n=1/n，1/n>1/(n+1)单调不增且lim 1/n=0，由莱布尼茨判别法…",
+              "evidence": "显然有 $\\frac{1}{n} > \\frac{1}{n + 1}$ ，即 $u_{_n} > u_{_{n+1}}$ ，则 $\\left\\{ u _ { n } \\right\\}$ 单调不增，且有 $\\lim_{n \\to \\infty} u_n = \\lim_{n \\to \\infty} \\frac{1}{n} = 0$ ，故由莱布尼茨判别法知，该级数收敛.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "莱布尼茨：uₙ 单调递减且 →0，则交错级数收敛，且 |S−Sₙ| ≤ uₙ₊₁",
+              "evidence": "莱布尼茨",
+              "children": []
+            },
+            {
+              "name": "绝对收敛 ⇒ 收敛；条件收敛时不能随意重排",
+              "evidence": "绝对收敛",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "绝对值判别法",
+          "evidence": "给任意项级数的每一项加上绝对值，写成 $\\sum_{n = 1}^{\\infty}\\left| u_{n} \\right|$ ，这样就使得 $\\left| u_{n} \\right| \\geqslant 0$ 成了正项级数，它叫作原级数$\\sum_{n = 1}^{\\infty}u_{n}$ 的绝对值级数.",
+          "examples": [
+            "例16.16"
+          ],
+          "children": [
+            {
+              "name": "转化为正项级数判别",
+              "evidence": "绝对值级数就自然站到了正项级数的队伍中，前面讲过的六种正项级数的敛散性判别法均可派上用场了."
+            },
+            {
+              "name": "绝对收敛推原级数收敛",
+              "evidence": "若 $\\sum_{n = 1}^{\\infty}|u_{n}|$ 收敛（即任意项级数 $\\sum_{n = 1}^{\\infty}u_{n}$ 绝对收敛)，则 $\\sum_{n = 1}^{\\infty}u_{n}$ 必收敛"
+            },
+            {
+              "name": "绝对值级数 $\\sum|u_n|$ 为正项级数，前面讲过的六种正项级数判别法均可使用",
+              "evidence": "绝对值级数就自然站到了正项级数的队伍中，前面讲过的六种正项级数的敛散性判别法均可派上用场了.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "莱布尼茨：uₙ 单调递减且 →0，则交错级数收敛，且 |S−Sₙ| ≤ uₙ₊₁",
+              "evidence": "莱布尼茨",
+              "children": []
+            },
+            {
+              "name": "绝对收敛 ⇒ 收敛；条件收敛时不能随意重排",
+              "evidence": "绝对收敛",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "莱布尼茨判别法：若交错级数 $\\sum_{n=1}^{\\infty}(-1)^{n-1}u_n$（$u_n>0$）满足 $\\{u_n\\}$ 单调不增且 $\\lim_{n\\to\\infty}u_n=0$，则级数收敛。",
+          "evidence": "给出一交错级数 $\\sum_{n = 1}^{\\infty}( - 1)^{n - 1}u_{n},\\;u_{n} > 0,\\;n = 1,\\;2,\\cdots$ ，若① $\\{ u _ { n } \\}$ 单调不增； $\\lim_{n \\to \\infty} u_{n} = 0$ ，则该级数收敛."
+        },
+        {
+          "level": "primary",
+          "statement": "绝对收敛定义：若 $\\sum_{n=1}^{\\infty}|u_n|$ 收敛，则称 $\\sum_{n=1}^{\\infty}u_n$ 绝对收敛。",
+          "evidence": "定义1 设 $\\sum _ { n = 1 } ^ { \\infty } u _ { n }$ 为任意项级数，若 $\\sum_{n = 1}^{\\infty}\\left| u_{n} \\right|$ 收敛，则称 $\\sum_{n = 1}^{\\infty}u_{n}$ 绝对收敛."
+        },
+        {
+          "level": "primary",
+          "statement": "条件收敛定义：若 $\\sum_{n=1}^{\\infty}u_n$ 收敛，但 $\\sum_{n=1}^{\\infty}|u_n|$ 发散，则称 $\\sum_{n=1}^{\\infty}u_n$ 条件收敛。",
+          "evidence": "定义2 设 $\\sum_{n = 1}^{\\infty}u_{n}$ 为任意项级数，若 $\\sum_{n = 1}^{\\infty}u_{n}$ 收敛，但 $\\sum_{n = 1}^{\\infty} \\left| u_{n} \\right|$ 发散，则称 $\\sum_{n = 1}^{\\infty}u_{n}$ 条件收敛"
+        },
+        {
+          "level": "secondary",
+          "statement": "绝对收敛必收敛：若 $\\sum_{n=1}^{\\infty}|u_n|$ 收敛，则 $\\sum_{n=1}^{\\infty}u_n$ 必收敛。",
+          "evidence": "若 $\\sum_{n = 1}^{\\infty}|u_{n}|$ 收敛（即任意项级数 $\\sum_{n = 1}^{\\infty}u_{n}$ 绝对收敛)，则 $\\sum_{n = 1}^{\\infty}u_{n}$ 必收敛"
+        },
+        {
+          "level": "secondary",
+          "statement": "交错调和级数 $\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{1}{n}$ 条件收敛。",
+          "evidence": "级数 $\\sum_{n = 1}^{\\infty} (-1)^{n - 1} \\bullet \\frac{1}{n}$ 叫作交错调和级数，这是一个经典且常用的例子，请考生知悉"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "莱布尼茨判别法与绝对/条件收敛判定为高频必考题型。"
+    },
+    {
+      "name": "正项级数的判别法",
+      "evidence": "正项级数 $\\sum_{n = 1}^{\\infty}u_{n}$ 收敛的充分必要条件是它的部分和数列 $\\left\\{ S_{n} \\right\\}$ 有界.",
+      "nodes": [
+        {
+          "name": "比较判别法（含极限形式）",
+          "evidence": "这个结论十分重要，在比较判别法中，常选取比较对象为 $\\sum_{n = 1}^{\\infty}\\frac{1}{n^{p}}$ 或者 $\\sum_{n = 0}^{\\infty}aq^{n}$ 在以后的多种场合都会派上用场，考生需牢记",
+          "examples": [
+            "例16.4",
+            "例16.5",
+            "例16.6",
+            "例16.3",
+            "例16.7",
+            "例16.8"
+          ],
+          "children": [
+            {
+              "name": "比较判别法的基本形式（不等式比较）",
+              "evidence": "如果从某项起有 $u_{n} \\leq v_{n}$ 成立，则①若 $\\sum_{n = 1}^{\\infty} \\nu_{n}$ 收敛，则 $\\sum_{n = 1}^{\\infty}u_{n}$ 也收敛；②若 $\\sum_{n = 1}^{\\infty}u_{n}$ 发散，则 $\\sum _ { n = 1 } ^ { \\infty } \\nu _ { n }$ 也发散."
+            },
+            {
+              "name": "比较判别法的极限形式（无穷小比阶）",
+              "evidence": "给出两个正项级数 $\\sum_{n = 1}^{\\infty}u_{n}$ 和 $\\sum_{n = 1}^{\\infty} v_{n}, v_{n} \\neq 0 (n = 1, 2, \\cdots)$ ，且 $\\lim_{n \\to \\infty} \\frac{u_n}{v_n} = A$"
+            },
+            {
+              "name": "常用比较对象：p级数或几何级数",
+              "evidence": "在比较判别法中，常选取比较对象为 $\\sum_{n = 1}^{\\infty}\\frac{1}{n^{p}}$ 或者 $\\sum_{n = 0}^{\\infty}aq^{n}$"
+            },
+            {
+              "name": "易错点：前有限项不影响敛散性",
+              "evidence": "前有限项不影响敛散性"
+            },
+            {
+              "name": "单调减少时 u_{n+1}²≤un·u_{n+1}，故 u_{n+1}≤√(…",
+              "evidence": "由 $\\left\\{ u _ { n } \\right\\}$ 单调减少可得 $u_{n + 1} \\leq u_{n}$ ，两边同时乘以 $u _ { n + 1 }$ ，进而可得 $u_{n + 1}^{2} \\leqslant u_{n}u_{n + 1}$ ，于是 $u _ { { n + 1 } }   \\leqslant$ $\\sqrt{u_{n}u_{n+1}}$ .因为 $\\sum _ { n = 1 } ^ { \\infty } { \\sqrt { u _ { n } u _ { n + 1 } } }$ 收敛，所以 $\\sum_{n = 1}^{\\infty}u_{n}$ 收",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "p 级数与几何级数结论",
+          "evidence": "P级数 $\\sum_{n = 1}^{\\infty}\\frac{1}{n^{p}}.$ 发散， $p \\leq 1 ,$ 对比记忆p积分 $\\int_{1}^{+\\infty} \\frac{1}{x^p}   dx \\left\\{ \\begin{aligned} & \\quad  收敛 , \\quad p \\leq 1 \\\\ & \\quad  收敛 , \\quad p > 1 \\end{aligned} \\right.$收敛， $p > 1 .$",
+          "examples": [
+            "例16.4",
+            "例16.7",
+            "例16.8",
+            "例16.9",
+            "例16.21"
+          ],
+          "children": [
+            {
+              "name": "p级数的敛散性结论",
+              "evidence": "P级数 $\\sum_{n = 1}^{\\infty}\\frac{1}{n^{p}}.$ 发散， $p \\leq 1 ,$ 对比记忆p积分 $\\int_{1}^{+\\infty} \\frac{1}{x^p}   dx \\left\\{ \\begin{aligned} & \\quad  收敛 , \\quad p \\leq 1 \\\\ & \\quad  收敛 , \\quad p > 1 \\end{aligned} \\right.$收敛， $p > 1 .$"
+            },
+            {
+              "name": "几何级数的敛散性结论",
+              "evidence": "在比较判别法中，常选取比较对象为 $\\sum_{n = 1}^{\\infty}\\frac{1}{n^{p}}$ 或者 $\\sum_{n = 0}^{\\infty}aq^{n}$"
+            },
+            {
+              "name": "调和级数发散",
+              "evidence": "于是 $\\sum_{n = 1}^{\\infty}\\frac{1}{n}$ 叫作调和级数"
+            }
+          ]
+        },
+        {
+          "name": "比值判别法（达朗贝尔）",
+          "evidence": "比值判别法",
+          "children": [
+            {
+              "name": "ρ<1 收敛，ρ>1 发散，ρ=1 失效",
+              "evidence": "比值判别法",
+              "children": []
+            }
+          ],
+          "examples": [
+            "例16.9",
+            "例16.10"
+          ],
+          "no_example_reason": "教材本节例题以综合判敛为主，已挂最近两道"
+        },
+        {
+          "name": "根值判别法（柯西）",
+          "evidence": "根值判别法",
+          "children": [
+            {
+              "name": "ρ<1 收敛，ρ>1 发散，ρ=1 失效",
+              "evidence": "根值判别法",
+              "children": []
+            }
+          ],
+          "examples": [
+            "例16.9",
+            "例16.10"
+          ],
+          "no_example_reason": "教材本节例题以综合判敛为主，已挂最近两道"
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "正项级数收敛的充分必要条件是部分和数列有界。",
+          "evidence": "正项级数 $\\sum_{n = 1}^{\\infty}u_{n}$ 收敛的充分必要条件是它的部分和数列 $\\left\\{ S_{n} \\right\\}$ 有界."
+        },
+        {
+          "level": "primary",
+          "statement": "比较判别法：若从某项起 un ≤ vn，则 vn 收敛时 un 收敛；un 发散时 vn 发散。",
+          "evidence": "如果从某项起有 $u_{n} \\leq v_{n}$ 成立，则①若 $\\sum_{n = 1}^{\\infty} \\nu_{n}$ 收敛，则 $\\sum_{n = 1}^{\\infty}u_{n}$ 也收敛；②若 $\\sum_{n = 1}^{\\infty}u_{n}$ 发散，则 $\\sum _ { n = 1 } ^ { \\infty } \\nu _ { n }$ 也发散."
+        },
+        {
+          "level": "primary",
+          "statement": "p级数 ∑1/n^p 当 p>1 时收敛，当 p≤1 时发散。",
+          "evidence": "P级数 $\\sum_{n = 1}^{\\infty}\\frac{1}{n^{p}}.$ 发散， $p \\leq 1 ,$ 对比记忆p积分 $\\int_{1}^{+\\infty} \\frac{1}{x^p}   dx \\left\\{ \\begin{aligned} & \\quad  收敛 , \\quad p \\leq 1 \\\\ & \\quad  收敛 , \\quad p > 1 \\end{aligned} \\right.$收敛， $p > 1 .$"
+        },
+        {
+          "level": "secondary",
+          "statement": "若正项级数 ∑an 收敛，则 ∑an^2 收敛。",
+          "evidence": "由 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛可得 $\\lim_{n \\to \\infty} a_n = 0$ ，即当n→∞时（存在N>0，当n>N时）， $a_{n} < M$ (极限的有界性)，于是 $a_{n}^{2}=a_{n} \\cdot a_{n}<Ma_{n}$ ，故由比较判别法知 $\\sum_{n = 1}^{\\infty}a_{n}^{2}$ 收敛."
+        },
+        {
+          "level": "secondary",
+          "statement": "若正项级数 ∑un 和 ∑vn 都收敛，则 ∑unvn 收敛。",
+          "evidence": "由 $\\sum_{n = 1}^{\\infty}u_{n}$ 和 $\\sum_{n = 1}^{\\infty} \\mathcal{V}_{n}$ 收敛可得 $\\sum_{n = 1}^{\\infty}u_{n}^{2}$ 和 $\\sum_{n = 1}^{\\infty} \\nu_{n}^{2}$ 收敛，且 $u_{n}v_{n} \\leqslant \\frac{1}{2}(u_{n}^{2} + v_{n}^{2})$ ，故由比较判别法知 $\\sum_{n = 1}^{\\infty}u_{n}v_{n}$ 收敛."
+        },
+        {
+          "level": "secondary",
+          "statement": "若正项级数 ∑un 收敛，则 ∑un^3, ∑u2n, ∑u2n+1 都收敛。",
+          "evidence": "同样的方法可以证明 $\\sum a_{n}^{3}, \\sum a_{2n}, \\sum a_{2n+1}$ 都收敛"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "比较、比值、根值判别法是判断敛散性的核心工具，考研必考。"
+    },
+    {
+      "name": "傅里叶级数（仅数一）",
+      "evidence": "幂级数展开，一般是n阶可导。傅里叶级数，不需要n阶可导一般情况下函数具有周期性.",
+      "nodes": [
+        {
+          "name": "傅里叶系数公式",
+          "evidence": "幂级数展开，一般是n阶可导。傅里叶级数，不需要n阶可导一般情况下函数具有周期性.",
+          "examples": [
+            "例16.38",
+            "例16.39",
+            "例16.34"
+          ],
+          "children": [
+            {
+              "name": "周期为2l的傅里叶系数计算",
+              "evidence": "a_{0}=\\frac{1}{l}\\int_{-l}^{l}f(x)\\mathrm{d}x\\leqslant a_{n}=\\frac{1}{l}\\int_{-l}^{l}f(x)\\cos\\frac{n\\pi}{l}x\\mathrm{d}x(n=0,1,2,\\cdots)"
+            },
+            {
+              "name": "傅里叶级数的形式",
+              "evidence": "\\frac{a_{0}}{2} + \\sum_{n = 1}^{\\infty}\\left( a_{n}\\cos\\frac{n\\pi}{l}x + b_{n}\\sin\\frac{n\\pi}{l}x \\right)"
+            },
+            {
+              "name": "展开符号“~”的含义",
+              "evidence": "这个符号的意思 $f(x) > \\frac{a_{0}}{2} + \\sum_{n = 1}^{\\infty}\\left( a_{n}\\cos\\frac{n\\pi}{l}x + b_{n}\\sin\\frac{n\\pi}{l}x \\right) = S(x)$是“展开为”"
+            },
+            {
+              "name": "a0=1/l∫_{-l}^{l}f(x)dx，an=1/l∫_{-l}^{l}f(…",
+              "evidence": "a_{0}=\\frac{1}{l}\\int_{-l}^{l}f(x)\\mathrm{d}x\\leqslant a_{n}=\\frac{1}{l}\\int_{-l}^{l}f(x)\\cos\\frac{n\\pi}{l}x\\mathrm{d}x(n=0,1,2,\\cdots)",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "“~”表示“展开为”，即f(x)的傅里叶级数的和函数为S(x)，S(x)与f(x)不一…",
+              "evidence": "这个符号的意思 $f(x) > \\frac{a_{0}}{2} + \\sum_{n = 1}^{\\infty}\\left( a_{n}\\cos\\frac{n\\pi}{l}x + b_{n}\\sin\\frac{n\\pi}{l}x \\right) = S(x)$是“展开为”",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "偶函数时bn=0，展开式f(x)~a0/2+Σan cos(nπx/l)，x∈[0,l]",
+              "evidence": "因为是余弦级数，将f(x)延拓成[-π，π]上的偶函数，则 $b_{n}=0,\\;n=1,\\;2,\\cdots$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "狄利克雷收敛定理",
+          "evidence": "周期为2 偶函数又 $x = \\frac{1}{2}$ 为f(x)的第一类间断点，故由狄利克雷收敛定理，得",
+          "examples": [
+            "例16.38"
+          ],
+          "children": [
+            {
+              "name": "收敛条件判断",
+              "evidence": "①连续或只有有限个第一类间断点；条件（一般会给出，了解即可）②至多只有有限个极值点."
+            },
+            {
+              "name": "连续点处和函数值",
+              "evidence": "x为连续点，S(x) 与f(x) 不一定相等"
+            },
+            {
+              "name": "间断点处和函数值",
+              "evidence": "S(x)=\\left\\{\\begin{aligned}&\\frac{f(x)}{f(x-0)+f(x+0)},\\\\&\\frac{f(-l+0)+f(l-0)}{2},\\end{aligned}\\right."
+            },
+            {
+              "name": "端点处和函数值",
+              "evidence": "\\frac{f(-l+0)+f(l-0)}{2}=\\frac{f(l-0)+f(l+0)}{2}"
+            },
+            {
+              "name": "f(l-0)+f(l+0))/2（利用周期性",
+              "evidence": "因为f(x)是周期函数，所以-1处的右极限就是1处的右极限，所以\\frac{f(-l+0)+f(l-0)}{2}=\\frac{f(l-0)+f(l+0)}{2}",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "在“收敛条件判断”下分列两个条件：①连续或只有有限个第一类间断点；②至多只有有限个极值点",
+              "evidence": "①连续或只有有限个第一类间断点；条件（一般会给出，了解即可）②至多只有有限个极值点.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "正弦级数与余弦级数",
+          "evidence": "①当f(x)为奇函数时，其展开式是正弦级数",
+          "examples": [
+            "例16.38",
+            "例16.39"
+          ],
+          "children": [
+            {
+              "name": "奇函数展开为正弦级数",
+              "evidence": "f(x) \\sim \\sum_{n = 1}^{\\infty}b_{n}\\sin\\frac{n\\pi x}{l}, b_{n} = \\frac{2}{l}\\int_{0}^{l}f(x)\\sin\\frac{n\\pi x}{l}\\mathrm{d}x, n = 1,2,\\cdots."
+            },
+            {
+              "name": "偶函数展开为余弦级数",
+              "evidence": "f(x) \\sim \\frac{a_{0}}{2} + \\sum_{n = 1}^{\\infty}a_{n}\\cos\\frac{n\\pi x}{l};"
+            },
+            {
+              "name": "周期奇延拓与正弦级数展开",
+              "evidence": "设f(x)定义在[0,l]上，令"
+            },
+            {
+              "name": "周期偶延拓与余弦级数展开",
+              "evidence": "设f(x)定义在[0,I]上，令"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "傅里叶系数公式：a0=1/l∫_{-l}^{l}f(x)dx，an=1/l∫_{-l}^{l}f(x)cos(nπx/l)dx，bn=1/l∫_{-l}^{l}f(x)sin(nπx/l)dx",
+          "evidence": "a_{0}=\\frac{1}{l}\\int_{-l}^{l}f(x)\\mathrm{d}x\\leqslant a_{n}=\\frac{1}{l}\\int_{-l}^{l}f(x)\\cos\\frac{n\\pi}{l}x\\mathrm{d}x(n=0,1,2,\\cdots)"
+        },
+        {
+          "level": "primary",
+          "statement": "狄利克雷收敛定理：满足连续或有限个第一类间断点且至多有限个极值点时，傅里叶级数处处收敛，和函数S(x)在连续点等于f(x)，在间断点等于左右极限的平均值，在端点等于f(-l+0)与f(l-0)的平均值",
+          "evidence": "则f(x)的傅里叶级数在[-l,I]上处处收敛.记其和函数为S(x)，则"
+        },
+        {
+          "level": "primary",
+          "statement": "奇函数的傅里叶级数为正弦级数，系数bn=2/l∫_{0}^{l}f(x)sin(nπx/l)dx",
+          "evidence": "f(x) \\sim \\sum_{n = 1}^{\\infty}b_{n}\\sin\\frac{n\\pi x}{l}, b_{n} = \\frac{2}{l}\\int_{0}^{l}f(x)\\sin\\frac{n\\pi x}{l}\\mathrm{d}x, n = 1,2,\\cdots."
+        },
+        {
+          "level": "primary",
+          "statement": "偶函数的傅里叶级数为余弦级数，系数a0=2/l∫_{0}^{l}f(x)dx，an=2/l∫_{0}^{l}f(x)cos(nπx/l)dx",
+          "evidence": "a_{0} = \\frac{2}{l} \\int_{0}^{l} f(x) \\mathrm{d}x, \\; a_{n} = \\frac{2}{l} \\int_{0}^{l} f(x) \\cos \\frac{n \\pi x}{l} \\mathrm{d}x, \\; n = 1, 2, \\cdots."
+        },
+        {
+          "level": "secondary",
+          "statement": "和函数S(x)在任意点收敛于该点左极限与右极限的平均值",
+          "evidence": "总结:S(x)收敛于点的 $\\frac{ 左极限  +  右极限 }{2}$"
+        },
+        {
+          "level": "secondary",
+          "statement": "周期为2l的偶函数，其傅里叶级数在端点处的和函数值等于f(l-0)与f(l+0)的平均值",
+          "evidence": "\\frac{f(-l+0)+f(l-0)}{2}=\\frac{f(l-0)+f(l+0)}{2}"
+        }
+      ],
+      "role": "高频",
+      "tier": "high",
+      "tier_reason": "数一专属考点，狄利克雷定理与系数计算两三年一考。"
+    }
+  ]
+}

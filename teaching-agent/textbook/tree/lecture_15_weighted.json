@@ -1,0 +1,508 @@
+{
+  "lecture": 15,
+  "title": "常微分方程",
+  "blocks": [
+    {
+      "name": "一阶微分方程",
+      "evidence": "一阶微分方程的求解",
+      "nodes": [
+        {
+          "name": "可分离变量方程",
+          "evidence": "能写成 $y' = f(x)g(y)$ 形式的方程称为可分离变量型微分方程",
+          "examples": [
+            "例15.3",
+            "例15.4",
+            "例15.5",
+            "例15.21",
+            "例15.22",
+            "例15.23"
+          ],
+          "children": [
+            {
+              "name": "直接可分离：分离变量后两边积分",
+              "evidence": "\\frac{\\mathrm{d}y}{\\mathrm{d}x}=f(x)g(y)\\Rightarrow\\int\\frac{\\mathrm{d}y}{g(y)}=\\int f(x)\\mathrm{d}x"
+            },
+            {
+              "name": "换元后可分离：令 u=ax+by+c",
+              "evidence": "形如 $\\frac{\\mathrm{d}y}{\\mathrm{d}x} = f(ax + by + c)$ 的方程，其中常数a,b全都不为零.其解法为令 $u = ax + by + c$"
+            },
+            {
+              "name": "易错点：分离变量时可能丢解（奇解）",
+              "evidence": "分离变量得 $\\frac{\\mathrm{d}u}{1 + \\sin u} = \\mathrm{d}x$ 时，默认了一件事情，那就是$\\sin u \\ne -1$ ,回避了 $1+\\sin u=0$ 的情况，从而丢掉了全部解中的部分解"
+            }
+          ]
+        },
+        {
+          "name": "齐次方程（令 u=y/x）",
+          "evidence": "形如 $\\frac{\\mathrm{d}y}{\\mathrm{d}x} = \\varphi\\left(\\frac{y}{x}\\right)$ 的方程叫作齐次型微分方程.其解法为令 $\\begin{aligned}u = & \\frac{y}{x}\\end{aligned}$",
+          "examples": [
+            "例15.6",
+            "例15.18"
+          ],
+          "children": [
+            {
+              "name": "代换步骤：y=ux，化方程为可分离",
+              "evidence": "则 $y = u x \\Rightarrow \\frac{\\mathrm{d}y}{\\mathrm{d}x} = u + x \\frac{\\mathrm{d}u}{\\mathrm{d}x}$ ,于是原方程变为 $x \\frac{\\mathrm{d}u}{\\mathrm{d}x} + u = \\varphi(u)$"
+            },
+            {
+              "name": "几何应用：将切线截距等条件翻译为微分方程",
+              "evidence": "由题设知 $\\sqrt{x^{2}+y^{2}}=y-xy'$ ,又 $x > 0$ ，故 $\\sqrt{1+\\left(\\frac{y}{x}\\right)^{2}}=\\frac{y}{x}-y'$"
+            },
+            {
+              "name": "标准形：y' = φ(y/x)",
+              "evidence": "齐次方程",
+              "children": []
+            },
+            {
+              "name": "代换：y=ux ⇒ y'=u+xu'，方程化为 x u' = φ(u)−u（可分离）",
+              "evidence": "齐次方程",
+              "children": []
+            },
+            {
+              "name": "易错：换元后要把 u 换回 y/x，别停在 u",
+              "evidence": "齐次方程",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "一阶线性微分方程（公式法）",
+          "evidence": "掌握变量可分离的微分方程、齐次微分方程及一阶线性微分方程的解法",
+          "examples": [
+            "例15.7",
+            "例15.8",
+            "例15.9",
+            "例15.10",
+            "例15.11"
+          ],
+          "children": [
+            {
+              "name": "识别标准形并套用通解公式",
+              "evidence": "形如 $a_{n}(x)y^{(n)} + a_{n - 1}(x)y^{(n - 1)} + \\cdots + a_{1}(x)y^{\\prime} + a_{0}(x)y = f(x)$ 的微分方程称为n阶线性微分方程"
+            },
+            {
+              "name": "标准形：y' + P(x)y = Q(x)",
+              "evidence": "一阶线性",
+              "children": []
+            },
+            {
+              "name": "通解：y = e^{−∫P dx}[∫Q e^{∫P dx} dx + C]",
+              "evidence": "一阶线性",
+              "children": []
+            },
+            {
+              "name": "步骤：化标准形 → 算 ∫P → 套公式 → 代初值",
+              "evidence": "一阶线性",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "伯努利方程（仅数一）",
+          "evidence": "会解伯努利方程和全微分方程，会用简单的变量代换解某些微分方程（仅数学一）",
+          "examples": [],
+          "children": [
+            {
+              "name": "识别伯努利方程并作变量代换化为一阶线性方程",
+              "evidence": "会用简单的变量代换解某些微分方程（仅数学一）"
+            },
+            {
+              "name": "标准形：y' + P(x)y = Q(x)yⁿ（n≠0,1）",
+              "evidence": "伯努利方程",
+              "children": []
+            },
+            {
+              "name": "换元：令 z = y^{1−n}，化为 z' + (1−n)Pz = (1−n)Q",
+              "evidence": "伯努利",
+              "children": []
+            },
+            {
+              "name": "易错：n>0 时 y=0 也是解，换元会丢掉，需单独讨论",
+              "evidence": "伯努利",
+              "children": []
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "清单中例题涉及可分离变量、一阶线性、齐次、二阶常系数、欧拉方程、差分方程等，没有以伯努利方程（形如 y'+P(x)y=Q"
+        },
+        {
+          "name": "全微分方程（仅数一）",
+          "evidence": "会解伯努利方程和全微分方程，会用简单的变量代换解某些微分方程（仅数学一）",
+          "examples": [
+            "例15.14"
+          ],
+          "children": [
+            {
+              "name": "判定并求解全微分方程",
+              "evidence": "会解伯努利方程和全微分方程，会用简单的变量代换解某些微分方程（仅数学一）"
+            },
+            {
+              "name": "判定：P dx + Q dy = 0 且 ∂P/∂y = ∂Q/∂x（单连通区域内）",
+              "evidence": "全微分方程",
+              "children": []
+            },
+            {
+              "name": "求解：找 u(x,y) 使 du = P dx+Q dy，则通解 u=C",
+              "evidence": "全微分",
+              "children": []
+            },
+            {
+              "name": "求 u 的方法：分组凑微分 或 沿折线积分 u=∫P dx + ∫Q dy",
+              "evidence": "全微分",
+              "children": []
+            },
+            {
+              "name": "不满足条件时可用积分因子 μ(x) 使其成为全微分",
+              "evidence": "全微分",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "可分离变量方程 y'=f(x)g(y) 的解法：分离变量后两边积分",
+          "evidence": "\\frac{\\mathrm{d}y}{\\mathrm{d}x}=f(x)g(y)\\Rightarrow\\int\\frac{\\mathrm{d}y}{g(y)}=\\int f(x)\\mathrm{d}x"
+        },
+        {
+          "level": "primary",
+          "statement": "齐次型微分方程 dy/dx=φ(y/x) 的解法：令 u=y/x，化为可分离变量方程",
+          "evidence": "形如 $\\frac{\\mathrm{d}y}{\\mathrm{d}x} = \\varphi\\left(\\frac{y}{x}\\right)$ 的方程叫作齐次型微分方程.其解法为令 $\\begin{aligned}u = & \\frac{y}{x}\\end{aligned}$"
+        },
+        {
+          "level": "primary",
+          "statement": "形如 dy/dx=f(ax+by+c) 的方程，令 u=ax+by+c 可化为可分离变量方程",
+          "evidence": "形如 $\\frac{\\mathrm{d}y}{\\mathrm{d}x} = f(ax + by + c)$ 的方程，其中常数a,b全都不为零.其解法为令 $u = ax + by + c$"
+        },
+        {
+          "level": "secondary",
+          "statement": "非线性方程的全部解=通解+奇解；线性方程的全部解=通解",
+          "evidence": "非线性方程:全部解=通解+奇解.线性方程:全部解=通解."
+        },
+        {
+          "level": "secondary",
+          "statement": "为方便合并，不定积分后常加 lnC 而非 C",
+          "evidence": "为方便合并，不定积分后常加lnC而非C."
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "可分离变量与一阶线性方程几乎年年考查，是微分方程大题的基础题型。"
+    },
+    {
+      "name": "高阶线性微分方程",
+      "evidence": "方程 $y'' + p y' + q y = 0$ 称为二阶常系数齐次线性微分方程，其中p，q为常数.",
+      "nodes": [
+        {
+          "name": "二阶常系数齐次（特征方程三种情况）",
+          "evidence": "对于 $y'' + p y' + q y = 0$ ，其对应的特征方程为 $r^{2} + pr + q = 0$",
+          "examples": [
+            "例15.15",
+            "例15.16",
+            "例15.1"
+          ],
+          "children": [
+            {
+              "name": "特征方程有两个不等实根 r1≠r2，通解 y=C1e^{r1x}+C2e^{r2x}",
+              "evidence": "若 $p^{2}-4q>0$ ，设 $r_{1}, r_{2}$ 是特征方程的两个不等实根，即 $r_{1} \\neq r_{2}$ ，可得其通解为"
+            },
+            {
+              "name": "特征方程有二重根 r，通解 y=(C1+C2x)e^{rx}",
+              "evidence": "若 $p^{2}-4q=0$ ，设 $r_{1}, r_{2}$ 是特征方程的两个相等的实根，即二重根，令 $r_{1} = r_{2} = r$ ，可得其通解为"
+            },
+            {
+              "name": "特征方程有共轭复根 α±βi，通解 y=e^{αx}(C1cosβx+C2sinβx)",
+              "evidence": "若 $p^{2}-4q<0$ ，设 $\\alpha \\pm \\beta \\dot { \\mathbf { i } }$ 是特征方程的一对共轭复根，可得其通解为"
+            },
+            {
+              "name": "由极值/初始条件定常数：先写通解再代入 y(0)、y'(0) 求 C1、C2",
+              "evidence": "由于在x=0处y(x)取得极值3，可知 $y(0)=C_{1}+C_{2}=3$ ，且"
+            }
+          ]
+        },
+        {
+          "name": "二阶常系数非齐次（待定系数法）",
+          "evidence": "方程 $y'' + p y' + q y = f(x) (f(x) \\neq 0)$ 称为二阶常系数非齐次线性微分方程，其中p，q为常数， $f(x)$ 为已知的连续函数，叫作自由项",
+          "examples": [
+            "例15.2",
+            "例15.17"
+          ],
+          "children": [
+            {
+              "name": "解的结构：非齐次通解=导出方程通解+非齐次一个特解",
+              "evidence": "y″+py′+qy=0也称为非齐次方程 $y'' + p y' + q y = f(x) (f(x) \\neq 0)$ 的“导出方程”。"
+            },
+            {
+              "name": "自由项为多项式、指数、正余弦及其和与积时用待定系数法设特解",
+              "evidence": "⑦会解自由项为多项式、指数函数、正弦函数、余弦函数以及它们的和与积的二阶常系数非齐 次线性微分方程；"
+            },
+            {
+              "name": "叠加原理：f1、f2 分别对应的特解之和是 f1+f2 的特解",
+              "evidence": "则 $y_{1}^{*}(x) + y_{2}^{*}(x)$ 是 $y'' + p y' +$ $q y = f _ { 1 } ( x ) + f _ { 2 } ( x )$ 的解."
+            },
+            {
+              "name": "不必求通解，利用方程本身得 y''(0) 再配合洛必达求极限",
+              "evidence": "不用求解微分方程，而是利用方程所反映出来的函数与各阶导数之间的关系来解题"
+            }
+          ]
+        },
+        {
+          "name": "n 阶常系数齐次",
+          "evidence": "⑥掌握二阶常系数齐次线性微分方程的解法，并会解某些高于二阶的常系数齐次线性微分方程；",
+          "examples": [
+            "例15.15",
+            "例15.19"
+          ],
+          "children": [
+            {
+              "name": "n 阶常系数齐次方程由特征方程的根写出各基本解再线性组合",
+              "evidence": "当 $a_{k}(x)(k = 0,1,2,\\cdots,n)$ 都是常数时，又称方程为n阶常系数线性微分方程."
+            },
+            {
+              "name": "高于二阶的常系数齐次方程按特征根（单根、重根、复根）逐项写解",
+              "evidence": "掌握二阶常系数齐次线性微分方程的解法，并会解某些高于二阶的常系数齐次线性微分方程；"
+            }
+          ]
+        },
+        {
+          "name": "欧拉方程 x²y''+pxy'+qy=f(x)（仅数一）",
+          "evidence": "微分方程的几何应用能写成 $x^{2}y+px+qy=f(x)$ 形式的微分方程（欧拉方程）（仅数学一）",
+          "examples": [
+            "例15.20"
+          ],
+          "children": [
+            {
+              "name": "识别形如 x²y''+pxy'+qy=f(x) 的方程并作变量代换化为常系数方程",
+              "evidence": "能写成 $x^{2}y+px+qy=f(x)$ 形式的微分方程（欧拉方程）（仅数学一）"
+            },
+            {
+              "name": "仅数学一考查，属重难点",
+              "evidence": "②欧拉方程（仅数学一）"
+            },
+            {
+              "name": "换元：x=e^t（x>0）⇒ x y' = Dy，x²y'' = D(D−1)y，D=d/dt",
+              "evidence": "欧拉方程",
+              "children": []
+            },
+            {
+              "name": "化为常系数线性方程后用特征方程求解，最后把 t 换回 ln x",
+              "evidence": "欧拉方程",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "二阶常系数齐次线性微分方程 y''+py'+qy=0 的通解由特征方程 r²+pr+q=0 的根分三种情况给出",
+          "evidence": "对于 $y'' + p y' + q y = 0$ ，其对应的特征方程为 $r^{2} + pr + q = 0$"
+        },
+        {
+          "level": "primary",
+          "statement": "若 y1、y2 是齐次方程两个线性无关的解，则 y=C1y1+C2y2 是齐次方程的通解",
+          "evidence": "则称 $y_{1}(x), y_{2}(x)$ 是该方程的两个线性无关的解，且 $y(x) = C_1 y_1(x) + C_2 y_2(x)$ 是方程 $y'' + p y' + q y = 0$ 的通解."
+        },
+        {
+          "level": "primary",
+          "statement": "非齐次方程的通解等于其导出方程（齐次方程）的通解加非齐次方程的一个特解",
+          "evidence": "y″+py′+qy=0也称为非齐次方程 $y'' + p y' + q y = f(x) (f(x) \\neq 0)$ 的“导出方程”。"
+        },
+        {
+          "level": "secondary",
+          "statement": "若解中含 e^{rx}：r>0 时 e^{rx} 在 x→+∞ 无界，r<0 时在 x→-∞ 无界",
+          "evidence": "当 $r > 0$ 时， $\\mathbf{e}^{rx}$ 在 $x \\to +\\infty$ 时无界；"
+        },
+        {
+          "level": "secondary",
+          "statement": "若解具有周期性，则 e^{αx}=1，即 α=0（cosβx 与 sinβx 均有界）",
+          "evidence": "由于 $\\cos \\beta x$ 与 $\\sin \\beta x$ 有周期性，因此若解具有周期性，则 $\\mathbf{e}^{\\alpha x} = 1$ ，即 $\\alpha = 0$"
+        },
+        {
+          "level": "secondary",
+          "statement": "叠加原理：y1* 是 f1 的解、y2* 是 f2 的解，则 y1*+y2* 是 f1+f2 的解",
+          "evidence": "则 $y_{1}^{*}(x) + y_{2}^{*}(x)$ 是 $y'' + p y' +$ $q y = f _ { 1 } ( x ) + f _ { 2 } ( x )$ 的解."
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "二阶常系数齐次与非齐次待定系数法为考研核心考点，几乎年年出现。"
+    },
+    {
+      "name": "可降阶的高阶方程",
+      "evidence": "⑤二阶可降阶微分方程（用换元法化为一阶方程)(仅数学一、数学二)",
+      "nodes": [
+        {
+          "name": "y''=f(x,y') 型（令 p=y'）",
+          "evidence": "(1) $y'' = f(x, y')$ 型(方程中不显含未知函数y).",
+          "examples": [
+            "例15.12"
+          ],
+          "children": [
+            {
+              "name": "令 y'=p, y''=p'，化为一阶方程",
+              "evidence": "①令 $y' = p, y'' = p'$ ，则原方程变为一阶方程 $\\frac{\\mathrm{d}p}{\\mathrm{d}x} = f(x, p)$"
+            },
+            {
+              "name": "解出 p 后积分得通解",
+              "evidence": "②若求得其通解为 $p = \\varphi(x,   C_1)$ ，即 $y' = \\varphi(x,   C_1)$ ，则原方程的通解为 $y = \\int \\varphi ( x , C _ { 1 } ) \\mathrm { d } x + C _ { 2 }$"
+            },
+            {
+              "name": "易错点：y''=f(y') 型也按不显含 y 处理",
+              "evidence": "此类型既不显含y，又不显含x，按(1)的办法，即不显含y来处理."
+            },
+            {
+              "name": "令 p=y' ⇒ y''=p'，方程降为一阶 p'=f(x,p)",
+              "evidence": "可降阶",
+              "children": []
+            },
+            {
+              "name": "解出 p 后再积分一次得 y=∫p dx + C₂",
+              "evidence": "可降阶",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "y''=f(y,y') 型（令 p=y'）",
+          "evidence": "(2) $y'' = f(y, y')$ 型(方程中不显含自变量x).",
+          "examples": [
+            "例15.13"
+          ],
+          "children": [
+            {
+              "name": "令 y'=p, y''=p dp/dy，化为一阶方程",
+              "evidence": "①令 $y' = p,\\; y'' = \\frac{\\mathrm{d}p}{\\mathrm{d}x} = \\frac{\\mathrm{d}p}{\\mathrm{d}y} \\cdot \\frac{\\mathrm{d}y}{\\mathrm{d}x} = \\frac{\\mathrm{d}p}{\\mathrm{d}y} \\cdot p$ ，则原方程变为一阶方程 $p \\frac{\\mathrm{d}p}{\\mathrm{d}y} = f(y, p)$"
+            },
+            {
+              "name": "解出 p 后分离变量再积分",
+              "evidence": "②若求得其通解为 $p = \\varphi(y,   C_1)$ ，则由 $p = \\frac{\\mathrm{d}y}{\\mathrm{d}x}$ 可得 $\\frac{\\mathrm{d}y}{\\mathrm{d}x} = \\varphi(y,   C_1)$ ，分离变量得 $\\frac{\\mathrm{d}y}{\\varphi(y,   C_1)} = \\mathrm{d}x$"
+            },
+            {
+              "name": "易错点：y'' 不能写成 p'",
+              "evidence": "所以 $y''$ 不能写$p ^ { \\prime }$ 而应写成 $y'' = \\frac{\\mathrm{d}p}{\\mathrm{d}x} = \\frac{\\mathrm{d}p}{\\mathrm{d}y} \\cdot \\frac{\\mathrm{d}y}{\\mathrm{d}x} = p\\frac{\\mathrm{d}p}{\\mathrm{d}y}.$"
+            },
+            {
+              "name": "令 p=y' ⇒ y'' = p·dp/dy（对 y 求导），方程变为 p dp/dy = f(y,p)",
+              "evidence": "可降阶",
+              "children": []
+            },
+            {
+              "name": "解出 p 后分离变量 dy/p = dx 再积分",
+              "evidence": "可降阶",
+              "children": []
+            },
+            {
+              "name": "易错：这种类型不能令 x 为自变量，必须把 p 看成 y 的函数",
+              "evidence": "可降阶",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "y''=f(x,y') 型：令 y'=p, y''=p'，化为一阶方程 dp/dx=f(x,p)，解出 p 后积分得通解。",
+          "evidence": "①令 $y' = p, y'' = p'$ ，则原方程变为一阶方程 $\\frac{\\mathrm{d}p}{\\mathrm{d}x} = f(x, p)$"
+        },
+        {
+          "level": "primary",
+          "statement": "y''=f(y,y') 型：令 y'=p, y''=p dp/dy，化为一阶方程 p dp/dy=f(y,p)，再分离变量积分。",
+          "evidence": "①令 $y' = p,\\; y'' = \\frac{\\mathrm{d}p}{\\mathrm{d}x} = \\frac{\\mathrm{d}p}{\\mathrm{d}y} \\cdot \\frac{\\mathrm{d}y}{\\mathrm{d}x} = \\frac{\\mathrm{d}p}{\\mathrm{d}y} \\cdot p$ ，则原方程变为一阶方程 $p \\frac{\\mathrm{d}p}{\\mathrm{d}y} = f(y, p)$"
+        },
+        {
+          "level": "secondary",
+          "statement": "y''=f(y') 型既不显含 y 也不显含 x，按不显含 y 处理，令 y'=p, y''=p'。",
+          "evidence": "此类型既不显含y，又不显含x，按(1)的办法，即不显含y来处理."
+        }
+      ],
+      "role": "核心",
+      "tier": "high",
+      "tier_reason": "令p=y'的降阶法在数一数二中出现频率较高，约两三年一考。"
+    },
+    {
+      "name": "微分方程的应用",
+      "evidence": "⑨会用微分方程解决一些简单的应用问题（几何应用、物理应用（仅数学一、数学二）和经济 应用（仅数学三））；",
+      "nodes": [
+        {
+          "name": "几何应用（切线/法线/曲率建模）",
+          "evidence": "微分方程的几何应用能写成 $x^{2}y+px+qy=f(x)$ 形式的微分方程（欧拉方程）（仅数学一）",
+          "examples": [
+            "例15.3",
+            "例15.6",
+            "例15.21"
+          ],
+          "children": [
+            {
+              "name": "依据切线、法线斜率建立微分方程",
+              "evidence": "微分方程的几何应用能写成 $x^{2}y+px+qy=f(x)$ 形式的微分方程（欧拉方程）（仅数学一）"
+            },
+            {
+              "name": "依据曲率公式建立微分方程",
+              "evidence": "微分方程的几何应用能写成 $x^{2}y+px+qy=f(x)$ 形式的微分方程（欧拉方程）（仅数学一）"
+            },
+            {
+              "name": "由积分曲线过定点等几何条件定特解",
+              "evidence": "确定了通解中的常数后，解就成了特解"
+            }
+          ]
+        },
+        {
+          "name": "物理应用（仅数一、数二）",
+          "evidence": "微分方程的物理应用（仅数学一、数学二）",
+          "examples": [
+            "例15.22",
+            "例15.23"
+          ],
+          "children": [
+            {
+              "name": "由变化率（速度、加速度等）建立微分方程",
+              "evidence": "微分方程的物理应用（仅数学一、数学二）"
+            },
+            {
+              "name": "用初始条件确定物理量特解",
+              "evidence": "确定通解中常数的条件就是初始条件"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "会用微分方程解决一些简单的应用问题（几何应用、物理应用（仅数学一、数学二）和经济应用（仅数学三））",
+          "evidence": "⑨会用微分方程解决一些简单的应用问题（几何应用、物理应用（仅数学一、数学二）和经济 应用（仅数学三））；"
+        },
+        {
+          "level": "primary",
+          "statement": "微分方程解的图形称为积分曲线",
+          "evidence": "若将函数代入微分方程，使方程成为恒等式，则该函数称为微分方程的解.微分方程解的图形称为积分曲线."
+        },
+        {
+          "level": "secondary",
+          "statement": "确定通解中常数的条件就是初始条件，确定常数后的解为特解",
+          "evidence": "确定通解中常数的条件就是初始条件"
+        },
+        {
+          "level": "secondary",
+          "statement": "解应用问题时可不解方程，直接利用方程反映的函数与各阶导数关系求解",
+          "evidence": "不用求解微分方程，而是利用方程所反映出来的函数与各阶导数之间的关系来解题"
+        }
+      ],
+      "role": "高频",
+      "tier": "high",
+      "tier_reason": "几何建模应用常与微分方程结合命题，物理应用在数一数二中有一定频率。"
+    }
+  ],
+  "excluded_examples": [
+    {
+      "id": "例15.24",
+      "reason": "差分方程，仅数三"
+    },
+    {
+      "id": "例15.25",
+      "reason": "差分方程，仅数三"
+    }
+  ]
+}

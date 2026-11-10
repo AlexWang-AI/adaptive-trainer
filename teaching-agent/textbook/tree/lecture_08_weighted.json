@@ -1,0 +1,555 @@
+{
+  "lecture": 8,
+  "title": "一元函数积分学的概念与性质",
+  "blocks": [
+    {
+      "name": "定积分的定义与性质",
+      "evidence": "定积分的定义是由德国数学家波恩哈德·黎曼 (Bernhard Riemann) 给出的，故这种积分又被称为黎曼积分。",
+      "nodes": [
+        {
+          "name": "定积分定义（黎曼和）",
+          "evidence": "定积分的存在性，也称一元函数的(常义)可积性.这里的“常义”是指“区间有限，函数有界”，也有人称为“黎曼”可积性，与后面要谈到的“区间无穷，函数无界”的“反常”积分有所区别.在本讲中所谈到的可积性都是指常义可积性 y",
+          "examples": [
+            "例8.1",
+            "例8.2"
+          ],
+          "children": [
+            {
+              "name": "黎曼和极限的步骤：分割、近似、求和、取极限",
+              "evidence": "①分割(分割方法不唯一，只要分成n份即可):②近似；③求和:④取极限。"
+            },
+            {
+              "name": "定积分的几何意义（面积代数和）",
+              "evidence": "若f(x)既有正值又有负值，定积分$\\int_{a}^{b} f(x) \\mathrm{d}x$ 表示x轴上方图形的面积减去x轴下方图形的面积"
+            },
+            {
+              "name": "定积分的值与积分变量记号无关",
+              "evidence": "定积分的值只与被积函数及积分区间有关，而与积分变量的记法无关"
+            },
+            {
+              "name": "f≥0为曲边梯形面积；f≤0为面积负值；有正有负为x轴上方面积减下方面积",
+              "evidence": "①若 $f(x) \\geqslant 0$ ，定积分 $\\int_{a}^{b} f(x) \\mathrm{d}x$ 表示由曲线 $y = f(x)$ 、直线 $x   =   a$ 、直线 $x = b$ 与x轴所围成的曲边梯形的面积",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "定积分值只与被积函数和积分区间有关，与积分变量记法无关，是一个客观存在的数量值",
+              "evidence": "这就是说，定积分的值只与被积函数及积分区间有关，而与积分变量的记法无关",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "定积分的性质（线性/区间可加/保号/估值）",
+          "evidence": "掌握不定积分和定积分的性质及定积分中值定理",
+          "examples": [
+            "例8.7",
+            "例8.4",
+            "例8.8",
+            "例8.9",
+            "例8.10"
+          ],
+          "children": [
+            {
+              "name": "线性性质",
+              "evidence": "掌握不定积分和定积分的性质及定积分中值定理"
+            },
+            {
+              "name": "区间可加性",
+              "evidence": "掌握不定积分和定积分的性质及定积分中值定理"
+            },
+            {
+              "name": "保号性",
+              "evidence": "掌握不定积分和定积分的性质及定积分中值定理"
+            },
+            {
+              "name": "估值定理",
+              "evidence": "掌握不定积分和定积分的性质及定积分中值定理"
+            }
+          ]
+        },
+        {
+          "name": "凑定积分定义求极限",
+          "evidence": "注 能凑成 $\\frac{i}{n}$ 则用定积分定义；凑不成的，先用放缩法，放缩后再用定积分定义常见的几种凑定积分定义的式子有",
+          "examples": [
+            "例8.6"
+          ],
+          "children": [
+            {
+              "name": "将和式化为积分和的形式",
+              "evidence": "若将式子中的a，b特殊化为0,1这两个数，得出的形式更为简单: $\\int_{0}^{1} f(x) \\mathrm{d}x = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f\\left(\\frac{i}{n}\\right) \\frac{1}{n}$"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "定积分的定义（黎曼和极限）",
+          "evidence": "若当λ→0时，极限 $\\lim_{\\lambda \\to 0} \\sum_{k=1}^{n} f(\\xi_k) \\Delta x_k$ 存在且与分点 $x _ { i }$ 及点 $\\xi _ { k }$ 的取法无关，则称函数f(x)在区间[a,b]上可积"
+        },
+        {
+          "level": "primary",
+          "statement": "定积分存在的必要条件：可积函数必有界",
+          "evidence": "可积函数必有界，即若定积分 $\\int_{a}^{b} f(x) \\mathrm{d}x$ 存在，则f(x)在[a,b]上必有界。"
+        },
+        {
+          "level": "primary",
+          "statement": "定积分的值与积分变量记号无关",
+          "evidence": "定积分的值只与被积函数及积分区间有关，而与积分变量的记法无关"
+        },
+        {
+          "level": "secondary",
+          "statement": "定积分的精确定义（n等分取左端点）",
+          "evidence": "取左端点的函数值作为高: $\\lim_{n \\to \\infty} \\sum_{i=0}^{n-1} f\\left(a + \\frac{b-a}{n}i\\right) \\frac{b-a}{n} = \\int_{a}^{b} f(x)   dx$"
+        },
+        {
+          "level": "secondary",
+          "statement": "定积分的精确定义（[0,1]区间n等分取右端点）",
+          "evidence": "若将式子中的a，b特殊化为0,1这两个数，得出的形式更为简单: $\\int_{0}^{1} f(x) \\mathrm{d}x = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f\\left(\\frac{i}{n}\\right) \\frac{1}{n}$"
+        },
+        {
+          "level": "secondary",
+          "statement": "定积分的几何意义（曲边梯形面积的代数和）",
+          "evidence": "若f(x)既有正值又有负值，定积分$\\int_{a}^{b} f(x) \\mathrm{d}x$ 表示x轴上方图形的面积减去x轴下方图形的面积"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "凑定积分定义求极限几乎年年出现，性质是后续计算与证明的基础。"
+    },
+    {
+      "name": "变限积分",
+      "evidence": "当x在[a，b]上变动时，对应于每一个x值，积分 $\\int_{a}^{x} f(t) \\mathrm{d}t$ 都有一个确定的值，因此 $\\int_{a}^{x} f(t) \\mathrm{d}t$ 是一个关于x的函数",
+      "nodes": [
+        {
+          "name": "变限积分的概念",
+          "evidence": "称函数F(x)为变上限的定积分.同理可以定义变下限的定积分和上、下限都变化的定积分，这些都称V为变限积分.事实上，变限积分就是定积分的推广",
+          "examples": [
+            "例8.11"
+          ],
+          "children": [
+            {
+              "name": "变上限积分的定义与记号",
+              "evidence": "记作 $F(x)=\\int_{a}^{x}f(t)\\mathrm{d}t(a \\leqslant x \\leqslant b)$"
+            },
+            {
+              "name": "变下限及上下限都变化的变限积分",
+              "evidence": "同理可以定义变下限的定积分和上、下限都变化的定积分，这些都称V为变限积分"
+            },
+            {
+              "name": "变限积分本质是由定积分定义的函数",
+              "evidence": "→本质是一个由定积分定义的函数。"
+            },
+            {
+              "name": "L3补：因左右极限不等，故F'_-≠F'_+，F(x)在x₀处不可导",
+              "evidence": "因此 $F_{-}^{\\prime}(\\pi) \\neq F_{+}^{\\prime}(\\pi)$ ，即F(x)在x=π处不可导.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "L3补条件：x₀为f(x)唯一的可去间断点",
+              "evidence": "若 $x = x_{0} \\in I$ 是f(x)唯一的可去间断点，则 $F(x) = \\int_{a}^{x} f(t)   dt$ 在 $, x _ { 0 }$ 处可导",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "求导定理（连续性与可导性）",
+          "evidence": "函数f(x)在I上连续，则函数 $F(x) = \\int_{a}^{x} f(t)   dt$ 在I上可导且 $F^{\\prime}(x) = f(x)$",
+          "examples": [
+            "例8.11",
+            "例8.12",
+            "例6.3"
+          ],
+          "children": [
+            {
+              "name": "可积则变限积分连续",
+              "evidence": "函数f(x)在I上可积，则函数 $F(x) = \\int_{a}^{x} f(t)   dt$ 在I上连续"
+            },
+            {
+              "name": "连续则变限积分可导且导数为f(x)",
+              "evidence": "函数f(x)在I上连续，则函数 $F(x) = \\int_{a}^{x} f(t)   dt$ 在I上可导且 $F^{\\prime}(x) = f(x)$"
+            },
+            {
+              "name": "跳跃间断点处不可导，左右导数等于左右极限",
+              "evidence": "若 $x = x_{0} \\in I$ 是f(x)唯一的跳跃间断点，则 $F(x) = \\int_{a}^{x} f(t)   dt$ 在 $x _ { 0 }$ 处不可导"
+            },
+            {
+              "name": "可去间断点处可导，导数等于极限值",
+              "evidence": "若 $x = x_{0} \\in I$ 是f(x)唯一的可去间断点，则 $F(x) = \\int_{a}^{x} f(t)   dt$ 在 $, x _ { 0 }$ 处可导，且 $F^{\\prime}(x_0) = \\lim_{x \\to x_0} f(x) \\neq f(x_0)$"
+            }
+          ]
+        },
+        {
+          "name": "变限积分与极限/导数综合",
+          "evidence": "本题有三个要点:第一，变限积分只要存在就必连续，故排除(B);第二，由f(x)有两个跳跃间断点可知，F(x)应有两个不可导点，排除 $( \\mathbf { A } ) ;$ 第三， $F(0)=\\int_{0}^{0}f(t)\\mathrm{d}t=0$ ，所以F(x)的图像过原点，排除(C)",
+          "examples": [
+            "例8.11",
+            "例8.12",
+            "例8.13",
+            "例8.14"
+          ],
+          "children": [
+            {
+              "name": "利用连续性排除选项",
+              "evidence": "变限积分只要存在就必连续，故排除(B)"
+            },
+            {
+              "name": "利用间断点判断不可导点个数",
+              "evidence": "由f(x)有两个跳跃间断点可知，F(x)应有两个不可导点，排除 $( \\mathbf { A } ) ;$"
+            },
+            {
+              "name": "利用特殊点（如F(0)=0）排除选项",
+              "evidence": "$F(0)=\\int_{0}^{0}f(t)\\mathrm{d}t=0$ ，所以F(x)的图像过原点，排除(C)"
+            },
+            {
+              "name": "补『f在x₀连续时F'(x₀)=f(x₀)；",
+              "evidence": "若a=1，则f(x)在x=0处连续，此时F(x)在x=0处可导，且 $F^{\\prime}(0) = f(0) = 1$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "若f(x)在[a,b]上连续，则F(x)=∫_a^x f(t)dt在[a,b]上可导，且F'(x)=f(x)。",
+          "evidence": "如果函数f(x)在[a，b]上连续，则函数 $F(x) = \\int_{a}^{x} f(t)   dt$ 在[a,b]上可导，且 $F^{\\prime}(x) = f(x)$"
+        },
+        {
+          "level": "primary",
+          "statement": "若f(x)在I上可积，则F(x)=∫_a^x f(t)dt在I上连续。",
+          "evidence": "函数f(x)在I上可积，则函数 $F(x) = \\int_{a}^{x} f(t)   dt$ 在I上连续"
+        },
+        {
+          "level": "secondary",
+          "statement": "若x₀是f(x)唯一的跳跃间断点，则F(x)=∫_a^x f(t)dt在x₀处不可导，且左导数等于左极限，右导数等于右极限。",
+          "evidence": "若 $x = x_{0} \\in I$ 是f(x)唯一的跳跃间断点，则 $F(x) = \\int_{a}^{x} f(t)   dt$ 在 $x _ { 0 }$ 处不可导，且 $\\left\\{ \\begin{aligned} F_{-}^{\\prime}(x_{0}) = \\lim_{x \\rightarrow x_{0}^{-}} f(x), \\\\ F_{+}^{\\prime}(x_{0}) = \\lim_{x \\rightarrow x_{0}^{+}} f(x). \\end{aligned} \\right.$"
+        },
+        {
+          "level": "secondary",
+          "statement": "若x₀是f(x)唯一的可去间断点，则F(x)=∫_a^x f(t)dt在x₀处可导，且F'(x₀)=lim_{x→x₀}f(x)≠f(x₀)。",
+          "evidence": "若 $x = x_{0} \\in I$ 是f(x)唯一的可去间断点，则 $F(x) = \\int_{a}^{x} f(t)   dt$ 在 $, x _ { 0 }$ 处可导，且 $F^{\\prime}(x_0) = \\lim_{x \\to x_0} f(x) \\neq f(x_0)$"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "变限积分求导及与极限/导数综合是考研核心题型，几乎每年必考。"
+    },
+    {
+      "name": "反常积分",
+      "evidence": "理解反常积分的概念，了解反常积分收敛的比较判别法",
+      "nodes": [
+        {
+          "name": "无穷限反常积分",
+          "evidence": "理解反常积分的概念，了解反常积分收敛的比较判别法",
+          "examples": [
+            "例8.5",
+            "例8.15",
+            "例8.16",
+            "例8.19"
+          ],
+          "children": [
+            {
+              "name": "无穷限反常积分的定义与收敛性判断",
+              "evidence": "理解反常积分的概念，了解反常积分收敛的比较判别法"
+            },
+            {
+              "name": "计算无穷限反常积分时先求变上限积分再取极限",
+              "evidence": "理解反常积分的概念，了解反常积分收敛的比较判别法"
+            },
+            {
+              "name": "补『双侧无穷限积分须拆为两段且各自收敛；",
+              "evidence": "$\\int_{-\\infty}^{+\\infty} x^3 \\mathrm{d}x \\neq \\lim_{R \\to +\\infty} \\int_{-R}^{R} x^3 \\mathrm{d}x$ ，只有当反常积分收敛时。",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "两函数连续、非负、同区间；无界函数情形还要求瑕点相同",
+              "evidence": "比较判别法 设函数f(x)，g(x)在区间 $\\left[ a, +\\infty \\right)$ 上连续，并且 $0 \\leqslant \\overline{f(x) \\leqslant g(x)} (a \\leqslant x < +\\infty)$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "g(x)>0；λ=0时仅由g收敛推f收敛，λ=∞时仅由g发散推f发散，不可反向",
+              "evidence": "②当 $\\overline{\\lambda = 0}$ 时，若 $\\int_{a}^{+\\infty} g(x) \\mathrm{d}x$ 收敛，则 $\\int_{a}^{+\\infty} f(x) \\mathrm{d}x$ 也收敛；",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "无界函数反常积分",
+          "evidence": "理解反常积分的概念，了解反常积分收敛的比较判别法",
+          "examples": [
+            "例8.18"
+          ],
+          "children": [
+            {
+              "name": "无界函数反常积分的定义与收敛性判断",
+              "evidence": "理解反常积分的概念，了解反常积分收敛的比较判别法"
+            },
+            {
+              "name": "识别瑕点并拆分积分区间",
+              "evidence": "理解反常积分的概念，了解反常积分收敛的比较判别法"
+            },
+            {
+              "name": "补『奇点（∞与瑕点）唯一性前提：一个积分只能有一个奇点，否则必须拆分』要点",
+              "evidence": "在判别积分敛散性时，一个积分中只能有一个奇点，若出现两个及以上奇点，需拆分.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "定积分存在必要条件是被积函数有界，反常积分允许无界，二者不是同一概念",
+              "evidence": "前面所说的 $\\int_{a}^{b} f(x) \\mathrm{d}x$ 是定积分(黎曼积分)，而这里的 $\\int_{a}^{b} f(x) \\mathrm{d}x$ 是反常积分，它们并不是一个概念",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补三种瑕点位置的定义式，并注明右端任一发散则原积分发散",
+              "evidence": "③若 $x = c \\in (a,   b)$ 是唯一瑕点，则 $$\\int _ { a } ^ { b } f ( x ) \\mathrm { d } x = \\int _ { a } ^ { c } f ( x ) \\mathrm { d } x + \\int _ { c } ^ { b } f ( x ) \\mathrm { d } x ,$$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "使f(x)在x_0的邻域内无界的点即为瑕点",
+              "evidence": "使 f(x) 在 x_0 的邻域内无界的点即为瑕点。",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "定积分（黎曼积分）存在必有界，反常积分（广义积分）允许无界，二者不是同一概念",
+              "evidence": "前面已经指出，定积分存在有两个必要条件:一是积分区间有限，二是被积函数有界.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "敛散性判别法",
+          "evidence": "了解反常积分收敛的比较判别法",
+          "examples": [
+            "例8.16",
+            "例8.17"
+          ],
+          "children": [
+            {
+              "name": "比较判别法的使用条件与比较对象选取",
+              "evidence": "了解反常积分收敛的比较判别法"
+            },
+            {
+              "name": "易错点：判别前需先确认被积函数非负",
+              "evidence": "了解反常积分收敛的比较判别法"
+            },
+            {
+              "name": "比较判别法：0≤f≤g，∫g 收敛则 ∫f 收敛；∫f 发散则 ∫g 发散",
+              "evidence": "比较判别法",
+              "children": []
+            },
+            {
+              "name": "极限形式：lim f/g = c（0<c<∞）则同敛散；c=0 时 g 收敛可推 f 收敛",
+              "evidence": "比较判别法",
+              "children": []
+            },
+            {
+              "name": "绝对收敛：∫|f| 收敛 ⇒ ∫f 收敛（条件收敛时不能用比较）",
+              "evidence": "绝对收敛",
+              "children": []
+            },
+            {
+              "name": "判别顺序：先看是不是 p 积分 → 再试比较 → 最后用定义算极限",
+              "evidence": "敛散性判别法",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "p 积分的结论",
+          "evidence": "了解反常积分收敛的比较判别法",
+          "examples": [
+            "例8.15",
+            "例8.18",
+            "例8.19"
+          ],
+          "children": [
+            {
+              "name": "p 积分收敛与发散的 p 值分界",
+              "evidence": "了解反常积分收敛的比较判别法"
+            },
+            {
+              "name": "用 p 积分作比较判别法的基准",
+              "evidence": "了解反常积分收敛的比较判别法"
+            }
+          ]
+        },
+        {
+          "name": "反常积分的计算（换元/分部/牛莱推广）",
+          "evidence": "若上述极限存在，则称反常积分收敛，否则称发散",
+          "children": [
+            {
+              "name": "先算原函数再取极限（上下限极限分开算）",
+              "evidence": "若上述极限存在，则称反常积分收敛，否则称发散"
+            },
+            {
+              "name": "换元后上下限同步取极限",
+              "evidence": "若右端两个积分都收敛，则称反常积分收敛，否则称发散"
+            },
+            {
+              "name": "分点拆分：任一段发散则整体发散",
+              "evidence": "只要有一个发散，则原反常积分就发散"
+            }
+          ],
+          "examples": [
+            "例8.8",
+            "例8.9"
+          ]
+        },
+        {
+          "name": "瑕点与无界函数反常积分",
+          "evidence": "使 f(x) 在 x0 的邻域内无界的点即为瑕点。",
+          "children": [
+            {
+              "name": "什么是瑕点（邻域内无界）",
+              "evidence": "使 f(x) 在 x0 的邻域内无界的点即为瑕点。"
+            },
+            {
+              "name": "瑕点在区间内部时必须以瑕点分拆",
+              "evidence": "只要有一个发散，则原反常积分就发散"
+            }
+          ],
+          "examples": [
+            "例8.8",
+            "例8.9"
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "连续函数f(x)必有原函数F(x)",
+          "evidence": "连续函数f(x)必有原函数F(x)"
+        },
+        {
+          "level": "primary",
+          "statement": "若函数f(x)在[a,b]上连续，则函数F(x)=∫_a^x f(t)dt在[a,b]上可导，且F′(x)=f(x)",
+          "evidence": "如果函数f(x)在[a，b]上连续，则函数 $F(x) = \\int_{a}^{x} f(t)   dt$ 在[a,b]上可导，且 $F^{\\prime}(x) = f(x)$"
+        },
+        {
+          "level": "secondary",
+          "statement": "若F′(x)=f(x)，则对任意常数C有[F(x)+C]′=f(x)，故f(x)若有原函数则原函数有无穷多个，F(x)+C称为全体原函数",
+          "evidence": "故F(x)+C也是原函数，所以f(x)若有原函数，则原函数一定有无穷多个。 $F ( x ) + C$ 称为全体原函数"
+        },
+        {
+          "level": "secondary",
+          "statement": "积分中值定理：若函数f(x)在区间[a,b]上连续，则至少存在一点ξ∈[a,b]，使∫_a^b f(x)dx=f(ξ)(b−a)",
+          "evidence": "积分中值定理:若函数f(x)在区间a,b]上连续，则至少存在一点 $\\xi \\in [a, b]$ ，使"
+        },
+        {
+          "level": "primary",
+          "statement": "反常积分 = 常义积分 + 取极限：无穷限或无界函数，结果由极限是否存在决定",
+          "evidence": "若上述极限存在，则称反常积分收敛，否则称发散"
+        },
+        {
+          "level": "secondary",
+          "statement": "分段区间上任一段发散，整体即发散（不是“有一项收敛就收敛”）",
+          "evidence": "只要有一个发散，则原反常积分就发散"
+        },
+        {
+          "level": "secondary",
+          "statement": "定积分存在的两个必要条件：区间有限 + 被积函数有界；破坏其一即为反常积分",
+          "evidence": "定积分存在有两个必要条件:一是积分区间有限，二是被积函数有界"
+        },
+        {
+          "level": "secondary",
+          "statement": "p 积分：∫₁^∞1/x^p 在 p>1 收敛；∫₀¹1/x^p 在 p<1 收敛",
+          "evidence": "反常积分有可能出现函数无界的情况"
+        }
+      ],
+      "role": "高频",
+      "tier": "must",
+      "tier_reason": "敛散性判别与p积分结论两三年一考，无穷限与无界函数两类均需掌握。"
+    },
+    {
+      "name": "原函数与不定积分",
+      "evidence": "## 一元函数积分学的概念与性质",
+      "nodes": [
+        {
+          "name": "原函数存在定理",
+          "evidence": "连续函数f(x)必有原函数F(x)。",
+          "examples": [
+            "例8.1",
+            "例8.2",
+            "例8.3"
+          ],
+          "children": [
+            {
+              "name": "存在可导函数F(x)，对区间I上任意一点都有F'(x)=f(x)；",
+              "evidence": "由 $F^{\\prime}(x) = f(x)$ 知，F(x)必连续，故可排除(A)，(C).",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "利用∫f(x)dx=F(x)+C两端求导得F'(x)=f(x)，可反求被积函数",
+              "evidence": "将所给表达式的等式两端分别关于x求导，得",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "若F'(x)=f(x)在区间上成立，则F(x)在该区间上连续；",
+              "evidence": "由f(x)处处有定义得F(x)处处可导，推出F(x)处处连续.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "对所给等式两端关于x求导得被积表达式，再令t=x²代换求出f(x)；",
+              "evidence": "将所给表达式的等式两端分别关于x求导，得",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "称F(x)为f(x)在区间I上的『一个』原函数，因[F(x)+C]'=F'(x)=f(…",
+              "evidence": "问:为什么强调一个？",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "∫f(x)dx=F(x)+C为f(x)在区间I上的不定积分，F(x)+C表示全体原函数",
+              "evidence": "为f(x)在区间I上的不定积分",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "若F'(x)=f(x)，则F(x)是f(x)的一个原函数，且f(x)的全体原函数为F(x)+C（C为任意常数）。",
+          "evidence": "故F(x)+C也是原函数，所以f(x)若有原函数，则原函数一定有无穷多个。F(x)+C称为全体原函数"
+        },
+        {
+          "level": "primary",
+          "statement": "连续函数必有原函数。",
+          "evidence": "连续函数f(x)必有原函数F(x)。"
+        },
+        {
+          "level": "secondary",
+          "statement": "连续函数必有原函数；有原函数不一定连续",
+          "evidence": "原函数存在定理"
+        },
+        {
+          "level": "secondary",
+          "statement": "两个原函数相差常数",
+          "evidence": "原函数"
+        }
+      ],
+      "role": "核心",
+      "tier": "high",
+      "tier_reason": "原函数存在定理是基本概念，常与连续/间断点结合考查，但单独命题频率中等。"
+    }
+  ]
+}

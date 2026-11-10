@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.env
+data/*.db
+data/*.db-*
+runs/*.jsonl
+runs/eval_passk.json

@@ -1,0 +1,583 @@
+{
+  "lecture": 10,
+  "title": "一元函数积分学的应用（一）几何应用",
+  "blocks": [
+    {
+      "name": "平面图形的面积",
+      "evidence": "用定积分表达和计算平面图形的面积",
+      "nodes": [
+        {
+          "name": "直角坐标下面积（上下函数相减）",
+          "evidence": "曲线 $y = y_{1}(x)$ 与 $y = y_{2}(x)$ 及 $x = a, x = b(a < b)$ 所围成的平面图形的面积 $$ S = \\int _ { a } ^ { b } \\left| y _ { 1 } ( x ) - y _ { 2 } ( x ) \\right| \\mathrm { d } x . $$",
+          "examples": [
+            "例10.1",
+            "例10.2",
+            "例10.4",
+            "例8.5",
+            "例10.7",
+            "例10.9"
+          ],
+          "children": [
+            {
+              "name": "求交点确定积分上下限",
+              "evidence": "①求交点. $\\left\\{ \\begin{aligned} y = x^{n}, \\\\ y = x^{n + 1} \\end{aligned} \\right. \\Rightarrow x^{n} = x^{n + 1} \\Rightarrow x = 0  或  x = 1$"
+            },
+            {
+              "name": "画图确定上下函数",
+              "evidence": "②画图（见图10-1）"
+            },
+            {
+              "name": "套公式计算定积分",
+              "evidence": "③套公式，做计算，得到 $A _ { n }$ 的具体表达式."
+            },
+            {
+              "name": "易错点：绝对值处理",
+              "evidence": "计算一个带绝对值的函数的定积分"
+            },
+            {
+              "name": "面积公式可推广到无穷区间，用收敛的反常积分表示",
+              "evidence": "→可以推广为用收敛的反常积分进行表示推广:可能用到在收敛情况下的反常积分及时回看，补上，以免遗忘",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "考试不会给出图形，必须自己画图；",
+              "evidence": "①画出摆线（考试不会给出图！！！）",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "由参数方程消参得y=f(x)，套直角坐标公式后换元，S=∫_α^β y(t)x′(…",
+              "evidence": "S = \\int_{a}^{b} f(x) \\mathrm{d}x = \\int_{x^{-1}(a)}^{x^{-1}(b)} f[x(t)] \\mathrm{d}[x(t)] = \\int_{a}^{\\beta} y(t) x^{\\prime}(t) \\mathrm{d}t .",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "不必真消参，直接套 S=∫_{x^{-1}(a)}^{x^{-1}(b)} f[x(…",
+              "evidence": "S = \\int_{a}^{b} f(x) \\mathrm{d}x = \\int_{x^{-1}(a)}^{x^{-1}(b)} f[x(t)] \\mathrm{d}[x(t)] = \\int_{a}^{\\beta} y(t) x^{\\prime}(t) \\mathrm{d}t .",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "计算 ∫|y1-y2|dx 需按零点分段去绝对值，图形在x轴下方部分翻折保证面积为正",
+              "evidence": "计算一个带绝对值的函数的定积分",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "极坐标下面积",
+          "evidence": "曲线 $r = r_{1}(\\theta)$ 与 $r = r_{2}(\\theta)$ 与两射线 $\\theta = \\alpha$ 与 $\\theta = \\beta (0 < \\beta - \\alpha \\leq 2\\pi)$ 所围成的曲边扇形的面积 $$ \\frac{1}{2} \\int_{\\alpha}^{\\beta} \\left| r_1^2(\\theta) - r_2^2(\\theta) \\right| \\mathrm{d}\\theta  . $$",
+          "examples": [
+            "例10.3"
+          ],
+          "children": [
+            {
+              "name": "用经过O的射线切分扇形区域",
+              "evidence": "①用经过O的射线去切分扇形区域"
+            },
+            {
+              "name": "取微元：大三角形面积减小三角形面积",
+              "evidence": "②取微元:用大“三角形”面积-小“三角形”面积."
+            },
+            {
+              "name": "积分得面积公式",
+              "evidence": "③积分: $S = \\int _ { \\alpha } ^ { \\beta } \\frac { 1 } { 2 } \\left| r _ { 2 } ^ { 2 } ( \\theta ) - r _ { 1 } ^ { 2 } ( \\theta ) \\right| \\mathrm { d } \\theta$"
+            },
+            {
+              "name": "易错点：绝对值保证差值非负",
+              "evidence": "U绝对值:保证差值非负"
+            },
+            {
+              "name": "先画图确定图形对应的θ范围（如双纽线一支θ∈[0,π/4]），再套(1/2)∫r^…",
+              "evidence": "阴影部分的图形由射线 $\\theta = 0 , \\theta = \\frac{\\pi}{4}$ 与伯努利双纽线 $r^{2}=a^{2}\\cos2\\theta$ 围成",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "ΔS≈(1/2)r2^2(θ)dθ−(1/2)r1^2(θ)dθ，积分得 S=(1…",
+              "evidence": "当 $\\mathrm { d } \\theta \\to 0$ 时，可将扇形区域近似看作三角形，计算三角形面积: $\\frac{1}{2} r_2(\\theta) \\cdot r_2(\\theta) \\mathrm{d}\\theta - \\frac{1}{2} r_1(\\theta) \\cdot r_1(\\theta) \\mathrm{d}\\theta$微元法.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "先画图找对称性，将总面积表示为对称部分面积的整数倍（如双纽线 S=4∫_0^{π/4}…",
+              "evidence": "如图10-3所示，利用对称性，所求图形面积是阴影部分面积的4倍",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "分段与对称处理",
+          "evidence": "①画图.②套公式，做计算（借助对称性简化计算）.",
+          "examples": [
+            "例10.2",
+            "例10.3",
+            "例10.4"
+          ],
+          "children": [
+            {
+              "name": "参数方程下换元法",
+              "evidence": "②参数方程下换元法"
+            },
+            {
+              "name": "分段函数积分",
+              "evidence": "计算一个带绝对值的函数的定积分"
+            },
+            {
+              "name": "对称性简化计算",
+              "evidence": "用大的面积减去小的面积，即 $S = \\int_{a}^{b} y_{1} \\mathrm{d}x - \\int_{a}^{b} y_{2} \\mathrm{d}x$"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "直角坐标下面积公式：S = ∫_a^b |y1(x) - y2(x)| dx",
+          "evidence": "S = \\int _ { a } ^ { b } \\left| y _ { 1 } ( x ) - y _ { 2 } ( x ) \\right| \\mathrm { d } x ."
+        },
+        {
+          "level": "primary",
+          "statement": "极坐标下面积公式：S = (1/2)∫_α^β |r1^2(θ) - r2^2(θ)| dθ",
+          "evidence": "\\frac{1}{2} \\int_{\\alpha}^{\\beta} \\left| r_1^2(\\theta) - r_2^2(\\theta) \\right| \\mathrm{d}\\theta  ."
+        },
+        {
+          "level": "secondary",
+          "statement": "微元法：取微元 ΔS = |y1(x) - y2(x)| dx，再积分",
+          "evidence": "①取微元: $\\Delta S = \\left| y_{1}(x) - y_{2}(x) \\right|$ dx ②积分: $S = \\int_{a}^{b} \\left| y_{1} - y_{2} \\right| \\mathrm{d}x$"
+        },
+        {
+          "level": "secondary",
+          "statement": "极坐标下微元：ΔS = (1/2)|r2^2(θ) - r1^2(θ)| dθ",
+          "evidence": "\\Delta S = \\frac{1}{2} r_2(\\theta) \\cdot r_2(\\theta) \\mathrm{d}\\theta - \\frac{1}{2} r_1(\\theta) \\cdot r_1(\\theta) \\mathrm{d}\\theta = \\frac{1}{2} \\left| r_2^2(\\theta) - r_1^2(\\theta) \\right| \\mathrm{d}\\theta ."
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "定积分几何应用的核心考点，直角坐标与极坐标面积计算几乎年年出现在大题或填空中。"
+    },
+    {
+      "name": "旋转体的体积",
+      "evidence": "用定积分表达和计算旋转体的体积",
+      "nodes": [
+        {
+          "name": "绕 x 轴旋转（圆盘法）",
+          "evidence": "曲线 $y = y(x)$ 与 $x = a, \\; x = b(a < b)$ 及x轴围成的曲边梯形绕x轴旋转一周所得到的旋转体的体积为 $V_{x} = \\int_{a}^{b} \\pi y^{2}(x) \\mathrm{d}x$",
+          "examples": [
+            "例10.5",
+            "例10.6",
+            "例10.12",
+            "例10.13"
+          ],
+          "children": [
+            {
+              "name": "确定积分区间与被积函数",
+              "evidence": "①确定x的取值范围: $\\sqrt{\\sin x} \\Rightarrow \\sin x \\geqslant 0 \\Rightarrow x \\in [0,$ π] ."
+            },
+            {
+              "name": "套用圆盘法公式计算",
+              "evidence": "②套公式: $V_{x} = \\int_{0}^{\\pi} \\pi \\left( \\mathrm{e}^{-\\frac{x}{2}} \\sqrt{\\sin x} \\right)^{2} \\mathrm{d}x$"
+            },
+            {
+              "name": "微元法推导（取微元“小硬币”）",
+              "evidence": "用微元法:①取微元 “小硬币” >dx ② $\\Delta V = \\pi y^{2}(x) \\mathrm{d}x   .$ ③积分: $V_{x} = \\int_{a}^{b} \\pi y^{2}(x) \\mathrm{d}x   .$"
+            },
+            {
+              "name": "新增节点『绕定直线旋转（一般公式10-1）』，含条件：过L0的任一条垂线与L至多有一个交点；",
+              "evidence": "定直线 $L_{0}:Ax + By + C = 0$ ，且过 $L _ { 0 }$ 的任一条垂线与L至多有一个交点，如图10-6所示，则L绕$L _ { 0 }$ 旋转一周所得旋转体的体积为",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补公式 V=∫_a^b A(x)dx，并说明截面面积A(x)的求法",
+              "evidence": "掌握用定积分表达和计算一些几何量（平面图形的面积、平面曲线的弧长、旋转体的体积及侧面积、平行截面面积为已知的立体体积、质心、形心等)",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "①取微元“小硬币”宽dx；②ΔV=πy²(x)dx；③积分得Vx",
+              "evidence": "y(x)用微元法:①取微元 “小硬币” >dx",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "若过L0的垂线与L有多于一个交点，则不能直接套公式10-1",
+              "evidence": "若出现2个及以上的交点，则不适用",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "L:y=f(x), a≤x≤b 且 f(x) 可导；若出现2个及以上交点则不适用",
+              "evidence": "若出现2个及以上的交点，则不适用，如平面曲线L: $y = f(x),   a \\leqslant x \\leqslant b$ ，且f(x)可导.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "A=C=0,B≠0 时 V=π∫_a^b f²(x)dx",
+              "evidence": "特别地，若 $A = C = 0,   B \\ne 0$ ，则 $L _ { 0 }$ 为 $y = 0 \\left( x \\right)$ 轴)，如图10-7所示，L绕 $L _ { 0 }$ 旋转一周所得旋转体的体积为",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "绕非坐标轴直线旋转时可用『大体积减小体积』取微元",
+              "evidence": "先取微元:用“大体积”—“小体积 $\\mathrm{d}V = \\left[ \\pi (1 - \\ln y)^2 - \\pi \\left(1 - \\frac{y}{\\mathrm{e}}\\right)^2 \\right] \\mathrm{d}y$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "绕 y 轴旋转（柱壳法）",
+          "evidence": "曲线 $y = y(x)$ 与 $x=a, x=b(0 \\le a<b)$ 及x轴围成的曲边梯形绕y轴旋转一周所得到的旋转体的体积为 $V_{y} = 2 \\pi \\int_{a}^{b} x | y(x) | \\mathrm{d}x .$",
+          "examples": [
+            "例10.6",
+            "例10.5",
+            "例10.12",
+            "例10.13",
+            "例10.7"
+          ],
+          "children": [
+            {
+              "name": "柱壳法公式的直接应用",
+              "evidence": "取 $[x, x+\\Delta x](\\Delta x>0)$ ，得到一个小竖条，如图10-5的阴影区域所示，此小竖条绕着y轴旋转一周成为一个“圆柱壳”，将其沿任何一条竖线“切开可展开为一个“长方体”，其体积为 $\\mathrm{d}V_{y} = 2\\pi x \\left| y(x) \\right| \\mathrm{d}x   ,$"
+            },
+            {
+              "name": "交换x与y地位，反解函数后套用Vy公式",
+              "evidence": "①x与y地位交换，求出 $y = f(x) \\Rightarrow x = \\varphi(y)$ ②套 $V _ { y }$ 体积公式，y作自变量，x作因变量，有 $V_{y}=\\int_{\\frac{1}{2}}^{\\frac{\\sqrt{3}}{2}}2\\pi y\\cdot\\varphi(y)\\mathrm{d}y$"
+            },
+            {
+              "name": "利用反函数将绕x轴旋转转化为Vy公式",
+              "evidence": "方法总结 学会利用反函数，将绕x轴旋转用 $V _ { y }$ 的体积公式表示出来."
+            },
+            {
+              "name": "要求0≤a<b，x为柱壳半径，|y(x)|为柱壳高",
+              "evidence": "曲线 $y = y(x)$ 与 $x=a, x=b(0 \\le a<b)$ 及x轴围成的曲边梯形绕y轴旋转一周所得到的旋转体的体积为",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "取[x,x+Δx]小竖条绕y轴旋转成圆柱壳，dV_y=2πx|y(x)|dx，积…",
+              "evidence": "取 $[x, x+\\Delta x](\\Delta x>0)$ ，得到一个小竖条，如图10-5的阴影区域所示，此小竖条绕着y轴旋转一周成为一个“圆柱壳”",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "反解 x=φ(y) 后以 y 为自变量，Vy=∫_{y1}^{y2} 2πy·φ(y)dy",
+              "evidence": "②套 $V _ { y }$ 体积公式，y作自变量，x作因变量，有 $V_{y}=\\int_{\\frac{1}{2}}^{\\frac{\\sqrt{3}}{2}}2\\pi y\\cdot\\varphi(y)\\mathrm{d}y$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "已知截面面积求体积",
+          "evidence": "平行截面面积为已知的立体体积",
+          "examples": [
+            "例10.14"
+          ],
+          "children": [
+            {
+              "name": "截面面积已知时用定积分求体积",
+              "evidence": "掌握用定积分表达和计算一些几何量（平面图形的面积、平面曲线的弧长、旋转体的体积及侧面积、平行截面面积为已知的立体体积、质心、形心等)"
+            },
+            {
+              "name": "V = ∫ₐᵇ A(x) dx（A(x) 为垂直 x 轴的截面积）",
+              "evidence": "已知截面面积",
+              "children": []
+            },
+            {
+              "name": "沿 y 轴截时 V = ∫ A(y) dy",
+              "evidence": "已知截面面积",
+              "children": []
+            },
+            {
+              "name": "常见截面：平行于坐标面的圆/正方形/等边三角形",
+              "evidence": "已知截面面积",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "绕x轴旋转体的体积公式：V_x = π∫_a^b y^2(x) dx",
+          "evidence": "曲线 $y = y(x)$ 与 $x = a, \\; x = b(a < b)$ 及x轴围成的曲边梯形绕x轴旋转一周所得到的旋转体的体积为 $V_{x} = \\int_{a}^{b} \\pi y^{2}(x) \\mathrm{d}x$"
+        },
+        {
+          "level": "primary",
+          "statement": "绕y轴旋转体的体积公式（柱壳法）：V_y = 2π∫_a^b x|y(x)| dx",
+          "evidence": "曲线 $y = y(x)$ 与 $x=a, x=b(0 \\le a<b)$ 及x轴围成的曲边梯形绕y轴旋转一周所得到的旋转体的体积为 $V_{y} = 2 \\pi \\int_{a}^{b} x | y(x) | \\mathrm{d}x .$"
+        },
+        {
+          "level": "secondary",
+          "statement": "绕x轴旋转也可通过反函数转化为Vy公式计算",
+          "evidence": "方法总结 学会利用反函数，将绕x轴旋转用 $V _ { y }$ 的体积公式表示出来."
+        },
+        {
+          "level": "secondary",
+          "statement": "微元法推导旋转体体积：取微元“小硬币”ΔV=πy^2(x)dx，再积分",
+          "evidence": "用微元法:①取微元 “小硬币” >dx ② $\\Delta V = \\pi y^{2}(x) \\mathrm{d}x   .$ ③积分: $V_{x} = \\int_{a}^{b} \\pi y^{2}(x) \\mathrm{d}x   .$"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "圆盘法与柱壳法是历年高频考点，常与面积、微分方程结合出综合题。"
+    },
+    {
+      "name": "函数的平均值",
+      "evidence": "设 $x \\in [a,   b]$ ，函数y(x)在[a,b]上的平均值为 $\\bar { y } = \\frac { 1 } { b - a } \\int _ { a } ^ { b } y ( x ) \\mathrm { d } x \\Rightarrow \\bar { y } = y ( \\xi ) , \\xi \\in [ a , b ]$ (由积分中>一般认为y(x)是连续函数值定理可得）.",
+      "nodes": [
+        {
+          "name": "平均值定义",
+          "evidence": "设 $x \\in [a,   b]$ ，函数y(x)在[a,b]上的平均值为 $\\bar { y } = \\frac { 1 } { b - a } \\int _ { a } ^ { b } y ( x ) \\mathrm { d } x \\Rightarrow \\bar { y } = y ( \\xi ) , \\xi \\in [ a , b ]$ (由积分中>一般认为y(x)是连续函数值定理可得）.",
+          "examples": [
+            "例10.8"
+          ],
+          "children": [
+            {
+              "name": "直接套公式计算平均值",
+              "evidence": "①套公式: $\\overline{f} = \\frac{1}{3 - 1}\\int_{1}^{3}f(x)\\mathrm{d}x = \\frac{1}{2}\\int_{1}^{3}f(x)\\mathrm{d}x.$"
+            },
+            {
+              "name": "易错点：忽略区间长度或积分上下限",
+              "evidence": "观察可知区间长度均为2"
+            },
+            {
+              "name": "若f(x)周期为T，则∫_a^{a+T}f(x)dx=∫_0^T f(x)dx",
+              "evidence": "若f(x)是周期为 T的周期函数，则 $\\int_{ \\underline{a} }^{ a + T } f(x) \\mathrm{d}x = \\int_{0}^{T} f(x) \\mathrm{d}x (f(x + T) = f(x))$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "令F(x)=∫_x^{x+2}f(t)dt，则F'(x)=f(x+2)-f(…",
+              "evidence": "记 $F(x) = \\int_{x}^{x + 2} f(t) \\mathrm{d}t$ ，则 变限积分函数 $$ F^{\\prime}(x) = f(x + 2) - f(x) = x   , $$ 故 $$ F(x)=\\int x\\mathrm{d}x=\\frac{1}{2}x^{2}+C $$ 由 $F(0)=\\int_{0}^{2}f(x)\\mathrm{d}x=0=C$ ，得 $F(x) = \\frac{1}{2}x^{2}$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "积分中值定理的联系",
+          "evidence": "$\\bar { y } = y ( \\xi ) , \\xi \\in [ a , b ]$ (由积分中>一般认为y(x)是连续函数值定理可得）.",
+          "examples": [
+            "例10.8"
+          ],
+          "children": [
+            {
+              "name": "理解平均值等于某点的函数值",
+              "evidence": "$\\bar { y } = y ( \\xi ) , \\xi \\in [ a , b ]$"
+            },
+            {
+              "name": "连续函数前提下应用积分中值定理",
+              "evidence": "一般认为y(x)是连续函数值定理可得"
+            },
+            {
+              "name": "补充 ξ∈[a,b]，并说明需连续函数前提",
+              "evidence": "$\\bar { y } = y ( \\xi ) , \\xi \\in [ a , b ]$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "在y(x)连续前提下，由积分中值定理存在ξ∈[a,b]，使ȳ=y(ξ)",
+              "evidence": "$\\bar { y } = y ( \\xi ) , \\xi \\in [ a , b ]$ (由积分中>一般认为y(x)是连续函数值定理可得）.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "函数在区间上的平均值等于其定积分除以区间长度。",
+          "evidence": "$\\bar { y } = \\frac { 1 } { b - a } \\int _ { a } ^ { b } y ( x ) \\mathrm { d } x$"
+        },
+        {
+          "level": "primary",
+          "statement": "平均值 f̄ = (1/(b−a))∫ₐᵇ f(x)dx",
+          "evidence": "平均值"
+        },
+        {
+          "level": "secondary",
+          "statement": "连续函数的平均值必被某点取到（积分中值定理）",
+          "evidence": "平均值"
+        }
+      ],
+      "role": "高频",
+      "tier": "high",
+      "tier_reason": "平均值定义及与积分中值定理的联系两三年一考，多出现在选择填空或证明题中。"
+    },
+    {
+      "name": "其他几何应用（数一/数二）",
+      "evidence": "4 其他几何应用(仅数学一、数学二)",
+      "nodes": [
+        {
+          "name": "平面曲线弧长",
+          "evidence": "(2) 平面曲线的弧长.",
+          "examples": [
+            "例10.10",
+            "例10.11"
+          ],
+          "children": [
+            {
+              "name": "直角坐标方程求弧长：套 s=∫√(1+y'²)dx",
+              "evidence": "若平面光滑曲线由直角坐标方程 $y = y(x) (a \\leq x \\leq b)$ 给出，则 $s = \\int_{a}^{b} \\sqrt{1 + \\left[ y^{\\prime}(x) \\right]^{2}}   dx$"
+            },
+            {
+              "name": "参数方程求弧长：套 s=∫√(x'²+y'²)dt",
+              "evidence": "若平面光滑曲线由参数方程 $\\begin{cases}x = x(t), \\\\y = y(t)\\end{cases}(\\alpha \\leqslant t \\leqslant \\beta)$ 给出，则 $s = \\int _ { \\alpha } ^ { \\beta } \\sqrt { \\left[ x ^ { \\prime } ( t ) \\right] ^ { 2 } + \\left[ y ^ { \\prime } ( t ) \\right] ^ { 2 } } \\mathrm { d } t$"
+            },
+            {
+              "name": "极坐标方程求弧长：套 s=∫√(r²+r'²)dθ",
+              "evidence": "若平面光滑曲线由极坐标方程 $r = r(\\theta) (\\alpha \\leq \\theta \\leq \\beta)$ 给出，则 $s = \\int _ { \\alpha } ^ { \\beta } \\sqrt { \\left[ r ( \\theta ) \\right] ^ { 2 } + \\left[ r ^ { \\prime } ( \\theta ) \\right] ^ { 2 } } \\mathrm { d } \\theta$"
+            },
+            {
+              "name": "易错点：只需套公式做计算，不用画图",
+              "evidence": "分析只需套公式，做计算即可，不用画图."
+            },
+            {
+              "name": "新增『平面图形的形心』节点，L3 写明区域条件 0≤y≤f(x)、a≤x≤b 及横/纵坐标公式",
+              "evidence": "设平面区域 $D = \\left\\{ (x, y) \\mid 0 \\leq y \\leq f(x), \\; a \\leq x \\leq b \\right\\}$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补充条件『f(x) 在[a,b]上连续』并注明分子取绝对值",
+              "evidence": "$y = f(x)$ 在[a，b]上连续",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补上下限 α 到 β 及『平面光滑曲线』条件",
+              "evidence": "②若平面光滑曲线由参数方程 $\\begin{cases}x = x(t), \\\\y = y(t)\\end{cases}(\\alpha \\leqslant t \\leqslant \\beta)$ 给出",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『r=r(θ), α≤θ≤β，平面光滑曲线』",
+              "evidence": "③若平面光滑曲线由极坐标方程 $r = r(\\theta) (\\alpha \\leq \\theta \\leq \\beta)$ 给出",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『D={(x,y)|0≤y≤f(x), a≤x≤b}，f(x)在[a,b]上连续』及分子取…",
+              "evidence": "设平面区域 $D = \\left\\{ (x, y) \\mid 0 \\leq y \\leq f(x), \\; a \\leq x \\leq b \\right\\}$ $y = f(x)$ 在[a，b]上连续",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『平面光滑曲线由参数方程给出，α≤t≤β』",
+              "evidence": "②若平面光滑曲线由参数方程 $\\begin{cases}x = x(t), \\\\y = y(t)\\end{cases}(\\alpha \\leqslant t \\leqslant \\beta)$ 给出",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『平面光滑曲线由极坐标方程 r=r(θ) (α≤θ≤β) 给出』",
+              "evidence": "③若平面光滑曲线由极坐标方程 $r = r(\\theta) (\\alpha \\leq \\theta \\leq \\beta)$ 给出",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "将该易错点移到形心节点下",
+              "evidence": "—→考研题答案未必简洁，要多做计算",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "旋转曲面侧面积",
+          "evidence": "(3)旋转曲面的面积(侧面积).→在狐长公式基础上多乘了2π|y(x)|.",
+          "examples": [
+            "例10.12",
+            "例10.13"
+          ],
+          "children": [
+            {
+              "name": "直角坐标下绕x轴旋转：S=2π∫|y|√(1+y'²)dx",
+              "evidence": "曲线L: $y = f(x) (a \\leq x \\leq b)$ 绕x轴旋转一周所得旋转曲面的面积"
+            },
+            {
+              "name": "参数方程下绕x轴旋转：S=2π∫|y(t)|√(x'²+y'²)dt",
+              "evidence": "曲线L: $\\left\\{ \\begin{aligned} x = x(t), \\\\ y = y(t) \\end{aligned} \\right. (\\alpha \\leqslant t \\leqslant \\beta, x^{\\prime}(t) \\neq 0)$ 绕x轴旋转一周所得旋转曲面的面积"
+            },
+            {
+              "name": "记忆要点：在弧长公式基础上多乘2π|y(x)|",
+              "evidence": "→在狐长公式基础上多乘了2π|y(x)|."
+            }
+          ]
+        },
+        {
+          "name": "曲率与曲率半径的积分表达",
+          "evidence": "①掌握用定积分表达和计算一些几何量（平面图形的面积、平面曲线的弧长、旋转体的体积及侧面积、平行截面面积为已知的立体体积、质心、形心等)及函数的平均值(仅数学一、数学二)",
+          "examples": [],
+          "children": [
+            {
+              "name": "形心坐标公式：横坐标=∫xf(x)dx/∫f(x)dx",
+              "evidence": "$\\frac{\\iint_{D} x \\mathrm{d} \\sigma}{\\iint_{D} \\mathrm{d} \\sigma} = \\frac{\\left| \\int_{a}^{b} \\mathrm{d} x \\int_{0}^{f(x)} x \\mathrm{d} y \\right|}{\\left| \\int_{a}^{b} \\mathrm{d} x \\int_{0}^{f(x)} \\mathrm{d} y \\right|} = \\frac{\\left| \\int_{a}^{b} x f(x) \\mathrm{d} x \\right|}{\\left| \\int_{a}^{b} f(x) \\mathrm{d} x \\right|}$"
+            },
+            {
+              "name": "形心坐标公式：纵坐标=½∫f²(x)dx/∫f(x)dx",
+              "evidence": "$\\frac{\\iint\\limits_{D} y \\mathrm{d}\\sigma}{\\iint\\limits_{D} \\mathrm{d}\\sigma} = \\frac{\\int_{a}^{b} \\mathrm{d}x \\int_{0}^{f(x)} y \\mathrm{d}y}{\\int_{a}^{b} \\mathrm{d}x \\int_{0}^{f(x)} \\mathrm{d}y} = \\frac{\\left| \\frac{1}{2} \\int_{a}^{b} f^2(x) \\mathrm{d}x \\right|}{\\int_{a}^{b} f(x) \\mathrm{d}x}$"
+            },
+            {
+              "name": "易错点：答案未必简洁，要多做计算",
+              "evidence": "考研题答案未必简洁，要多做计算"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "本讲例题主要涉及面积、弧长、旋转体体积与表面积等定积分应用，没有以曲率或曲率半径的积分表达为主要考点的例题；且所给要点实"
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "直角坐标下两曲线及x=a,x=b围成平面图形面积 S=∫ₐᵇ|y₁(x)-y₂(x)|dx",
+          "evidence": "$S = \\int _ { a } ^ { b } \\left| y _ { 1 } ( x ) - y _ { 2 } ( x ) \\right| \\mathrm { d } x .$"
+        },
+        {
+          "level": "primary",
+          "statement": "极坐标下曲边扇形面积 S=½∫ₐᵝ|r₁²(θ)-r₂²(θ)|dθ",
+          "evidence": "$\\frac{1}{2} \\int_{\\alpha}^{\\beta} \\left| r_1^2(\\theta) - r_2^2(\\theta) \\right| \\mathrm{d}\\theta  .$"
+        },
+        {
+          "level": "primary",
+          "statement": "平面曲线绕定直线Ax+By+C=0旋转所得旋转体体积公式(10-1)",
+          "evidence": "$\\frac { \\pi } { \\left( A ^ { 2 } + B ^ { 2 } \\right) ^ { \\frac { 3 } { 2 } } } \\int _ { a } ^ { b } \\left[ A x + B f ( x ) + C \\right] ^ { 2 } \\left| A f ^ { \\prime } ( x ) - B \\right| \\mathrm { d } x .$"
+        },
+        {
+          "level": "primary",
+          "statement": "平面曲线弧长公式：直角坐标、参数方程、极坐标三种形式",
+          "evidence": "若平面光滑曲线由极坐标方程 $r = r(\\theta) (\\alpha \\leq \\theta \\leq \\beta)$ 给出，则 $s = \\int _ { \\alpha } ^ { \\beta } \\sqrt { \\left[ r ( \\theta ) \\right] ^ { 2 } + \\left[ r ^ { \\prime } ( \\theta ) \\right] ^ { 2 } } \\mathrm { d } \\theta$"
+        },
+        {
+          "level": "primary",
+          "statement": "旋转曲面侧面积 S=2π∫ₐᵇ|y|√(1+y'²)dx",
+          "evidence": "$S = 2 \\pi \\int _ { a } ^ { b } \\left| y \\right| \\sqrt { 1 + \\left( y _ { x } ^ { \\prime } \\right) ^ { 2 } } \\mathrm { d } x .$"
+        },
+        {
+          "level": "secondary",
+          "statement": "曲线绕x轴旋转体积特例：V=π∫ₐᵇf²(x)dx",
+          "evidence": "$V = \\pi \\int_{a}^{b} f^{2}(x) \\mathrm{d}x = \\frac{\\pi}{(B^{2})^{2}} \\int_{a}^{b} \\left| B f(x) \\right|^{2} \\left| - B \\right| \\mathrm{d}x = \\frac{\\pi}{\\left| B \\right|^{3}} \\int_{a}^{b} B^{2} \\left| B \\right| f^{2}(x) \\mathrm{d}x = \\pi \\int_{a}^{b} f^{2}(x) \\mathrm{d}x$"
+        },
+        {
+          "level": "secondary",
+          "statement": "旋转曲面侧面积在弧长公式基础上多乘2π|y(x)|",
+          "evidence": "→在狐长公式基础上多乘了2π|y(x)|."
+        },
+        {
+          "level": "secondary",
+          "statement": "形心坐标公式：横坐标=∫xf(x)dx/∫f(x)dx，纵坐标=½∫f²(x)dx/∫f(x)dx",
+          "evidence": "$\\frac{\\iint_{D} x \\mathrm{d} \\sigma}{\\iint_{D} \\mathrm{d} \\sigma} = \\frac{\\left| \\int_{a}^{b} \\mathrm{d} x \\int_{0}^{f(x)} x \\mathrm{d} y \\right|}{\\left| \\int_{a}^{b} \\mathrm{d} x \\int_{0}^{f(x)} \\mathrm{d} y \\right|} = \\frac{\\left| \\int_{a}^{b} x f(x) \\mathrm{d} x \\right|}{\\left| \\int_{a}^{b} f(x) \\mathrm{d} x \\right|}$"
+        }
+      ],
+      "role": "核心",
+      "tier": "edge",
+      "tier_reason": "弧长、侧面积、曲率仅数一数二要求且考查频率较低，了解公式与基本计算即可。"
+    }
+  ]
+}

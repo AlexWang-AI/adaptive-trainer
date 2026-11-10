@@ -1,0 +1,660 @@
+{
+  "lecture": 6,
+  "title": "一元函数微分学的应用（二）中值定理、微分等式与微分不等式",
+  "blocks": [
+    {
+      "name": "涉及导数的中值定理",
+      "evidence": "第6讲一元函数微分学的应用（二）——中值定理、微分等式与微分不等式",
+      "nodes": [
+        {
+          "name": "费马定理",
+          "evidence": "定理5(费马定理）设f(x)在点 $x _ { 0 }$ 处满足 则 $f^{\\prime}(x_0) = 0$ ②取极值， 极值点",
+          "examples": [
+            "例6.3"
+          ],
+          "children": [
+            {
+              "name": "证明费马定理",
+              "evidence": "不妨假设f(x)在点 $x_{0}$ 处取得极大值，则存在 $x_{0}$ 的邻域 $U(x_{0})$ 对任意的 $x \\in U(x_0)$ 都有 $\\Delta f =$ $f(x) - f(x_0) \\leq 0$"
+            },
+            {
+              "name": "导数零点定理",
+              "evidence": "例 6.3 (导数零点定理)设f(x)在[a,b]上可导，证明当 $f_{+}^{\\prime}(a) \\bullet f_{-}^{\\prime}(b) < 0$ 时，存在 $\\xi \\in (a,   b)$使得"
+            },
+            {
+              "name": "补『有界与最值定理』『介值定理』『（离散的）平均值定理』『（连续的）平均值定理』节点",
+              "evidence": "(离散的)平均值定理: $f(\\xi) = \\frac{1}{n} \\sum_{i=1}^{n} f(x_i)$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『用中值定理证明不等式』『用函数性态证明微分不等式』『用常数变量化证明』节点",
+              "evidence": "## 3用中值定理证明不等式\n\n主要用拉格朗日中值定理或者泰勒公式",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补两个子节点，并注明前者用于区间上证明、后者用于局部（求极限、判无穷小阶、判极值）",
+              "evidence": "(1)带拉格朗日余项的n阶泰勒公式",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "极大值⇒Δf≤0，由保号性 f'_-(x0)≥0、f'_+(x0)≤0，可导故相…",
+              "evidence": "$f^{\\prime}_{-}(x_0) = \\lim_{x \\to x_0^{-}} \\frac{f(x) - f(x_0)}{x - x_0} \\geq 0$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "罗尔定理（含推广）",
+          "evidence": "定理 6(罗尔定理) ①在[a, b]上连续， 三个条件同时满足才可以 设f(x)满足②在(a,b)内可导，则存在 $\\xi \\in (a,   b)$ ，使得 $f^{\\prime}(\\xi) = 0$ ③f(a) = f(b) ,",
+          "examples": [
+            "例6.6",
+            "例6.9"
+          ],
+          "children": [
+            {
+              "name": "推广的罗尔定理",
+              "evidence": "注1推广的罗尔定理. 设f(x)在(a, b) 内可导， $\\lim_{x \\to a^{+}} f(x) = \\lim_{x \\to b^{-}} f(x) = A$ ，则在(a,b)内至少存在一点ξ，使 $f^{\\prime}(\\xi) = 0$"
+            },
+            {
+              "name": "构造辅助函数",
+              "evidence": "注2罗尔定理的使用往往需要构造辅助函数，其方法总结如下. (1)简单情形:题设f(x)即为辅助函数（研究对象）. (2)复杂情形. 一般不用f，而用一个神秘的“F”——辅助函数。"
+            },
+            {
+              "name": "补构造辅助函数的典型例子与判别原则",
+              "evidence": "分析 令 $F(x)=\\frac{1}{2}f^{2}(x),\\quad\\frac{1}{2}f^{2}\\to f^{\\prime}\\to(f^{\\prime})^{2}+ff^{\\prime\\prime}$ ，欲证 $F^{\\prime}(\\xi) = 0$ 想到罗尔定理；欲证 $F ^ { \\prime } ( \\xi )   >   0$ 想到拉格朗日中值定理.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补构造辅助函数的典型例子（如F(x)=½f²(x)）与判别原则（欲证F'(ξ)=0想罗尔，欲…",
+              "evidence": "分析 令 $F(x)=\\frac{1}{2}f^{2}(x),\\quad\\frac{1}{2}f^{2}\\to f^{\\prime}\\to(f^{\\prime})^{2}+ff^{\\prime\\prime}$ ，欲证 $F^{\\prime}(\\xi) = 0$ 想到罗尔定理；欲证 $F ^ { \\prime } ( \\xi )   >   0$ 想到拉格朗日中值定理.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "拉格朗日中值定理",
+          "evidence": "拉格朗日中值定理",
+          "examples": [
+            "例6.8"
+          ],
+          "children": [
+            {
+              "name": "f(a)-f(b)、f与f'关系",
+              "evidence": "见到f(a)-f(b)或f与f'的关系，一般想到用拉格朗日中值定理.拉格朗日中值定理的作用是用导函数的值来控制函数值的增减",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补条件（[a,b]连续、(a,b)可导）、结论 f(b)-f(a)=f'(ξ)(b-a) 及…",
+              "evidence": "见到f(a)-f(b)或f与f'的关系，一般想到用拉格朗日中值定理.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "条件：f 在 [a,b] 连续、(a,b) 可导",
+              "evidence": "拉格朗日中值定理",
+              "children": []
+            },
+            {
+              "name": "结论：存在 ξ∈(a,b) 使 f(b)−f(a) = f'(ξ)(b−a)",
+              "evidence": "拉格朗日中值定理",
+              "children": []
+            },
+            {
+              "name": "用途：证不等式、证等式、求极限（凑 f(b)−f(a) 形式）",
+              "evidence": "拉格朗日中值定理",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "柯西中值定理",
+          "evidence": "了解并会用柯西中值定理",
+          "examples": [
+            "例6.11"
+          ],
+          "children": [
+            {
+              "name": "补柯西中值定理的条件与结论公式，并注明常与具体函数（如ln x）配合使用",
+              "evidence": "①在[a,b]上连续，设 $f(x),   g(x)$ 满足 ②在(a，b)内可导，则存在 $\\xi \\in (a,   b)$ ，使得③ $g^{\\prime}(x) \\neq 0$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补三条件（[a,b]连续、(a,b)可导、g'(x)≠0）与结论 (f(b)-f(a))/(…",
+              "evidence": "设 $f(x),   g(x)$ 满足 ②在(a，b)内可导，则存在 $\\xi \\in (a,   b)$ ，使得③ $g^{\\prime}(x) \\neq 0$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "条件：f,g 在 [a,b] 连续、(a,b) 可导，且 g'(x)≠0",
+              "evidence": "柯西中值定理",
+              "children": []
+            },
+            {
+              "name": "结论：存在 ξ 使 [f(b)−f(a)]/[g(b)−g(a)] = f'(ξ)/g'(ξ)",
+              "evidence": "柯西中值定理",
+              "children": []
+            },
+            {
+              "name": "用途：两个函数增量之比；拉格朗日是 g(x)=x 的特例",
+              "evidence": "柯西中值定理",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "泰勒公式（微分中值型）",
+          "evidence": "泰勒公式",
+          "examples": [
+            "例6.13"
+          ],
+          "children": [
+            {
+              "name": "f(x) = Σ f⁽ᵏ⁾(x₀)(x−x₀)ᵏ/k! + f⁽ⁿ⁺¹⁾(ξ)(x−x₀)ⁿ⁺¹/(n+1)!",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "条件：f 在含 x₀ 的区间上有 n+1 阶导数",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "用途：证不等式、估误差、求高阶导、定极限阶数",
+              "evidence": "泰勒公式",
+              "children": []
+            },
+            {
+              "name": "x₀=0 时退化为麦克劳林公式",
+              "evidence": "麦克劳林展开式",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "费马定理：设f(x)在点x0处可导且取极值，则f'(x0)=0。",
+          "evidence": "定理5(费马定理）设f(x)在点 $x _ { 0 }$ 处满足 则 $f^{\\prime}(x_0) = 0$ ②取极值， 极值点"
+        },
+        {
+          "level": "primary",
+          "statement": "罗尔定理：设f(x)在[a,b]上连续，在(a,b)内可导，且f(a)=f(b)，则存在ξ∈(a,b)，使得f'(ξ)=0。",
+          "evidence": "定理 6(罗尔定理) ①在[a, b]上连续， 三个条件同时满足才可以 设f(x)满足②在(a,b)内可导，则存在 $\\xi \\in (a,   b)$ ，使得 $f^{\\prime}(\\xi) = 0$ ③f(a) = f(b) ,"
+        },
+        {
+          "level": "secondary",
+          "statement": "推广的罗尔定理：设f(x)在(a,b)内可导，lim_{x→a+}f(x)=lim_{x→b-}f(x)=A，则存在ξ∈(a,b)，使f'(ξ)=0。",
+          "evidence": "注1推广的罗尔定理. 设f(x)在(a, b) 内可导， $\\lim_{x \\to a^{+}} f(x) = \\lim_{x \\to b^{-}} f(x) = A$ ，则在(a,b)内至少存在一点ξ，使 $f^{\\prime}(\\xi) = 0$"
+        },
+        {
+          "level": "secondary",
+          "statement": "导数零点定理：设f(x)在[a,b]上可导，且f'_+(a)·f'_-(b)<0，则存在ξ∈(a,b)，使得f'(ξ)=0。",
+          "evidence": "例 6.3 (导数零点定理)设f(x)在[a,b]上可导，证明当 $f_{+}^{\\prime}(a) \\bullet f_{-}^{\\prime}(b) < 0$ 时，存在 $\\xi \\in (a,   b)$使得"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "罗尔、拉格朗日、柯西及泰勒公式是证明题核心工具，考研几乎每年必考。"
+    },
+    {
+      "name": "涉及函数的中值定理",
+      "evidence": "设f(x)在[a,b]上连续，则",
+      "nodes": [
+        {
+          "name": "有界与最值定理",
+          "evidence": "定理1(有界与最值定理) $m \\leq f(x) \\leq M$ ，其中m,M分别为f(x)在[a,b]上的最小值与最大值.",
+          "examples": [
+            "例6.4"
+          ],
+          "children": [
+            {
+              "name": "理解定理条件与结论",
+              "evidence": "设f(x)在[a,b]上连续，则"
+            },
+            {
+              "name": "应用有界性证明不等式",
+              "evidence": "有界|f(x)|≤M"
+            },
+            {
+              "name": "在『介值定理』下或单独增设『平均值定理』节点，含离散平均值定理与连续平均值定理的L3要点",
+              "evidence": "重难点 | ①平均值定理；②罗尔定理的推论；③用函数性态证明微分不等式；④用中值定理证明微分不等式",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "在有界与最值定理下正式增设L3『有界性：|f(x)|≤M』",
+              "evidence": "有界|f(x)|≤M",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "单独增设『平均值定理』节点，含离散平均值定理与连续平均值定理的L3要点",
+              "evidence": "重难点 | ①平均值定理",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "增设综合应用节点，体现三定理配合使用",
+              "evidence": "零点定理（证存在性） 配合起来考",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "介值定理",
+          "evidence": "定理2(介值定理)当 $m \\leqslant \\mu \\leqslant M$ 时，存在 $\\xi \\in [a,   b]$ ，使得 $f(\\xi) = \\mu$",
+          "examples": [
+            "例6.1",
+            "例6.2"
+          ],
+          "children": [
+            {
+              "name": "理解介值定理的几何意义",
+              "evidence": "如，f(x)在[0，2]上连续， $f(0)=0,\\ f(1)=1$ ，则存在 $\\xi \\in (0,1)$ ，使 $f(\\xi) = \\frac{1}{2}$"
+            },
+            {
+              "name": "应用介值定理证明存在性",
+              "evidence": "定理2(介值定理)当 $m \\leqslant \\mu \\leqslant M$ 时，存在 $\\xi \\in [a,   b]$ ，使得 $f(\\xi) = \\mu$"
+            }
+          ]
+        },
+        {
+          "name": "零点定理",
+          "evidence": "定理4(零点定理)当 $f(a) \\cdot f(b) < 0$ 时，存在 $\\xi \\in (a,   b)$ ，使得 $f(\\xi) = 0$",
+          "examples": [
+            "例6.1",
+            "例6.2",
+            "例6.3",
+            "例6.16",
+            "例6.18"
+          ],
+          "children": [
+            {
+              "name": "构造辅助函数证明方程根的存在性",
+              "evidence": "分析 涉及关系式，“做一至两步的逆运算”只需证 $f(\\eta) - \\eta = 0$"
+            },
+            {
+              "name": "推广的零点定理（端点极限异号）",
+              "evidence": "注 推广的零点定理:若f(x)在(a, b) 内连续， $\\lim_{x \\to a^{+}} f(x) = \\alpha, \\quad \\lim_{x \\to b^{-}} f(x) = \\beta$ 且 $\\alpha \\cdot \\beta < 0$ $f(x) = 0$ 在(a, b)内至少有一个根，这里 $a,b,\\alpha,\\beta$ 可以是有限数，也可以是无穷大"
+            },
+            {
+              "name": "结合极限保号性寻找异号点",
+              "evidence": "由 $\\lim_{x \\to 0^{+}} \\frac{f(x)}{x} < 0$ 与极限的保号性可知，存在 $a \\in (0,1)$ ，使得 $\\frac{f(a)}{a} < 0$ ，即 $f(a) < 0$"
+            },
+            {
+              "name": "补充『单调性证唯一性』『罗尔原话』『罗尔定理的推论』『实系数奇次方程至少有一个实根』等节点",
+              "evidence": "零点定理（证存在性） 配合起来考 微分等式方程的根，函数的零点，曲线的交点 单调性（证唯一性） 罗尔原话 ★罗尔定理的推论 实系数奇次方程至少有一个实根",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "在零点定理下正式增设『单调性证唯一性』『罗尔原话』『罗尔定理的推论』『实系数奇次方程至少有一…",
+              "evidence": "单调性（证唯一性） 罗尔原话 ★罗尔定理的推论 实系数奇次方程至少有一个实根",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "在零点定理下正式增设L3『方程的根/函数零点/曲线交点互相转化』",
+              "evidence": "微分等式方程的根，函数的零点，曲线的交点",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "有界与最值定理：若f(x)在[a,b]上连续，则m ≤ f(x) ≤ M，其中m,M分别为f(x)在[a,b]上的最小值与最大值。",
+          "evidence": "定理1(有界与最值定理) $m \\leq f(x) \\leq M$ ，其中m,M分别为f(x)在[a,b]上的最小值与最大值."
+        },
+        {
+          "level": "primary",
+          "statement": "介值定理：若f(x)在[a,b]上连续，且m ≤ μ ≤ M，则存在ξ∈[a,b]，使得f(ξ)=μ。",
+          "evidence": "定理2(介值定理)当 $m \\leqslant \\mu \\leqslant M$ 时，存在 $\\xi \\in [a,   b]$ ，使得 $f(\\xi) = \\mu$"
+        },
+        {
+          "level": "primary",
+          "statement": "零点定理：若f(x)在[a,b]上连续，且f(a)·f(b)<0，则存在ξ∈(a,b)，使得f(ξ)=0。",
+          "evidence": "定理4(零点定理)当 $f(a) \\cdot f(b) < 0$ 时，存在 $\\xi \\in (a,   b)$ ，使得 $f(\\xi) = 0$"
+        },
+        {
+          "level": "secondary",
+          "statement": "推广的零点定理：若f(x)在(a,b)内连续，lim_{x→a+}f(x)=α，lim_{x→b-}f(x)=β，且α·β<0，则f(x)=0在(a,b)内至少有一个根（a,b,α,β可为有限数或无穷大）。",
+          "evidence": "注 推广的零点定理:若f(x)在(a, b) 内连续， $\\lim_{x \\to a^{+}} f(x) = \\alpha, \\quad \\lim_{x \\to b^{-}} f(x) = \\beta$ 且 $\\alpha \\cdot \\beta < 0$ $f(x) = 0$ 在(a, b)内至少有一个根，这里 $a,b,\\alpha,\\beta$ 可以是有限数，也可以是无穷大"
+        },
+        {
+          "level": "secondary",
+          "statement": "离散平均值定理：若f(x)在[a,b]上连续，a<x1<…<xn<b，则存在ξ∈[x1,xn]，使得f(ξ)=[f(x1)+…+f(xn)]/n。",
+          "evidence": "定理3(平均值定理）当 $a < x_{1} < x_{2} < \\cdots < x_{n} < b$ 时，在 $\\left[ x _ { 1 } ,   x _ { n } \\right]$ 内至少存在一点 $\\xi$ ，使得"
+        },
+        {
+          "level": "secondary",
+          "statement": "连续平均值定理：f(ξ)=1/(b-a)∫_a^b f(x)dx。",
+          "evidence": "(连续的)平均值定理: $f(\\xi) = \\frac{1}{b - a}\\int_{a}^{b}f(x)\\mathrm{d}x  .$"
+        }
+      ],
+      "role": "核心",
+      "tier": "must",
+      "tier_reason": "有界最值、介值、零点定理是极限与连续部分的必考基础，几乎年年以选择或证明形式出现。"
+    },
+    {
+      "name": "微分等式（方程根的问题）",
+      "evidence": "微分等式方程的根，函数的零点，曲线的交点",
+      "nodes": [
+        {
+          "name": "零点定理证根的存在性",
+          "evidence": "定理4(零点定理)当 $f(a) \\cdot f(b) < 0$ 时，存在 $\\xi \\in (a,   b)$ ，使得 $f(\\xi) = 0$",
+          "examples": [
+            "例6.1",
+            "例6.2",
+            "例6.7",
+            "例6.14"
+          ],
+          "children": [
+            {
+              "name": "构造辅助函数F(x)=f(x)-g(x)证f(η)=g(η)",
+              "evidence": "分析 涉及关系式，“做一至两步的逆运算”只需证 $f(\\eta) - \\eta = 0$"
+            },
+            {
+              "name": "推广的零点定理：区间端点无定义时用极限值异号",
+              "evidence": "注 推广的零点定理:若f(x)在(a, b) 内连续， $\\lim_{x \\to a^{+}} f(x) = \\alpha, \\quad \\lim_{x \\to b^{-}} f(x) = \\beta$ 且 $\\alpha \\cdot \\beta < 0$ $f(x) = 0$ 在(a, b)内至少有一个根"
+            },
+            {
+              "name": "端点无定义点可直接用",
+              "evidence": "a,b为无定义点，可直接用"
+            }
+          ]
+        },
+        {
+          "name": "单调性证根的唯一性",
+          "evidence": "单调性（证唯一性）",
+          "examples": [
+            "例6.14",
+            "例6.15",
+            "例6.17",
+            "例5.13"
+          ],
+          "children": [
+            {
+              "name": "补『若 f(x) 在 (a,b) 内单调，则 f(x)=0 在 (a,b) 内至多有一个根…",
+              "evidence": "若f(x)在(a,b)内单调，则f(x)=0在(a,b)内至多有一个根，这里区间(a,b)可以是有限区间也可以是无穷区间.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "『证唯一根两步：零点定理（或推广零点定理）证存在，再用 f'(x)>0（或<0）证…",
+              "evidence": "所以f(x)=0在(0，+∞)内有且仅有一个实根.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "罗尔定理及其推论",
+          "evidence": "★罗尔定理的推论",
+          "examples": [
+            "例6.4",
+            "例6.5",
+            "例6.7"
+          ],
+          "children": [
+            {
+              "name": "罗尔原话",
+              "evidence": "罗尔原话"
+            },
+            {
+              "name": "罗尔定理的推论",
+              "evidence": "★罗尔定理的推论"
+            },
+            {
+              "name": "『反证：设 f(x)=0 至少有 n+1 个根 x1<…<x_{n+1}，逐阶用罗…",
+              "evidence": "证（反证法）假设f(x)=0在I上至少有n+1个实根，此处只证明n+1个根时推出矛盾，其余同理",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "实系数奇次方程必有实根",
+          "evidence": "实系数奇次方程至少有一个实根",
+          "examples": [
+            "例6.15"
+          ],
+          "children": [
+            {
+              "name": "实系数奇次方程至少有一个实根",
+              "evidence": "实系数奇次方程至少有一个实根"
+            },
+            {
+              "name": "『证 lim_{x→+∞}f(x)=+∞，lim_{x→-∞}f(x)=-∞，由连…",
+              "evidence": "则 $\\lim_{x \\to +\\infty} f(x) = +\\infty, \\quad \\lim_{x \\to -\\infty} f(x) = -\\infty$ 由f(x)的连续性及推广的零点定理，知存在 $\\xi \\in (-\\infty, +\\infty)$ 使$f(\\xi) = 0$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "零点定理：若f(x)在[a,b]上连续，且f(a)·f(b)<0，则存在ξ∈(a,b)，使得f(ξ)=0。",
+          "evidence": "定理4(零点定理)当 $f(a) \\cdot f(b) < 0$ 时，存在 $\\xi \\in (a,   b)$ ，使得 $f(\\xi) = 0$"
+        },
+        {
+          "level": "primary",
+          "statement": "推广的零点定理：若f(x)在(a,b)内连续，lim_{x→a+}f(x)=α，lim_{x→b-}f(x)=β，且α·β<0，则f(x)=0在(a,b)内至少有一个根。",
+          "evidence": "注 推广的零点定理:若f(x)在(a, b) 内连续， $\\lim_{x \\to a^{+}} f(x) = \\alpha, \\quad \\lim_{x \\to b^{-}} f(x) = \\beta$ 且 $\\alpha \\cdot \\beta < 0$ $f(x) = 0$ 在(a, b)内至少有一个根"
+        },
+        {
+          "level": "secondary",
+          "statement": "实系数奇次方程至少有一个实根。",
+          "evidence": "实系数奇次方程至少有一个实根"
+        },
+        {
+          "level": "secondary",
+          "statement": "证明方程根的存在性时，常构造辅助函数F(x)=f(x)-g(x)，将f(η)=g(η)转化为F(η)=0。",
+          "evidence": "分析 涉及关系式，“做一至两步的逆运算”只需证 $f(\\eta) - \\eta = 0$"
+        }
+      ],
+      "role": "高频",
+      "tier": "high",
+      "tier_reason": "零点定理与单调性证根的存在唯一性为高频题型，两三年一次，罗尔推论偶有涉及。"
+    },
+    {
+      "name": "微分不等式",
+      "evidence": "微分不等式数学一综合题中的一个小步骤",
+      "nodes": [
+        {
+          "name": "用单调性证不等式",
+          "evidence": "通常的做法:首先将某一积分限(通常取上限)变量化，然后移项构造辅助函数，由辅助函数的单调性来证明不等式",
+          "examples": [
+            "例6.10",
+            "例6.19"
+          ],
+          "children": [
+            {
+              "name": "构造辅助函数F(x)，利用F'(x)的符号判断单调性，进而证明不等式",
+              "evidence": "★首先考虑研究辅助函数F(x)的凹凸性、最值、正负"
+            },
+            {
+              "name": "将不等式移项化为F(x)>0或F(x)<0的形式，研究F(x)的单调性",
+              "evidence": "涉及关系式，“做一至两步的逆运算”只需证 $f(\\eta) - \\eta = 0$"
+            },
+            {
+              "name": "若F'(x)符号不易判断，可对分子另设g(x)再求导判号，或改用二阶导（凹凸…",
+              "evidence": "$f^{\\prime}(x) = \\frac{\\left| x\\cos x - \\sin x \\right|}{x^{2}}$ 定不出正负，继续求导",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "若有f'(x)≥0, a<x<b，则有f(a)≤f(x)≤f(b)",
+              "evidence": "(1)若有 $f^{\\prime}(x) \\geqslant 0, a < x < b$ ，则有 $f(a) \\leqslant f(x) \\leqslant f(b)$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "F'(x)为分式且分母恒正时，只需研究分子g(x)的符号，对g(x)再求导判号",
+              "evidence": "分母大于0，只需研究分子 令 $g(x) = x\\cos x - \\sin x, \\quad x \\in \\left(0, \\frac{\\pi}{2}\\right)$ ，得 $g^{\\prime}(x) = -x\\sin x < 0$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "用最值证不等式",
+          "evidence": "★首先考虑研究辅助函数F(x)的凹凸性、最值、正负",
+          "examples": [
+            "例6.20"
+          ],
+          "children": [
+            {
+              "name": "构造辅助函数F(x)，求F(x)在区间上的最小值或最大值，证明不等式",
+              "evidence": "★首先考虑研究辅助函数F(x)的凹凸性、最值、正负"
+            },
+            {
+              "name": "利用闭区间上连续函数的最值定理，得到函数的值域范围",
+              "evidence": "定理1(有界与最值定理) $m \\leq f(x) \\leq M$ ，其中m,M分别为f(x)在[a,b]上的最小值与最大值."
+            },
+            {
+              "name": "设f(x)在I内连续且有唯一极值点x0，则x0为极大值点时f(x0)≥f(x)，为极小值…",
+              "evidence": "★(3)设f(x)在I内连续，且有唯一的极值点 $x _ { 0 }$ ，则当 $x _ { 0 }$ 为极小值点时，即为I内的最小值点，有$f(x) \\geqslant m$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "设f(x)在I内连续且有唯一极值点x0，x0为极大值点时f(x0)≥f(x)，x0为极…",
+              "evidence": "★(3)设f(x)在I内连续，且有唯一的极值点 $x _ { 0 }$ ，则当 $x _ { 0 }$ 为极小值点时，即为I内的最小值点，有$f(x) \\geqslant m$ $f(x_{0}) \\leqslant f(x)$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "用泰勒公式证不等式",
+          "evidence": "泰勒公式",
+          "examples": [
+            "例6.12"
+          ],
+          "children": [
+            {
+              "name": "将函数在某点处展开为泰勒公式，利用余项估计证明不等式",
+              "evidence": "泰勒公式"
+            },
+            {
+              "name": "选取合适的展开点（如区间端点、中点或极值点）进行泰勒展开",
+              "evidence": "泰勒公式"
+            },
+            {
+              "name": "若证f^(n)(ξ)=0用罗尔定理可能性大；",
+              "evidence": "若证 $f^{(n)}(\\xi) = 0$ 用罗尔定理可能性大；",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "用中值定理证不等式",
+          "evidence": "用中值定理证明",
+          "examples": [
+            "例6.21"
+          ],
+          "children": [
+            {
+              "name": "利用拉格朗日中值定理建立函数值与导数值的关系，证明不等式",
+              "evidence": "拉格朗日中值定理"
+            },
+            {
+              "name": "注意中值ξ的范围：$a < \\xi < b$，结合$f(a) < f(\\xi) < f(b)$进行放缩",
+              "evidence": "★中值ξ. $a < \\xi < b , f(a) < f(\\xi) < f(b)$"
+            },
+            {
+              "name": "用常数变量化证明：将常数视为变量，构造辅助函数",
+              "evidence": "用常数变量化证明"
+            },
+            {
+              "name": "用中值定理证不等式主要用拉格朗日中值定理或泰勒公式；",
+              "evidence": "主要用拉格朗日中值定理或者泰勒公式",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "如果欲证的不等式中都是常数，则可以将其中一个或者几个常数变量化，再利用导数工具证明…",
+              "evidence": "如果欲证的不等式中都是常数，则可以将其中一个或者几个常数变量化，再利用上面所述的导数工具去证明. 常数不可直接求导",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "见到f(a)-f(b)或f与f'的关系，一般想到用拉格朗日中值定理，作用是用导函数的…",
+              "evidence": "见到f(a)-f(b)或f与f'的关系，一般想到用拉格朗日中值定理.拉格朗日中值定理的作用是用导函数的值来控制函数值的增减",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "由(ln b-ln a)/(b-a)=1/ξ，0<a<ξ<b，得0<1/b<1/ξ…",
+              "evidence": "利用中值定理: $\\frac{\\ln b - \\ln a}{b - a} = \\frac{1}{\\xi}$ ，其中$0 < a < \\xi < b$ ，即 $0 < \\frac{1}{b} < \\frac{1}{\\xi} < \\frac{1}{a}$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "用中值定理证明不等式主要用拉格朗日中值定理或者泰勒公式",
+              "evidence": "主要用拉格朗日中值定理或者泰勒公式",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "有界与最值定理：设f(x)在[a,b]上连续，则m ≤ f(x) ≤ M，其中m,M分别为f(x)在[a,b]上的最小值与最大值。",
+          "evidence": "定理1(有界与最值定理) $m \\leq f(x) \\leq M$ ，其中m,M分别为f(x)在[a,b]上的最小值与最大值."
+        },
+        {
+          "level": "primary",
+          "statement": "介值定理：设f(x)在[a,b]上连续，当m ≤ μ ≤ M时，存在ξ∈[a,b]，使得f(ξ)=μ。",
+          "evidence": "定理2(介值定理)当 $m \\leqslant \\mu \\leqslant M$ 时，存在 $\\xi \\in [a,   b]$ ，使得 $f(\\xi) = \\mu$"
+        },
+        {
+          "level": "primary",
+          "statement": "平均值定理：当a < x1 < x2 < … < xn < b时，在[x1, xn]内至少存在一点ξ，使得f(ξ) = [f(x1)+f(x2)+…+f(xn)]/n。",
+          "evidence": "定理3(平均值定理）当 $a < x_{1} < x_{2} < \\cdots < x_{n} < b$ 时，在 $\\left[ x _ { 1 } ,   x _ { n } \\right]$ 内至少存在一点 $\\xi$ ，使得"
+        },
+        {
+          "level": "primary",
+          "statement": "零点定理：设f(x)在[a,b]上连续，当f(a)·f(b)<0时，存在ξ∈(a,b)，使得f(ξ)=0。",
+          "evidence": "定理4(零点定理)当 $f(a) \\cdot f(b) < 0$ 时，存在 $\\xi \\in (a,   b)$ ，使得 $f(\\xi) = 0$"
+        },
+        {
+          "level": "secondary",
+          "statement": "推广的零点定理：若f(x)在(a,b)内连续，lim_{x→a+} f(x)=α，lim_{x→b-} f(x)=β，且α·β<0，则f(x)=0在(a,b)内至少有一个根，这里a,b,α,β可以是有限数，也可以是无穷大。",
+          "evidence": "注 推广的零点定理:若f(x)在(a, b) 内连续， $\\lim_{x \\to a^{+}} f(x) = \\alpha, \\quad \\lim_{x \\to b^{-}} f(x) = \\beta$ 且 $\\alpha \\cdot \\beta < 0$ $f(x) = 0$ 在(a, b)内至少有一个根，这里 $a,b,\\alpha,\\beta$ 可以是有限数，也可以是无穷大"
+        },
+        {
+          "level": "secondary",
+          "statement": "用函数性态证明微分不等式时，首先考虑研究辅助函数F(x)的凹凸性、最值、正负。",
+          "evidence": "★首先考虑研究辅助函数F(x)的凹凸性、最值、正负"
+        },
+        {
+          "level": "secondary",
+          "statement": "用中值定理证明微分不等式时，注意中值ξ的范围：a < ξ < b，且f(a) < f(ξ) < f(b)。",
+          "evidence": "★中值ξ. $a < \\xi < b , f(a) < f(\\xi) < f(b)$"
+        }
+      ],
+      "role": "高频",
+      "tier": "high",
+      "tier_reason": "用单调性、最值、泰勒及中值定理证不等式是高频证明题型，两三年出现一次。"
+    }
+  ]
+}

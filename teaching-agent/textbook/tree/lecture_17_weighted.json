@@ -1,0 +1,672 @@
+{
+  "lecture": 17,
+  "title": "多元函数积分学的预备知识（仅数学一）",
+  "blocks": [
+    {
+      "name": "向量及其运算",
+      "evidence": "既有大小又有方向的量称为向量.",
+      "nodes": [
+        {
+          "name": "向量的表达形式",
+          "evidence": "向量的表达形式为 $$\\boldsymbol{a} = (a_{x}, a_{y}, a_{z}) = a_{x}\\boldsymbol{i} + a_{y}\\boldsymbol{j} + a_{z}\\boldsymbol{k}$$",
+          "examples": [],
+          "children": [
+            {
+              "name": "坐标表示与基向量表示",
+              "evidence": "$$\\boldsymbol{a} = (a_{x}, a_{y}, a_{z}) = a_{x}\\boldsymbol{i} + a_{y}\\boldsymbol{j} + a_{z}\\boldsymbol{k}$$"
+            },
+            {
+              "name": "向量相等的判定（自由性）",
+              "evidence": "注两个向量，只要它们的大小相等、方向相同，它们就是相等的向量，与它们在空间中的位置无关（这也称为向量的自由性)."
+            },
+            {
+              "name": "a∥b ⇔ a×b=0 ⇔ a_x/b_x=a_y/b_y=a_z/b_z（分母为0时…",
+              "evidence": "②a $\\sqrt{b} \\Leftrightarrow \\theta = 0$ 或 $\\boxed{\\pi} \\Leftrightarrow \\boxed{\\frac{a_{x}}{b_{x}} = \\frac{a_{y}}{b_{y}} = \\frac{a_{z}}{b_{z}}}$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "混合积 [abc] 等于以 a,b,c 坐标为行的三阶行列式，其值为零⇔三向量共面",
+              "evidence": "② $\\begin{vmatrix} a_{_x} & a_{_y} & a_{_z} \\\\ b_{_x} & b_{_y} & b_{_z} \\\\ c_{_x} & c_{_y} & c_{_z} \\end{vmatrix} = 0 \\Leftrightarrow$ 三向量共面:",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "a* = a/|a| = (cosα, cosβ, cosγ)",
+              "evidence": "(3) $\\boldsymbol{a}^{*} = \\frac{\\boldsymbol{a}}{\\left | \\boldsymbol{a} \\right | } = \\left ( \\cos \\alpha , \\cos \\beta , \\cos \\gamma \\right )$ 称为向量a的单位向量(表示方向的向量).",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "方向角为非零向量与三坐标轴正向的夹角；",
+              "evidence": "(1)非零向量a与x轴、y轴和z轴正向的夹角α，β，γ称为a的方向角.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "大小相等、方向相同即相等，与空间位置无关（自由性）",
+              "evidence": "注两个向量，只要它们的大小相等、方向相同，它们就是相等的向量，与它们在空间中的位置无关（这也称为向量的自由性).",
+              "children": [],
+              "source": "critic"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "本讲例题主要涉及直线、曲面、方向导数与旋度等计算，没有单独以向量的坐标/基向量表示、向量相等判定或单位向量表达为主要考点"
+        },
+        {
+          "name": "数量积与向量积",
+          "evidence": "设 $\\boldsymbol{a} = (a_{x}, a_{y}, a_{z}), \\boldsymbol{b} = (b_{x}, b_{y}, b_{z}), \\boldsymbol{c} = (c_{x}, c_{y}, c_{z}), \\boldsymbol{a}, \\boldsymbol{b}, \\boldsymbol{c}$ 均是非零向量.",
+          "examples": [],
+          "children": [
+            {
+              "name": "数量积的坐标计算与求夹角",
+              "evidence": "① $\\boldsymbol{a} \\cdot \\boldsymbol{b} = (a_{x}, a_{y}, a_{z}) \\cdot (b_{x}, b_{y}, b_{z}) = a_{x}b_{x} + a_{y}b_{y} + a_{z}b_{z}$"
+            },
+            {
+              "name": "垂直条件的坐标表示",
+              "evidence": "$\\boldsymbol{a} \\perp \\boldsymbol{b} \\Leftrightarrow \\boldsymbol{\\theta}=\\frac{\\pi}{2} \\Leftrightarrow \\boldsymbol{a} \\cdot \\boldsymbol{b}=|\\boldsymbol{a}| |\\boldsymbol{b}| \\cos \\theta=0 \\Leftrightarrow \\left|\\frac{a_{x} b_{x}+a_{y} b_{y}+a_{z} b_{z}=0}{}\\right|$"
+            },
+            {
+              "name": "向量积的坐标计算与平行条件",
+              "evidence": "① $\\boldsymbol{a} \\times \\boldsymbol{b} = \\begin{vmatrix} \\boldsymbol{i} & \\boldsymbol{j} & \\boldsymbol{k} \\\\ a_{_x} & a_{_y} & a_{_z} \\\\ b_{_x} & b_{_y} & b_{_z} \\end{vmatrix}$"
+            },
+            {
+              "name": "混合积与三向量共面",
+              "evidence": "$\\begin{vmatrix} a_{_x} & a_{_y} & a_{_z} \\\\ b_{_x} & b_{_y} & b_{_z} \\\\ c_{_x} & c_{_y} & c_{_z} \\end{vmatrix} = 0 \\Leftrightarrow$ 三向量共面:"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "本讲例题均为空间解析几何与多元微分应用（直线、曲面、方向导数、旋度等），没有以数量积、向量积、混合积或投影计算为主要考点"
+        },
+        {
+          "name": "方向角与方向余弦",
+          "evidence": "非零向量a与x轴、y轴和z轴正向的夹角α，β，γ称为a的方向角.",
+          "examples": [
+            "例17.1"
+          ],
+          "children": [
+            {
+              "name": "方向余弦的计算公式",
+              "evidence": "$\\cos \\alpha = \\frac{a_{x}}{\\left | \\boldsymbol{a} \\right | }, \\cos \\beta = \\frac{a_{y}}{\\left | \\boldsymbol{a} \\right | }, \\cos \\gamma = \\frac{a_{z}}{\\left | \\boldsymbol{a} \\right | }$"
+            },
+            {
+              "name": "单位向量的方向余弦表示",
+              "evidence": "$\\boldsymbol{a}^{*} = \\frac{\\boldsymbol{a}}{\\left | \\boldsymbol{a} \\right | } = \\left ( \\cos \\alpha , \\cos \\beta , \\cos \\gamma \\right )$ 称为向量a的单位向量(表示方向的向量)."
+            },
+            {
+              "name": "方向余弦的平方和恒等式",
+              "evidence": "$\\cos ^{2}\\alpha +\\cos ^{2}\\beta +\\cos ^{2}\\gamma =1$"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "数量积的坐标计算公式：a·b = a_x b_x + a_y b_y + a_z b_z",
+          "evidence": "$\\boldsymbol{a} \\cdot \\boldsymbol{b} = (a_{x}, a_{y}, a_{z}) \\cdot (b_{x}, b_{y}, b_{z}) = a_{x}b_{x} + a_{y}b_{y} + a_{z}b_{z}$"
+        },
+        {
+          "level": "primary",
+          "statement": "向量积的坐标计算公式：a×b = 行列式",
+          "evidence": "$\\boldsymbol{a} \\times \\boldsymbol{b} = \\begin{vmatrix} \\boldsymbol{i} & \\boldsymbol{j} & \\boldsymbol{k} \\\\ a_{_x} & a_{_y} & a_{_z} \\\\ b_{_x} & b_{_y} & b_{_z} \\end{vmatrix}$"
+        },
+        {
+          "level": "primary",
+          "statement": "方向余弦的平方和等于1",
+          "evidence": "$\\cos ^{2}\\alpha +\\cos ^{2}\\beta +\\cos ^{2}\\gamma =1$"
+        },
+        {
+          "level": "secondary",
+          "statement": "两向量垂直的充要条件是数量积为零",
+          "evidence": "$\\boldsymbol{a} \\perp \\boldsymbol{b} \\Leftrightarrow \\boldsymbol{\\theta}=\\frac{\\pi}{2} \\Leftrightarrow \\boldsymbol{a} \\cdot \\boldsymbol{b}=|\\boldsymbol{a}| |\\boldsymbol{b}| \\cos \\theta=0 \\Leftrightarrow \\left|\\frac{a_{x} b_{x}+a_{y} b_{y}+a_{z} b_{z}=0}{}\\right|$"
+        },
+        {
+          "level": "secondary",
+          "statement": "两向量平行的坐标条件：对应坐标成比例",
+          "evidence": "$\\boxed{\\frac{a_{x}}{b_{x}} = \\frac{a_{y}}{b_{y}} = \\frac{a_{z}}{b_{z}}}$"
+        },
+        {
+          "level": "secondary",
+          "statement": "三向量共面的充要条件是混合积为零",
+          "evidence": "$\\begin{vmatrix} a_{_x} & a_{_y} & a_{_z} \\\\ b_{_x} & b_{_y} & b_{_z} \\\\ c_{_x} & c_{_y} & c_{_z} \\end{vmatrix} = 0 \\Leftrightarrow$ 三向量共面:"
+        }
+      ],
+      "role": "核心",
+      "tier": "must",
+      "tier_reason": "数量积、向量积是空间解析几何与多元微分的基础运算，几乎年年涉及。"
+    },
+    {
+      "name": "空间平面与直线",
+      "evidence": "以下假设平面的法向量n=(A，B，C)",
+      "nodes": [
+        {
+          "name": "平面方程（点法式/一般式）",
+          "evidence": "①一般式: Ax + By + Cz + D = 0",
+          "examples": [
+            "例17.3"
+          ],
+          "children": [
+            {
+              "name": "点法式方程：由法向量和一点写出平面方程",
+              "evidence": "②点法式: A(x - x0) + B(y - y0) + C(z - z0) = 0"
+            },
+            {
+              "name": "一般式方程：点法式展开得到",
+              "evidence": "将点法式展开，记 D1=Ax0+By0+Cz0 ，则得到一般式的形式"
+            },
+            {
+              "name": "补充三点式、截距式、平面束方程三个知识点",
+              "evidence": "③三点式: $$\\begin{vmatrix} x - x_{1} & y - y_{1} & z - z_{1} \\\\ x - x_{2} & y - y_{2} & z - z_{2} \\\\ x - x_{3} & y - y_{3} & z - z_{3} \\end{vmatrix} = 0$$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "令λ=1不包含π2，令μ=1不包含π1",
+              "evidence": "令λ=1，则不包含 $\\pi_{2} , \\mathrm{令} \\mu = 1$ ，则不包含 $\\pi _ { \\parallel }$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "直线方程（对称式/参数式）",
+          "evidence": "③参数式: $\\begin{cases}x = x_{0} + l t, \\\\y = y_{0} + m t, P_{0}(x_{0}, y_{0}, z_{0}), \\\\z = z_{0} + n t,\\end{cases}$ 为直线上的已知点，t为参数",
+          "examples": [
+            "例17.2",
+            "例17.3",
+            "例17.4"
+          ],
+          "children": [
+            {
+              "name": "对称式方程 (x-x₀)/l = (y-y₀)/m = (z-z₀)/n",
+              "evidence": "## 2 直线方程",
+              "children": []
+            },
+            {
+              "name": "参数式 x=x₀+lt, y=y₀+mt, z=z₀+nt",
+              "evidence": "## 2 直线方程",
+              "children": []
+            },
+            {
+              "name": "由两平面交线确定直线（一般式）",
+              "evidence": "其几何背景很直观，是两个平面的交线",
+              "children": []
+            },
+            {
+              "name": "交面式直线方向向量τ=n1×n2",
+              "evidence": "该直线的方向向量 $\\tau = \\boldsymbol{n}_{1} \\times \\boldsymbol{n}_{2}$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "平面与直线的位置关系",
+          "evidence": "以下假设平面的法向量n=(A，B，C)",
+          "examples": [
+            "例17.2",
+            "例17.3",
+            "例17.4"
+          ],
+          "children": [
+            {
+              "name": "点到平面的距离公式",
+              "evidence": "点 P0(x0,y0,z0) 到平面 Ax + By + Cz + D = 0 的距离"
+            },
+            {
+              "name": "点到平面距离 d=|Ax₀+By₀+Cz₀+D|/√(A²+B²+C²)",
+              "evidence": "点到平面的距离",
+              "children": []
+            },
+            {
+              "name": "直线与平面夹角 sinφ=|n·s|/(|n||s|)",
+              "evidence": "位置关系",
+              "children": []
+            },
+            {
+              "name": "两平面夹角 cosθ=|n₁·n₂|/(|n₁||n₂|)",
+              "evidence": "位置关系",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "平面的点法式方程：A(x-x0)+B(y-y0)+C(z-z0)=0，其中(A,B,C)为法向量，(x0,y0,z0)为平面上一点。",
+          "evidence": "②点法式: A(x - x0) + B(y - y0) + C(z - z0) = 0"
+        },
+        {
+          "level": "primary",
+          "statement": "平面的一般式方程：Ax+By+Cz+D=0，法向量为(A,B,C)。",
+          "evidence": "①一般式: Ax + By + Cz + D = 0"
+        },
+        {
+          "level": "primary",
+          "statement": "点到平面的距离公式：d = |Ax0+By0+Cz0+D| / √(A²+B²+C²)。",
+          "evidence": "点 P0(x0,y0,z0) 到平面 Ax + By + Cz + D = 0 的距离"
+        },
+        {
+          "level": "primary",
+          "statement": "平面点法式 A(x−x₀)+B(y−y₀)+C(z−z₀)=0",
+          "evidence": "平面方程"
+        },
+        {
+          "level": "secondary",
+          "statement": "直线对称式 (x−x₀)/l=(y−y₀)/m=(z−z₀)/n",
+          "evidence": "直线方程"
+        },
+        {
+          "level": "secondary",
+          "statement": "点到平面距离 d=|Ax₀+By₀+Cz₀+D|/√(A²+B²+C²)",
+          "evidence": "点到平面的距离"
+        }
+      ],
+      "role": "高频",
+      "tier": "must",
+      "tier_reason": "平面与直线方程及位置关系是考研高频必考题型，常与几何应用结合。"
+    },
+    {
+      "name": "多元微分学的几何应用",
+      "evidence": "## 四多元函数微分学的几何应用",
+      "nodes": [
+        {
+          "name": "空间曲线的切线与法平面",
+          "evidence": "## 1空间曲线的切线与法平面",
+          "examples": [
+            "例17.7"
+          ],
+          "children": [
+            {
+              "name": "参数方程给出的曲线：切向量为(x′(t₀),y′(t₀),z′(t₀))，写切线方程与法平面方程",
+              "evidence": "则曲线在 $P_{0}(x_{0},y_{0},z_{0})$ 处的切向量$\\boldsymbol{\\tau} = \\left( x^{\\prime}(t_{0}), y^{\\prime}(t_{0}), z^{\\prime}(t_{0}) \\right)$"
+            },
+            {
+              "name": "一般方程组给出的曲线：用两曲面梯度向量叉乘求切向量(A,B,C)",
+              "evidence": "梯度向量n两个梯度向量的叉乘:n×n2 G在P的梯度向量 $n _ { z }$"
+            },
+            {
+              "name": "易错点：需验证三个导数不同时为0或雅可比行列式不为0",
+              "evidence": "其中 $x(t),   y(t),   z(t)$ 在I上可导，且三个导数不同时为0"
+            }
+          ]
+        },
+        {
+          "name": "空间曲面的切平面与法线",
+          "evidence": "## 2空间曲面",
+          "examples": [
+            "例17.8"
+          ],
+          "children": [
+            {
+              "name": "曲面方程F(x,y,z)=0：法向量为梯度(∂F/∂x,∂F/∂y,∂F/∂z)",
+              "evidence": "$\\boldsymbol{n} = \\left( \\frac{\\partial f}{\\partial x}, \\frac{\\partial f}{\\partial y}, -1 \\right) \\bigg|_{(0,0)}$"
+            },
+            {
+              "name": "由曲面方程写切平面方程与法线方程",
+              "evidence": "(1) 曲面方程: $F(x, y, z) = 0$"
+            },
+            {
+              "name": "旋转曲面方程的求法：纬圆条件联立消去参数",
+              "evidence": "从方程组 $\\begin{cases}F(x_{1}, y_{1}, z) = 0, \\\\G(x_{1}, y_{1}, z) = 0, \\\\x^{2} + y^{2} = x_{1}^{2} + y_{1}^{2}\\end{cases}$ 中消去 $x_{1}$ $y_{1}$ 便得到旋转曲面的方程"
+            },
+            {
+              "name": "法向量(f′x,f′y,−1)方向向下；",
+              "evidence": "此法向量方向向下. →若为正值，与z轴正方向夹角为切平面方程: $f_{x}^{\\prime}(x_{0}, y_{0})(x - x_{0}) + f_{y}^{\\prime}(x_{0}, y_{0})(y - y_{0}) - (z - z_{0}) = 0$ 锐角，即法向量向上:若为负值，与z轴正方向夹角为钝角，即法向量向下",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "参数方程曲线在P₀处切线方程：(x−x₀)/x′(t₀)=(y−y₀)/y′(t₀)=(z−z₀)/z′(t₀)",
+          "evidence": "切线方程: $\\frac{x - x_{0}}{x^{\\prime}(t_{0})} = \\frac{y - y_{0}}{y^{\\prime}(t_{0})} = \\frac{z - z_{0}}{z^{\\prime}(t_{0})}$"
+        },
+        {
+          "level": "primary",
+          "statement": "参数方程曲线在P₀处法平面方程：x′(t₀)(x−x₀)+y′(t₀)(y−y₀)+z′(t₀)(z−z₀)=0",
+          "evidence": "法平面方程: $x^{\\prime}(t_{0})(x - x_{0}) + y^{\\prime}(t_{0})(y - y_{0}) + z^{\\prime}(t_{0})(z - z_{0}) = 0$"
+        },
+        {
+          "level": "primary",
+          "statement": "方程组曲线在P₀处切向量为两曲面梯度向量的叉乘(A,B,C)",
+          "evidence": "其在 $P_{0}(x_{0},y_{0},z_{0})$ 处的切向量 $\\tau=\\frac{\\left| \\begin{matrix} i & j & k \\\\ F_{x}^{\\prime} & F_{y}^{\\prime} & F_{z}^{\\prime} \\end{matrix} \\right|}{\\left| \\begin{matrix} G_{x}^{\\prime} & G_{y}^{\\prime} & G_{z}^{\\prime} \\end{matrix} \\right|}=(A, B, C)$"
+        },
+        {
+          "level": "primary",
+          "statement": "方程组曲线在P₀处法平面方程：A(x−x₀)+B(y−y₀)+C(z−z₀)=0",
+          "evidence": "法平面方程: $A(x - x_{0}) + B(y - y_{0}) + C(z - z_{0}) = 0$"
+        },
+        {
+          "level": "secondary",
+          "statement": "曲线在xOy面投影：消去z得φ(x,y)=0，投影曲线为{φ(x,y)=0, z=0}",
+          "evidence": "则曲线Γ在xOy面上的投影曲线包含于曲线 $\\begin{cases}\\varphi(x, y) = 0, \\\\z = 0.\\end{cases}$"
+        },
+        {
+          "level": "secondary",
+          "statement": "绕z轴旋转曲面：由x²+y²=x₁²+y₁²与母线方程消去x₁,y₁；若解出x=f₁(z),y=f₂(z)，则x²+y²=[f₁(z)]²+[f₂(z)]²",
+          "evidence": "则旋转曲面的方程为\n\n$$\nx^{2}+y^{2}=\\left[f_{1}(z)\\right]^{2}+\\left[f_{2}(z)\\right]^{2}\n$$"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "切线与法平面、切平面与法线几乎年年考查，是多元微分核心考点。"
+    },
+    {
+      "name": "场论初步",
+      "evidence": "## 多元函数积分学的预备知识（仅数学一）",
+      "nodes": [
+        {
+          "name": "方向导数",
+          "evidence": "存在，则称此极限为函数 $u = u(x, y, z)$ 在点 $P _ { 0 }$ 沿方向l的方向导数，记作 $\\left| \\frac { \\partial u } { \\partial l } \\right| _ { P _ { 0 } }$",
+          "examples": [
+            "例17.10",
+            "例17.11",
+            "例17.12",
+            "例17.1"
+          ],
+          "children": [
+            {
+              "name": "方向导数的计算公式（可微条件下）",
+              "evidence": "定理(方向导数的计算公式) 设三元函数 $u = u(x, y, z)$ 在点$P_{0}(x_{0},y_{0},z_{0})$ 处可微分，则 $u = u(x, y, z)$ 在点 $P _ { 0 }$ 处沿任一方向l的方向导数都存在"
+            },
+            {
+              "name": "方向余弦必须取单位向量",
+              "evidence": "(cosα，cosβ，cosγ)一定是单位向量"
+            },
+            {
+              "name": "补一个知识点『场的概念（数量场与向量场）』，作为方向导数/梯度（数量场）与散度/旋度（向量场…",
+              "evidence": "如果Ω上的每一点M(x，y，z)都对应着一个数量u，则在Ω上就确定了一个数量函数u = u(x, y, z)，它表示一个数量场.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "补『方向导数的定义（沿射线方向的增量比极限）』，并注明 t 为两点间距离、t→0+",
+              "evidence": "存在，则称此极限为函数 u = u(x, y, z) 在点 P0 沿方向l的方向导数",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "梯度",
+          "evidence": "定义 设三元函数 $u = u(x, y, z)$ 在点 $P_{0}(x_{0},y_{0},z_{0})$ 处具有一阶连续偏导数，则定义 $\\mathrm{grad} u \\Big|_{P_0} = (u'_x(P_0), u'_y(P_0), u'_z(P_0))$ 为函数 $u = u(x, y, z)$ 在点 $P _ { 0 }$ 处的梯度.",
+          "examples": [
+            "例17.11",
+            "例17.1"
+          ],
+          "children": [
+            {
+              "name": "梯度的定义与计算",
+              "evidence": "$\\mathrm{grad} u \\Big|_{P_0} = (u'_x(P_0), u'_y(P_0), u'_z(P_0))$"
+            },
+            {
+              "name": "grad u = (u_x, u_y, u_z)",
+              "evidence": "梯度",
+              "children": []
+            },
+            {
+              "name": "性质：梯度方向是 u 增长最快的方向，模为最大变化率",
+              "evidence": "梯度",
+              "children": []
+            },
+            {
+              "name": "与方向导数：∂u/∂l = grad u · e_l = |grad u|cosθ",
+              "evidence": "梯度",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "方向导数与梯度的关系",
+          "evidence": "由方向导数的计算公式 $\\left. \\frac { \\partial u } { \\partial l } \\right| _ { P _ { 0 } } = u _ { x } ^ { \\prime } ( P _ { 0 } ) \\cos \\alpha + u _ { y } ^ { \\prime } ( P _ { 0 } ) \\cos \\beta + u _ { z } ^ { \\prime } ( P _ { 0 } ) \\cos \\gamma$ 与梯度的定义",
+          "examples": [
+            "例17.10",
+            "例17.11"
+          ],
+          "children": [
+            {
+              "name": "梯度方向为方向导数最大的方向",
+              "evidence": "函数在某点的梯度是一个向量，它的方向与取得最大方向导数的方向一致，而它的模为方向导数的最大值"
+            },
+            {
+              "name": "方向导数最大值的计算公式",
+              "evidence": "$| \\mathrm { g r a d } \\; u | = \\sqrt { ( u _ { x } ^ { \\prime } ) ^ { 2 } + ( u _ { y } ^ { \\prime } ) ^ { 2 } + ( u _ { z } ^ { \\prime } ) ^ { 2 } }$"
+            },
+            {
+              "name": "方向导数 = 梯度在该方向的投影",
+              "evidence": "方向导数",
+              "children": []
+            },
+            {
+              "name": "沿梯度方向方向导数最大，值为 |grad u|",
+              "evidence": "方向导数",
+              "children": []
+            },
+            {
+              "name": "与梯度垂直的方向上方向导数为 0",
+              "evidence": "方向导数",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "散度",
+          "evidence": "定义 设向量场 $\\boldsymbol{A}(x, y, z) = \\boldsymbol{P}(x, y, z)\\boldsymbol{i} + \\boldsymbol{Q}(x, y, z)\\boldsymbol{j} + \\boldsymbol{R}(x, y, z)\\boldsymbol{k}$ ，则 $\\mathrm{div} \\boldsymbol{A} = \\frac{\\partial P}{\\partial x} + \\frac{\\partial Q}{\\partial y} + \\frac{\\partial R}{\\partial z}$ 叫作向量场A的散度",
+          "examples": [],
+          "children": [
+            {
+              "name": "散度的定义与计算公式",
+              "evidence": "$\\mathrm{div} \\boldsymbol{A} = \\frac{\\partial P}{\\partial x} + \\frac{\\partial Q}{\\partial y} + \\frac{\\partial R}{\\partial z}$"
+            },
+            {
+              "name": "散度的物理意义（源强度）",
+              "evidence": "↑1源→表示向外（内）流的强度"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "本讲例题清单均为空间解析几何、方向导数与旋度等内容，没有以散度计算或散度物理意义为主要考点的例题。"
+        },
+        {
+          "name": "旋度",
+          "evidence": "| 考题 | 空间曲线与曲面方程、曲线切线与法平面、曲面切平面与法线的求解，散度与旋度的概念、方向导数和梯度的计算 |",
+          "examples": [
+            "例17.13"
+          ],
+          "children": [
+            {
+              "name": "旋度的定义与计算公式",
+              "evidence": "定义 设向量场 $\\boldsymbol{A}(x, y, z) = \\boldsymbol{P}(x, y, z)\\boldsymbol{i} + \\boldsymbol{Q}(x, y, z)\\boldsymbol{j} + \\boldsymbol{R}(x, y, z)\\boldsymbol{k}$ ，则"
+            },
+            {
+              "name": "rot F = ∇×F = (R_y−Q_z, P_z−R_x, Q_x−P_y)",
+              "evidence": "旋度",
+              "children": []
+            },
+            {
+              "name": "物理意义：向量场旋转的强弱，旋度为 0 称无旋场",
+              "evidence": "旋度",
+              "children": []
+            },
+            {
+              "name": "记忆：三阶行列式按第一行展开",
+              "evidence": "旋度",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "方向导数的计算公式：可微函数沿方向l的方向导数等于梯度与方向单位向量的内积。",
+          "evidence": "定理(方向导数的计算公式) 设三元函数 $u = u(x, y, z)$ 在点$P_{0}(x_{0},y_{0},z_{0})$ 处可微分，则 $u = u(x, y, z)$ 在点 $P _ { 0 }$ 处沿任一方向l的方向导数都存在"
+        },
+        {
+          "level": "primary",
+          "statement": "梯度的定义：函数在一点处的梯度为各偏导数构成的向量。",
+          "evidence": "$\\mathrm{grad} u \\Big|_{P_0} = (u'_x(P_0), u'_y(P_0), u'_z(P_0))$"
+        },
+        {
+          "level": "primary",
+          "statement": "散度的定义：向量场A的散度等于各分量偏导数之和。",
+          "evidence": "$\\mathrm{div} \\boldsymbol{A} = \\frac{\\partial P}{\\partial x} + \\frac{\\partial Q}{\\partial y} + \\frac{\\partial R}{\\partial z}$"
+        },
+        {
+          "level": "secondary",
+          "statement": "梯度的模等于方向导数的最大值。",
+          "evidence": "函数在某点的梯度是一个向量，它的方向与取得最大方向导数的方向一致，而它的模为方向导数的最大值"
+        }
+      ],
+      "role": "高频",
+      "tier": "high",
+      "tier_reason": "方向导数、梯度、散度、旋度在数一中年年出现，但难度较低、分值稳定。"
+    },
+    {
+      "name": "空间曲线与曲面",
+      "evidence": "空间曲线与曲面方程、曲线切线与法平面、曲面切平面与法线的求解，散度与旋度的概念、方向导数和梯度的计算",
+      "nodes": [
+        {
+          "name": "空间曲线的一般方程与参数方程",
+          "evidence": "| 考题 | 空间曲线与曲面方程、曲线切线与法平面、曲面切平面与法线的求解，散度与旋度的概念、方向导数和梯度的计算 |",
+          "examples": [
+            "例17.5",
+            "例17.6"
+          ],
+          "children": [
+            {
+              "name": "曲线在坐标面上的投影",
+              "evidence": "往xOy面投影，消z；往xOz面投影，消y；往yOz面投影，消x."
+            },
+            {
+              "name": "投影曲线方程的求法",
+              "evidence": "联立方程，且令z=0或y=0或x=0."
+            },
+            {
+              "name": "在一般式中选某坐标变量为参数解出另两变量得参数式，注意多值或解不出时改用新参数",
+              "evidence": "在 $\\begin{cases}F(x, y, z) = 0, \\\\G(x, y, z) = 0\\end{cases}$ 中选取某直角坐标变量为自变量(看作参数)，解出其他两变量为此变量的函数，即得参数式.",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "消元后所得曲线只是投影曲线所在（包含）的曲线，需联立消元方程与该坐标为零",
+              "evidence": "则曲线Γ在xOy面上的投影曲线包含于曲线 $\\begin{cases}\\varphi(x, y) = 0, \\\\z = 0.\\end{cases}$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "若投影曲线f(x,y)=0易写出参数式x=x(t),y=y(t)，代入原方程解出单值…",
+              "evidence": "则以x=x(t)，y=y(t)代入原曲线的方程中，若能解得单值的 $z = z(t)$ ，则得原曲线的参数式:",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "常见二次曲面",
+          "evidence": "二次曲面.",
+          "examples": [
+            "例17.9"
+          ],
+          "children": [
+            {
+              "name": "二次曲面方程识别",
+              "evidence": "曲面方程: F(x, y, z) = 0"
+            },
+            {
+              "name": "椭球面 x²/a²+y²/b²+z²/c²=1",
+              "evidence": "二次曲面",
+              "children": []
+            },
+            {
+              "name": "单叶双曲面 / 双叶双曲面",
+              "evidence": "二次曲面",
+              "children": []
+            },
+            {
+              "name": "椭圆抛物面 z=x²/a²+y²/b²（碗状）",
+              "evidence": "二次曲面",
+              "children": []
+            },
+            {
+              "name": "双曲抛物面（马鞍面）z=x²/a²−y²/b²",
+              "evidence": "二次曲面",
+              "children": []
+            },
+            {
+              "name": "圆锥面 z²=x²+y²",
+              "evidence": "二次曲面",
+              "children": []
+            },
+            {
+              "name": "柱面：x²+y²=R²（圆柱面）、y=x²（抛物柱面）",
+              "evidence": "二次曲面",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "旋转曲面与柱面",
+          "evidence": "旋转曲面:曲线Γ绕一条定直线旋转一周所形成的曲面.",
+          "examples": [
+            "例17.5",
+            "例17.9"
+          ],
+          "children": [
+            {
+              "name": "旋转曲面：曲线绕轴旋转所得曲面",
+              "evidence": "## 3空间曲线与曲面",
+              "children": []
+            },
+            {
+              "name": "柱面：平行于定方向且与定曲线相交的直线形成的曲面",
+              "evidence": "## 3空间曲线与曲面",
+              "children": []
+            },
+            {
+              "name": "常见二次曲面：球面、圆锥面、抛物面、双曲面",
+              "evidence": "## 3空间曲线与曲面",
+              "children": []
+            },
+            {
+              "name": "母线任取点M1，纬圆上点P满足到轴上定点距离相等且与轴垂直（两条件），据此消去参数得…",
+              "evidence": "在母线 $T  上$任取一点 $M_{1}(x_{1}, y_{1}, z_{1})$ ，则过 $M_{1}$ 的纬圆上的任意一点 $P(x,   y,   z)$ 满足条件",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "曲线在坐标面上的投影：往xOy面投影消z，往xOz面投影消y，往yOz面投影消x，并令相应坐标为零。",
+          "evidence": "往xOy面投影，消z；往xOz面投影，消y；往yOz面投影，消x."
+        },
+        {
+          "level": "primary",
+          "statement": "空间曲线一般式：两曲面方程联立；参数式：x=x(t),y=y(t),z=z(t)",
+          "evidence": "空间曲线"
+        },
+        {
+          "level": "secondary",
+          "statement": "绕 z 轴旋转：x²+y²=f(z)² 型",
+          "evidence": "旋转曲面"
+        },
+        {
+          "level": "secondary",
+          "statement": "柱面：缺哪个变量就平行哪个轴",
+          "evidence": "柱面"
+        }
+      ],
+      "role": "核心",
+      "tier": "high",
+      "tier_reason": "二次曲面与旋转曲面常作为背景出现，单独命题频率中等。"
+    }
+  ]
+}

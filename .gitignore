@@ -26,3 +26,7 @@ whisper_models/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# keep teaching-agent handbook docx (root ignores *.docx)
+!teaching-agent/docs/handbook/*.docx
+

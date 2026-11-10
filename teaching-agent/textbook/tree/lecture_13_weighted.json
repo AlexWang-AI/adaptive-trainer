@@ -1,0 +1,560 @@
+{
+  "lecture": 13,
+  "title": "多元函数微分学",
+  "blocks": [
+    {
+      "name": "偏导数与全微分",
+      "evidence": "由 $\\frac{\\mathrm{d}[f(u)]}{\\mathrm{d}u} = \\frac{f^{\\prime}(u)}{\\frac{1}{u}}$ 得 $\\mathrm{d}[f(u)] = f^{\\prime}(u)\\mathrm{d}u$",
+      "nodes": [
+        {
+          "name": "偏导数定义与计算",
+          "evidence": "设函数 $z = f(x, y)$ 在点 $(x_{0},y_{0})$ 的某邻域内有定义，如果极限",
+          "examples": [
+            "例13.3",
+            "例13.4",
+            "例13.5",
+            "例13.6",
+            "例13.10"
+          ],
+          "children": [
+            {
+              "name": "隐函数偏导数公式法",
+              "evidence": "$\\frac { \\partial z } { \\partial x } = - \\frac { F _ { x } ^ { \\prime } ( x , y , z ) } { F _ { z } ^ { \\prime } ( x , y , z ) } , \\frac { \\partial z } { \\partial y } = - \\frac { F _ { y } ^ { \\prime } ( x , y , z ) } { F _ { z } ^ { \\prime } ( x , y , z ) }$"
+            },
+            {
+              "name": "隐函数存在定理条件",
+              "evidence": "当 $\\left| F_{y}^{\\prime}(x, y) \\neq 0 \\right|$ 时，则有"
+            },
+            {
+              "name": "定理1/2的条件为F在相应点邻域内有连续偏导数且F_y'≠0（或F_z'≠0），并注…",
+              "evidence": "隐函数存在定理1 对于由方程 $F(x, y) = 0$ 确定的隐函数y =f(x)，当 $\\left| F_{y}^{\\prime}(x, y) \\neq 0 \\right|$ 时，则有",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "偏导数定义（对 x / 对 y 的极限式）",
+              "evidence": "存在，则称此极限为函数 z=f(x,y) 在点 (x0,y0) 处对x的偏导数",
+              "children": []
+            },
+            {
+              "name": "偏导函数与记号 f'_x、∂z/∂x",
+              "evidence": "如果 z=f(x,y) 在区域D上的每一点处都有偏导数，它们仍是x，y的函数，则称为偏导函数，简称偏导数",
+              "children": []
+            },
+            {
+              "name": "高阶偏导数与二阶混合偏导记号",
+              "evidence": "如果二元函数 z=f(x,y) 的偏导数 f'_x 和 f'_y 仍然具有偏导数，则它们的偏导数称为二阶偏导数",
+              "children": []
+            },
+            {
+              "name": "混合偏导相等的条件（连续则相等）",
+              "evidence": "如果函数 z=f(x,y) 的两个二阶混合偏导数 ∂²z/∂x∂y 及 ∂²z/∂y∂x",
+              "children": []
+            },
+            {
+              "name": "分段/绝对值函数用定义求偏导（易错）",
+              "evidence": "偏导数在分段/绝对值函数中用定义求",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "可微的定义与判别",
+          "evidence": "13.3 函数 $f(x, y) = \\sqrt{|xy|}$ 在点(0,0)处（ ). (A)偏导数不存在 (B)偏导数存在，但不可微(C) 可微，但偏导数不连续 (D) 偏导数连续",
+          "examples": [
+            "例13.8",
+            "例13.1"
+          ],
+          "children": [
+            {
+              "name": "全微分计算",
+              "evidence": "$\\mathrm { d } z = \\frac { \\partial z } { \\partial u } \\mathrm { d } u + \\frac { \\partial z } { \\partial v } \\mathrm { d } v$"
+            },
+            {
+              "name": "定义：Δz = AΔx + BΔy + o(ρ)，ρ=√(Δx²+Δy²)",
+              "evidence": "可微",
+              "children": []
+            },
+            {
+              "name": "可微 ⇒ 偏导存在，且 A=f'_x, B=f'_y",
+              "evidence": "可微",
+              "children": []
+            },
+            {
+              "name": "判别步骤：先求 f'_x,f'_y，再验证 lim[Δz−f'_xΔx−f'_yΔy]/ρ = 0",
+              "evidence": "可微",
+              "children": []
+            },
+            {
+              "name": "偏导连续 ⇒ 可微；可微 ⇒ 连续、偏导存在（反之不成立）",
+              "evidence": "可微",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "可微/偏导连续/连续的关系",
+          "evidence": "若函数 z=f(x,y) 在点(x,y)处可微，则该函数在该点处的偏导数必存在",
+          "examples": [
+            "例13.8"
+          ],
+          "children": [
+            {
+              "name": "偏导数存在与连续的关系",
+              "evidence": "若 $F(x, y) = 0$ 能确定 $y = y(x)$ 需要求 $F_{y}^{\\prime} \\neq 0$ 否则，若 $F_{y}^{\\prime}=0$则可能出现 $\\frac{\\mathrm{d}y}{\\mathrm{d}x} = - \\frac{F_{x}^{\\prime}}{F_{y}^{\\prime}} \\rightarrow \\infty$ 即一个x对应两个y，不符合函数的定义"
+            }
+          ]
+        },
+        {
+          "name": "全微分形式不变性",
+          "evidence": "不管u是自变量还是中间变量，形式都成立",
+          "examples": [
+            "例13.12",
+            "例13.7",
+            "例13.15",
+            "例13.22"
+          ],
+          "children": [
+            {
+              "name": "利用全微分形式不变性求隐函数全微分",
+              "evidence": "利用全微分形式不变性，将原方程两端求全微分得"
+            },
+            {
+              "name": "全微分形式不变性在复合函数中的应用",
+              "evidence": "即无论u，ν是自变量还是中间变量，上式总成立"
+            },
+            {
+              "name": "①在原方程中令x=0,y=0求出z(0,0)；",
+              "evidence": "先求 $z(0,   0)$ .在原方程中令 $x = 0, \\; y = 0$ 得 $\\mathrm{e}^{3z(0,0)} = 1$ ，故 $z(0,0)=0$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "全微分形式不变性：无论u,v是自变量还是中间变量，dz = ∂z/∂u du + ∂z/∂v dv 总成立。",
+          "evidence": "即无论u，ν是自变量还是中间变量，上式总成立"
+        },
+        {
+          "level": "primary",
+          "statement": "隐函数存在定理1：由F(x,y)=0确定的隐函数y=f(x)，当F_y'≠0时，dy/dx = -F_x'/F_y'。",
+          "evidence": "对于由方程 $F(x, y) = 0$ 确定的隐函数y =f(x)，当 $\\left| F_{y}^{\\prime}(x, y) \\neq 0 \\right|$ 时，则有"
+        },
+        {
+          "level": "primary",
+          "statement": "隐函数存在定理2：由F(x,y,z)=0确定的隐函数z=f(x,y)，当F_z'≠0时，∂z/∂x = -F_x'/F_z'，∂z/∂y = -F_y'/F_z'。",
+          "evidence": "对于由方程 $F(x, y, z) = 0$ 确定的隐函数 $z = f(x, y)$ $\\left| F_{z}^{\\prime}(x, y, z) \\neq 0 \\right|$ 时，则有"
+        },
+        {
+          "level": "secondary",
+          "statement": "一元隐函数存在定理中F_y'≠0是确定连续可导隐函数的充分非必要条件。",
+          "evidence": "由隐函数存在定理1知，在题设条件下， $F_{y}^{\\prime}(x_{0}, y_{0}) \\neq 0$ 是方程 $F(x, y) = 0$ 在点 $(x_{0},y_{0})$"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "可微的定义与判别、可微/偏导连续/连续的关系几乎年年以选择或计算题出现。"
+    },
+    {
+      "name": "多元函数的最值与几何应用",
+      "evidence": "第13讲 多元函数微分学",
+      "nodes": [
+        {
+          "name": "无条件极值（AC-B² 判别）",
+          "evidence": "判别函数 $z = f(x, y)$ 在点 $(x_{0},y_{0})$ 处是否可微，步骤如下",
+          "examples": [
+            "例13.17",
+            "例13.18",
+            "例13.19",
+            "例13.20",
+            "例13.22"
+          ],
+          "children": [
+            {
+              "name": "求驻点并计算二阶偏导",
+              "evidence": "如果二 $元$ 函数 $z = f(x, y)$ 的偏导数 $f_{x}^{\\prime}(x,   y)$ 和 $f_{y}^{\\prime}(x,   y)$ 仍然具有偏导数，则它们的偏导数称为$z = f(x, y)$ 的二阶偏导数"
+            },
+            {
+              "name": "用AC-B²判别极值类型",
+              "evidence": "显然 $\\frac{\\partial^{2} u}{\\partial x \\partial y}$ 和 $\\frac { \\partial ^ { 2 } u } { \\partial y \\partial x }$ 连续，于是 $\\frac{\\partial^{2} u}{\\partial x \\partial y} = \\frac{\\partial^{2} u}{\\partial y \\partial x}$"
+            },
+            {
+              "name": "边界与不可导点需单独讨论",
+              "evidence": "如果多元函数不连续，《全国硕士研究生招生考试数学考试大纲》未要求讨论间断点类型"
+            },
+            {
+              "name": "极值必要条件 f_x=f_y=0；",
+              "evidence": "如果函数 $z = f(x, y)$ 的两个二阶混合偏导数 $\\frac { \\partial ^ { 2 } z } { \\partial x \\partial y }$ 及 $\\frac { \\partial ^ { 2 } z } { \\partial y \\partial x }$ 都在区域D内连续，则在区域D内$\\frac{\\partial^{2} z}{\\partial x \\partial y} = \\frac{\\partial^{2} z}{\\partial y \\partial x}$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "偏导数定义（差商极限）、偏导函数、高阶偏导数与混合偏导数记号",
+              "evidence": "如果极限 $$\\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x, y_0) - f(x_0, y_0)}{\\Delta x}$$ 存在，则称此极限为函数 $z = f(x, y)$ 在点 $(x_{0},y_{0})$ 处对x的偏导数",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "分段点、绝对值、含|x|处偏导数须用定义（差商极限）判断存在性",
+              "evidence": "$\\left. \\frac { \\partial f } { \\partial x } \\right| _ { ( 0 , 1 ) } = \\lim _ { x \\rightarrow 0 } \\frac { f ( x , 1 ) - f ( 0 , 1 ) } { x - 0 } = \\lim _ { x \\rightarrow 0 } \\frac { \\ln ( 1 + | x \\sin 1 | ) } { x } = \\lim _ { x \\rightarrow 0 } \\frac { | x \\sin 1 | } { x } ,$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "变限积分函数求偏导——可拆分型直接求导、不可拆分型换元后求导",
+              "evidence": "由题知， $F(x,y)=x\\int_{0}^{x-y}f(t)\\mathrm{d}t-y\\int_{0}^{x-y}f(t)\\mathrm{d}t-\\int_{0}^{x-y}tf(t)\\mathrm{d}t.$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "二元函数连续定义、二元初等函数在定义区域连续、用等价无穷小求极限定参数",
+              "evidence": "如果 $\\lim_{x \\to x_0 \\atop y \\to y_0} f(x, y) = f(x_0, y_0)$ ，则称函数f(x，y)在点 $(x_{0},y_{0})$ 处连续",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "f_x为固定y=y0的截线切线对x轴斜率，f_y为固定x=x0的截线切线对y轴斜率",
+              "evidence": "$f_{x}^{\\prime}(x_{0},y_{0})$ 在几何上表示曲线 $\\begin{cases}z = f(x,   y), \\\\y = y_0\\end{cases}$ 在点$(x_{0}, y_{0}, z_{0})$ 处的切线对x轴的斜率",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "条件极值与拉格朗日乘数法",
+          "evidence": "隐函数存在定理2 对于由方程 $F(x, y, z) = 0$ 确定的隐函数 $z = f(x, y)$ $\\left| F_{z}^{\\prime}(x, y, z) \\neq 0 \\right|$ 时，则有 隐函数存在的条件",
+          "examples": [
+            "例13.21"
+          ],
+          "children": [
+            {
+              "name": "构造拉格朗日函数",
+              "evidence": "设 $z = f(u, v), u = \\varphi(t), v = \\psi(t)$ $z = f[\\varphi(t), \\psi(t)]$ 目 $\\frac{\\mathrm{d}z}{\\mathrm{d}t} = \\frac{\\partial z}{\\partial u} \\frac{\\mathrm{d}u}{\\mathrm{d}t} + \\frac{\\partial z}{\\partial v} \\frac{\\mathrm{d}v}{\\mathrm{d}t}$ .称为全导数"
+            },
+            {
+              "name": "解方程组求可疑点",
+              "evidence": "无论z对哪个变量求导，也无论z已经求了几阶导，求导后的新函数仍然具有与原函数完全相同的复合结构"
+            },
+            {
+              "name": "比较函数值确定最值",
+              "evidence": "二元初等函数在定义区域上是连续的"
+            }
+          ]
+        },
+        {
+          "name": "方向导数与梯度",
+          "evidence": "一元导数→变化率。 1 →x x0 x0+Δx方向导数→某方向上的变化率数学一 A7",
+          "examples": [],
+          "children": [
+            {
+              "name": "方向导数定义与计算公式",
+              "evidence": "设函数 $z = f(x, y)$ 在点 $(x_{0},y_{0})$ 的某邻域内有定义，如果极限"
+            },
+            {
+              "name": "梯度方向为最大增长方向",
+              "evidence": "$f_{x}^{\\prime}(x_{0},y_{0})$ 在几何上表示曲线 $\\begin{cases}z = f(x,   y), \\\\y = y_0\\end{cases}$ 在点$(x_{0}, y_{0}, z_{0})$ 处的切线对x轴的斜率"
+            },
+            {
+              "name": "可微是方向导数存在的前提",
+              "evidence": "若该极限等于0,则z=f(x，y)在点 $(x_{0},y_{0})$ 处可微，否则，就不可微"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "本讲例题清单主要涉及极限、偏导数、全微分、隐函数、极值等，未出现以方向导数或梯度为主要考点的例题。"
+        },
+        {
+          "name": "曲面的切平面与法线",
+          "evidence": "$f_{y}^{\\prime}(x_{0},y_{0})$ 在几何上表示曲线 $\\begin{cases}z = f(x, y), \\\\x = x_0.\\end{cases}$ 在点 $(x_{0}, y_{0}, z_{0})$处的切线对y轴的斜率",
+          "examples": [],
+          "children": [
+            {
+              "name": "显式曲面法向量为(-fx,-fy,1)",
+              "evidence": "$f_{x}^{\\prime}(x_{0},y_{0})$ 在几何上表示曲线 $\\begin{cases}z = f(x,   y), \\\\y = y_0\\end{cases}$ 在点$(x_{0}, y_{0}, z_{0})$ 处的切线对x轴的斜率"
+            },
+            {
+              "name": "隐式曲面法向量为梯度",
+              "evidence": "$f_{y}^{\\prime}(x_{0},y_{0})$ 在几何上表示曲线 $\\begin{cases}z = f(x, y), \\\\x = x_0.\\end{cases}$ 在点 $(x_{0}, y_{0}, z_{0})$处的切线对y轴的斜率"
+            },
+            {
+              "name": "写出切平面与法线方程",
+              "evidence": "设有二元函数 $z = f(x, y)$ ，且 $z_{0} = f(x_{0}, y_{0})$ ，则 $f_{x}^{\\prime}(x_{0},y_{0})$ 在几何上表示曲线"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "清单中例题主要涉及极限、偏导数、隐函数、极值等，未出现求曲面切平面或法线的题目。"
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "二阶混合偏导数在连续的条件下与求导的次序无关",
+          "evidence": "如果函数 $z = f(x, y)$ 的两个二阶混合偏导数 $\\frac { \\partial ^ { 2 } z } { \\partial x \\partial y }$ 及 $\\frac { \\partial ^ { 2 } z } { \\partial y \\partial x }$ 都在区域D内连续，则在区域D内$\\frac{\\partial^{2} z}{\\partial x \\partial y} = \\frac{\\partial^{2} z}{\\partial y \\partial x}$"
+        },
+        {
+          "level": "primary",
+          "statement": "可微判别：全增量与线性增量之差的极限为零",
+          "evidence": "作极限 $\\lim_{\\Delta x \\to 0 \\atop \\Delta y \\to 0} \\frac{\\Delta z - (A\\Delta x + B\\Delta y)}{\\sqrt{(\\Delta x)^2 + (\\Delta y)^2}}$ ,若该极限等于0,则z=f(x，y)在点 $(x_{0},y_{0})$ 处可微，否则，就不可微"
+        },
+        {
+          "level": "secondary",
+          "statement": "偏导数几何意义：偏导数为截线切线斜率",
+          "evidence": "$f_{y}^{\\prime}(x_{0},y_{0})$ 在几何上表示曲线 $\\begin{cases}z = f(x, y), \\\\x = x_0.\\end{cases}$ 在点 $(x_{0}, y_{0}, z_{0})$处的切线对y轴的斜率"
+        },
+        {
+          "level": "secondary",
+          "statement": "全微分存在时可用偏导数写出线性主部",
+          "evidence": "$\\mathrm{d}u = \\frac{\\partial u^{\\nu}}{\\partial x}\\mathrm{d}x + \\frac{\\partial u}{\\partial y}\\mathrm{d}y$"
+        }
+      ],
+      "role": "核心",
+      "tier": "must",
+      "tier_reason": "无条件极值、条件极值及切平面法线为高频大题考点，几乎年年涉及。"
+    },
+    {
+      "name": "复合函数与隐函数求导",
+      "evidence": "设 $z = f(u, v), u = \\varphi(x, y), v = \\psi(x, y)$ ，则 $z = f[\\varphi(x, y), \\psi(x, y)]$ ，且",
+      "nodes": [
+        {
+          "name": "链式求导规则",
+          "evidence": "一元复合函数求导规则图（链式求导法则）:",
+          "examples": [
+            "例13.9",
+            "例13.10",
+            "例13.11",
+            "例13.16"
+          ],
+          "children": [
+            {
+              "name": "多元复合函数链式法则",
+              "evidence": "\\frac { \\partial z } { \\partial x } = \\frac { \\partial z } { \\partial u } \\frac { \\partial u } { \\partial x } + \\frac { \\partial z } { \\partial v } \\frac { \\partial v } { \\partial x } , \\frac { \\partial z } { \\partial y } = \\frac { \\partial z } { \\partial u } \\frac { \\partial u } { \\partial y } + \\frac { \\partial z } { \\partial v } \\frac { \\partial v } { \\partial y } ."
+            },
+            {
+              "name": "全导数公式",
+              "evidence": "设 $z = f(u, v), u = \\varphi(t), v = \\psi(t)$ $z = f[\\varphi(t), \\psi(t)]$ 目 $\\frac{\\mathrm{d}z}{\\mathrm{d}t} = \\frac{\\partial z}{\\partial u} \\frac{\\mathrm{d}u}{\\mathrm{d}t} + \\frac{\\partial z}{\\partial v} \\frac{\\mathrm{d}v}{\\mathrm{d}t}$ .称为全导数"
+            },
+            {
+              "name": "抽象函数偏导数记号与复合结构",
+              "evidence": "无论z对哪个变量求导，也无论z已经求了几阶导，求导后的新函数仍然具有与原函数完全相同的复合结构."
+            },
+            {
+              "name": "变量代换下偏导数关系式的确定",
+              "evidence": "用变量代换 $x = u v, y = \\frac{u^{2} - v^{2}}{2}$ 将函数 $f(x,   y)$变换成函数 $g(u, v)$"
+            },
+            {
+              "name": "将y=f(x)代入F=0，两边对x求导得 F_x'+F_y'·y'=0，再解出dy/…",
+              "evidence": "将 y = f(x) 代入 $F(x, y) = 0$ $F[x,f(x)]=0$ 在这个等式两边对x求导，得 $F_{x}^{\\prime}(x, y) +$ $F^{\\prime}_{y}(x, y) \\cdot \\frac{\\mathrm{d}y}{\\mathrm{d}x} = 0$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "将z=f(x,y)代入F=0，两边分别对x、y求偏导得 F_x'+F_z'·z_x=…",
+              "evidence": "将 $z = f(x, y)$ 代入 $F(x, y, z) = 0$ 得 $F[x, y, f(x, y)] = 0$ 在这个等式两边分别对x和y求偏导数，得 $F_{x}^{\\prime}(x, y, z) + F_{z}^{\\prime}(x, y, z) \\cdot \\frac{\\partial z}{\\partial x} = 0$",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "复合函数偏导一般用f_1'、f_2'表示，数字下标对应位置；",
+              "evidence": "如果是复合函数，一般用1.2来表示。",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "对第1个位置求导得f_1'，对第2个位置求导得f_2'，且f_1'、f_2'的复合结…",
+              "evidence": "(2)无论z对哪个变量求导，也无论z已经求了几阶导，求导后的新函数仍然具有与原函数完全相同的复合结构.",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "隐函数存在定理与公式法",
+          "evidence": "隐函数存在定理1 对于由方程 $F(x, y) = 0$ 确定的隐函数y =f(x)，当 $\\left| F_{y}^{\\prime}(x, y) \\neq 0 \\right|$ 时，则有",
+          "examples": [
+            "例13.12",
+            "例13.13",
+            "例13.14",
+            "例13.15",
+            "例13.16",
+            "例13.19"
+          ],
+          "children": [
+            {
+              "name": "一元隐函数求导公式",
+              "evidence": "\\frac{\\mathrm{d}y}{\\mathrm{d}x} = - \\frac{F_{x}^{\\prime}(x, y)}{F_{y}^{\\prime}(x, y)}"
+            },
+            {
+              "name": "二元隐函数求偏导公式",
+              "evidence": "\\frac { \\partial z } { \\partial x } = - \\frac { F _ { x } ^ { \\prime } ( x , y , z ) } { F _ { z } ^ { \\prime } ( x , y , z ) } , \\frac { \\partial z } { \\partial y } = - \\frac { F _ { y } ^ { \\prime } ( x , y , z ) } { F _ { z } ^ { \\prime } ( x , y , z ) } ."
+            },
+            {
+              "name": "隐函数存在性判定",
+              "evidence": "因此，在点(0,1,1)的某一个邻域 $U _ { 1 }$ 内，存在一个连续且具有连续偏导数的隐函数 $x = x(y,   z)$"
+            },
+            {
+              "name": "全微分形式不变性求隐函数微分",
+              "evidence": "利用全微分形式不变性，将原方程两端求全微分得"
+            }
+          ]
+        },
+        {
+          "name": "二阶偏导与混合偏导",
+          "evidence": "如果二 $元$ 函数 $z = f(x, y)$ 的偏导数 $f_{x}^{\\prime}(x,   y)$ 和 $f_{y}^{\\prime}(x,   y)$ 仍然具有偏导数，则它们的偏导数称为$z = f(x, y)$ 的二阶偏导数",
+          "examples": [
+            "例13.3",
+            "例13.4",
+            "例13.5",
+            "例13.6",
+            "例13.9"
+          ],
+          "children": [
+            {
+              "name": "二阶偏导数定义与记号",
+              "evidence": "\\frac{\\partial^{2} z}{\\partial x^{2}} = \\frac{\\partial}{\\partial x}\\left(\\frac{\\partial z}{\\partial x}\\right) = f_{xx}^{\\prime\\prime}(x, y) = z_{xx}^{\\prime\\prime}"
+            },
+            {
+              "name": "混合偏导数相等条件",
+              "evidence": "如果函数 $z = f(x, y)$ 的两个二阶混合偏导数 $\\frac { \\partial ^ { 2 } z } { \\partial x \\partial y }$ 及 $\\frac { \\partial ^ { 2 } z } { \\partial y \\partial x }$ 都在区域D内连续，则在区域D内$\\frac{\\partial^{2} z}{\\partial x \\partial y} = \\frac{\\partial^{2} z}{\\partial y \\partial x}$"
+            },
+            {
+              "name": "分段点处偏导数存在性判定",
+              "evidence": "f_{x}^{\\prime}(x_{0}, y_{0}) = \\lim_{\\Delta x \\to 0} \\frac{f(x_{0} + \\Delta x, y_{0}) - f(x_{0}, y_{0})}{\\Delta x}"
+            },
+            {
+              "name": "变限积分求偏导",
+              "evidence": "\\frac{\\partial F}{\\partial x} = \\int_{0}^{x - y}f(t)\\mathrm{d}t + xf(x - y) - yf(x - y) - (x - y)f(x - y) = \\int_{0}^{x - y}f(t)\\mathrm{d}t"
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "多元复合函数链式求导法则：∂z/∂x = (∂z/∂u)(∂u/∂x) + (∂z/∂v)(∂v/∂x)，∂z/∂y = (∂z/∂u)(∂u/∂y) + (∂z/∂v)(∂v/∂y)",
+          "evidence": "\\frac { \\partial z } { \\partial x } = \\frac { \\partial z } { \\partial u } \\frac { \\partial u } { \\partial x } + \\frac { \\partial z } { \\partial v } \\frac { \\partial v } { \\partial x } , \\frac { \\partial z } { \\partial y } = \\frac { \\partial z } { \\partial u } \\frac { \\partial u } { \\partial y } + \\frac { \\partial z } { \\partial v } \\frac { \\partial v } { \\partial y } ."
+        },
+        {
+          "level": "primary",
+          "statement": "一元隐函数求导公式：dy/dx = -F_x'/F_y'（F_y'≠0）",
+          "evidence": "\\frac{\\mathrm{d}y}{\\mathrm{d}x} = - \\frac{F_{x}^{\\prime}(x, y)}{F_{y}^{\\prime}(x, y)}"
+        },
+        {
+          "level": "primary",
+          "statement": "二元隐函数求偏导公式：∂z/∂x = -F_x'/F_z'，∂z/∂y = -F_y'/F_z'（F_z'≠0）",
+          "evidence": "\\frac { \\partial z } { \\partial x } = - \\frac { F _ { x } ^ { \\prime } ( x , y , z ) } { F _ { z } ^ { \\prime } ( x , y , z ) } , \\frac { \\partial z } { \\partial y } = - \\frac { F _ { y } ^ { \\prime } ( x , y , z ) } { F _ { z } ^ { \\prime } ( x , y , z ) } ."
+        },
+        {
+          "level": "primary",
+          "statement": "二阶混合偏导数在连续的条件下与求导次序无关",
+          "evidence": "如果函数 $z = f(x, y)$ 的两个二阶混合偏导数 $\\frac { \\partial ^ { 2 } z } { \\partial x \\partial y }$ 及 $\\frac { \\partial ^ { 2 } z } { \\partial y \\partial x }$ 都在区域D内连续，则在区域D内$\\frac{\\partial^{2} z}{\\partial x \\partial y} = \\frac{\\partial^{2} z}{\\partial y \\partial x}$"
+        },
+        {
+          "level": "secondary",
+          "statement": "全导数公式：dz/dt = (∂z/∂u)(du/dt) + (∂z/∂v)(dv/dt)",
+          "evidence": "\\frac{\\mathrm{d}z}{\\mathrm{d}t} = \\frac{\\partial z}{\\partial u} \\frac{\\mathrm{d}u}{\\mathrm{d}t} + \\frac{\\partial z}{\\partial v} \\frac{\\mathrm{d}v}{\\mathrm{d}t}"
+        },
+        {
+          "level": "secondary",
+          "statement": "全微分形式不变性：无论u,v是自变量还是中间变量，dz = (∂z/∂u)du + (∂z/∂v)dv总成立",
+          "evidence": "\\mathrm { d } z = \\frac { \\partial z } { \\partial u } \\mathrm { d } u + \\frac { \\partial z } { \\partial v } \\mathrm { d } v ,"
+        },
+        {
+          "level": "secondary",
+          "statement": "抽象函数求导后新函数仍具有与原函数完全相同的复合结构",
+          "evidence": "无论z对哪个变量求导，也无论z已经求了几阶导，求导后的新函数仍然具有与原函数完全相同的复合结构."
+        }
+      ],
+      "role": "重中之重",
+      "tier": "must",
+      "tier_reason": "链式法则与隐函数求导是多元微分核心计算，年年必考。"
+    },
+    {
+      "name": "多元函数的极限与连续",
+      "evidence": "如果 $\\lim_{x \\to x_0 \\atop y \\to y_0} f(x, y) = f(x_0, y_0)$ ，则称函数f(x，y)在点 $(x_{0},y_{0})$ 处连续，如果f(x，y)在区域D上每一点处都连续，则称f(x，y)在区域D上连续",
+      "nodes": [
+        {
+          "name": "二元函数的概念",
+          "evidence": "二元函数连续: $\\lim _ { ( x , y ) \\rightarrow ( x _ { 0 } , y _ { 0 } ) } f ( x , y ) = f ( x _ { 0 } , y _ { 0 } )$",
+          "examples": [],
+          "children": [
+            {
+              "name": "二元函数的定义域与对应关系",
+              "evidence": "二元函数连续: $\\lim _ { ( x , y ) \\rightarrow ( x _ { 0 } , y _ { 0 } ) } f ( x , y ) = f ( x _ { 0 } , y _ { 0 } )$"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "本讲例题主要涉及极限、偏导数、全微分、隐函数、极值等计算，没有单独考查二元函数定义域与对应关系概念的例题。"
+        },
+        {
+          "name": "二重极限（路径无关）",
+          "evidence": "取路径y=x,则 $\\lim_{x \\to 0} \\frac{x \\left| y \\right|}{x^2 + y^2} = \\lim_{x \\to 0} \\frac{x \\left| x \\right|}{2x^2}$ ,又 $\\lim_{x \\to 0^{+}} \\frac{x \\left| x \\right|}{2x^{2}} = \\frac{1}{2}, \\quad \\lim_{x \\to 0^{-}} \\frac{x \\left| x \\right|}{2x^{2}} = -\\frac{1}{2}$ ，极限不存在，故 $I _ { 2 }$ 不存在.",
+          "examples": [
+            "例13.1"
+          ],
+          "children": [
+            {
+              "name": "利用夹逼准则求二重极限",
+              "evidence": "由夹逼准则，得 $I_{1} = 0$ ，故 $I _ { 1 }$ 存在."
+            },
+            {
+              "name": "均值不等式在二重极限中的应用",
+              "evidence": "可用均值不等式 $\\left| xy \\right| \\leq \\frac{x^{2} + y^{2}}{2}$ 及夹逼准则."
+            }
+          ]
+        },
+        {
+          "name": "连续与间断",
+          "evidence": "如果 $\\lim_{x \\to x_0 \\atop y \\to y_0} f(x, y) = f(x_0, y_0)$ ，则称函数f(x，y)在点 $(x_{0},y_{0})$ 处连续，如果f(x，y)在区域D上每一点处都连续，则称f(x，y)在区域D上连续",
+          "examples": [
+            "例13.8"
+          ],
+          "children": [
+            {
+              "name": "二元函数连续的定义",
+              "evidence": "如果 $\\lim_{x \\to x_0 \\atop y \\to y_0} f(x, y) = f(x_0, y_0)$ ，则称函数f(x，y)在点 $(x_{0},y_{0})$ 处连续，如果f(x，y)在区域D上每一点处都连续，则称f(x，y)在区域D上连续"
+            },
+            {
+              "name": "二元初等函数的连续性",
+              "evidence": "二元初等函数在定义区域上是连续的."
+            },
+            {
+              "name": "利用连续定义确定参数",
+              "evidence": "为连续函数，则a="
+            },
+            {
+              "name": "间断点类型（大纲不要求）",
+              "evidence": "注如果多元函数不连续，《全国硕士研究生招生考试数学考试大纲》未要求讨论间断点类型."
+            }
+          ]
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "二元函数在点 $(x_0,y_0)$ 处连续的定义：$\\lim_{(x,y)\\to(x_0,y_0)} f(x,y)=f(x_0,y_0)$。",
+          "evidence": "如果 $\\lim_{x \\to x_0 \\atop y \\to y_0} f(x, y) = f(x_0, y_0)$ ，则称函数f(x，y)在点 $(x_{0},y_{0})$ 处连续，如果f(x，y)在区域D上每一点处都连续，则称f(x，y)在区域D上连续"
+        },
+        {
+          "level": "primary",
+          "statement": "二元初等函数在其定义区域上是连续的。",
+          "evidence": "二元初等函数在定义区域上是连续的."
+        },
+        {
+          "level": "secondary",
+          "statement": "若二重极限存在，则动点沿任意路径趋于定点时极限值相同；若沿不同路径极限不同，则二重极限不存在。",
+          "evidence": "取路径y=x,则 $\\lim_{x \\to 0} \\frac{x \\left| y \\right|}{x^2 + y^2} = \\lim_{x \\to 0} \\frac{x \\left| x \\right|}{2x^2}$ ,又 $\\lim_{x \\to 0^{+}} \\frac{x \\left| x \\right|}{2x^{2}} = \\frac{1}{2}, \\quad \\lim_{x \\to 0^{-}} \\frac{x \\left| x \\right|}{2x^{2}} = -\\frac{1}{2}$ ，极限不存在，故 $I _ { 2 }$ 不存在."
+        },
+        {
+          "level": "secondary",
+          "statement": "常用均值不等式 $|xy| \\leq \\frac{x^2+y^2}{2}$ 结合夹逼准则求二重极限。",
+          "evidence": "可用均值不等式 $\\left| xy \\right| \\leq \\frac{x^{2} + y^{2}}{2}$ 及夹逼准则."
+        }
+      ],
+      "role": "高频",
+      "tier": "high",
+      "tier_reason": "二重极限与连续是基础概念，常与可微性结合考查，两三年出现一次。"
+    }
+  ]
+}

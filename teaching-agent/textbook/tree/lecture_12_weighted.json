@@ -1,0 +1,287 @@
+{
+  "lecture": 12,
+  "title": "一元函数积分学的应用（三）物理应用与经济应用",
+  "blocks": [
+    {
+      "name": "功与压力（物理应用）",
+      "evidence": "物理应用（仅数学一、数学二）",
+      "nodes": [
+        {
+          "name": "变力沿直线做功",
+          "evidence": "设方向沿x轴正向的力函数为 $y = F(x) (a \\leqslant x \\leqslant b)$ ，则物体沿x轴从点a移动到点b时，变力 $F ( x )$ 所做的功(见图12-1)为",
+          "examples": [
+            "例12.1"
+          ],
+          "children": [
+            {
+              "name": "建立坐标系并写出力函数F(x)（如阻力与深度成正比时f=kx）",
+              "evidence": "①翻译成数学语言 + 引入记号↓ ↓成正比: $f = kx$ 阻力:f 深度:x功相等: $W _ { 1 } = W _ { 2 }$"
+            },
+            {
+              "name": "取功的微元dW=F(x)dx后积分求总功",
+              "evidence": "②取微元: $\\mathrm{d}W_{1} = kx\\mathrm{d}x , \\mathrm{d}W_{2} = kx\\mathrm{d}x$"
+            },
+            {
+              "name": "利用“每次做功相等”等条件列方程求位移",
+              "evidence": "又 $W_{2}=W_{1}$ ，从而"
+            },
+            {
+              "name": "易错点：积分上下限对应各次击入的深度区间，勿重复累加",
+              "evidence": "③积分 $W_{1} = \\int_{0}^{x_{1}}kx\\mathrm{d}x , \\quad W_{2} = \\int_{x_{1}}^{x_{2}}kx\\mathrm{d}x$"
+            },
+            {
+              "name": "仅数学三）』节点，含平均值、边际与总量关系（用牛顿-莱布尼茨公式处理",
+              "evidence": "经济应用（仅数学三） 涉及:①平均值:②边际与总量关系（用牛顿-莱布尼茨公式处理问题）",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "在物理应用各节点或根节点注明『仅数学一、数学二』",
+              "evidence": "物理应用（仅数学一、数学二）",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "W1=∫0^{x1}kxdx=kx1²/2，W2=∫_{x1}^{x2}kxdx=kx…",
+              "evidence": "又 $W_{2}=W_{1}$ ，从而",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "抽水做功（微元法）",
+          "evidence": "功的微元 $\\mathrm{d}W = \\rho g x A(x) \\mathrm{d}x$ 为位于x处厚度为dx，水平截面面积为A(x)的一层水被抽出（路程为x)所做的功.",
+          "examples": [
+            "例12.2"
+          ],
+          "children": [
+            {
+              "name": "建立坐标系（对称、高为正），确定水深x",
+              "evidence": "①建立坐标系（对称、高为正）；"
+            },
+            {
+              "name": "求x处水平截面面积A(x)（关键步骤）",
+              "evidence": "求解这类问题的关键是确定x处的水平截面面积 $A(x)$ ，其余的量都是固定的."
+            },
+            {
+              "name": "取微元dW=ρgxA(x)dx并积分",
+              "evidence": "②取微元 $\\mathrm{d}W = \\rho g A(x) x \\mathrm{d}x$丁(a−x)²b² π·"
+            },
+            {
+              "name": "易错点：抽水路程为x，微元中须乘x而非常数",
+              "evidence": "功的微元 $\\mathrm{d}W = \\rho g x A(x) \\mathrm{d}x$ 为位于x处厚度为dx，水平截面面积为A(x)的一层水被抽出（路程为x)所做的功."
+            },
+            {
+              "name": "核对原文抽水做功部分，若原文有对应公式再保留，否则不应作为本分支结论",
+              "evidence": "设方向沿x轴正向的力函数为 $y = F(x) (a \\leqslant x \\leqslant b)$ ，则物体沿x轴从点a移动到点b时，变力 $F ( x )$ 所做的功(见图12-1)为",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "静水压力",
+          "evidence": "垂直浸没在水中的平板ABCD(见图12-4)的一侧受到的水压力为",
+          "examples": [
+            "例12.3"
+          ],
+          "children": [
+            {
+              "name": "建系、取微元、再积分",
+              "evidence": "分析建系、取微元、再积分即可."
+            },
+            {
+              "name": "确定水深x处平板宽度f(x)-h(x)",
+              "evidence": "求解这类问题的关键是确定水深x处的平板的宽度 $f(x) - h(x)$"
+            },
+            {
+              "name": "易错点：压强随水深改变，微元须含水深因子x",
+              "evidence": "注水压力问题的特点:压强随水的深度的改变而改变."
+            },
+            {
+              "name": "建系后水深x处平板宽度为f(x)−h(x)，如例12.3中宽度为2(a−y)，积分P=…",
+              "evidence": "求解这类问题的关键是确定水深x处的平板的宽度 $f(x) - h(x)$",
+              "children": [],
+              "source": "critic"
+            }
+          ]
+        },
+        {
+          "name": "引力",
+          "evidence": "设有一长度为l、线密度为常数 $\\mu$ 的细棒，在与细棒右端的距离为a处有一质量为m的质点M（见图12-6），已知引力常量为G，则质点M与细棒之间的引力的大小为 $\\int_{-l}^{0} \\frac{G m \\mu}{(a-x)^2}   dx$",
+          "examples": [],
+          "children": [
+            {
+              "name": "建立坐标系，取细棒上微元质量dm=μdx",
+              "evidence": "设有一长度为l、线密度为常数 $\\mu$ 的细棒，在与细棒右端的距离为a处有一质量为m的质点M（见图12-6），已知引力常量为G，则质点M与细棒之间的引力的大小为 $\\int_{-l}^{0} \\frac{G m \\mu}{(a-x)^2}   dx$"
+            },
+            {
+              "name": "按万有引力定律写出微元引力并沿棒长积分",
+              "evidence": "已知引力常量为G，则质点M与细棒之间的引力的大小为 $\\int_{-l}^{0} \\frac{G m \\mu}{(a-x)^2}   dx$"
+            },
+            {
+              "name": "细棒长l、线密度μ，质点距棒右端a，取微元dm=μdx，积分区间[−l,0]，F=∫_…",
+              "evidence": "设有一长度为l、线密度为常数 $\\mu$ 的细棒，在与细棒右端的距离为a处有一质量为m的质点M",
+              "children": [],
+              "source": "critic"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "本讲例题分别涉及变力做功、抽水做功、水压力和边际成本/需求弹性，没有主要考查引力（细棒对质点的万有引力积分）的例题。"
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "primary",
+          "statement": "变力沿直线做功：W=∫_a^b F(x)dx",
+          "evidence": "$$ W = \\int _ { a } ^ { b } F ( x ) \\mathrm { d } x , $$"
+        },
+        {
+          "level": "primary",
+          "statement": "抽水做功：W=ρg∫_a^b xA(x)dx",
+          "evidence": "$$ W = \\rho g \\int _ { a } ^ { b } x A ( x ) \\mathrm { d } x , $$"
+        },
+        {
+          "level": "primary",
+          "statement": "静水压力：P=ρg∫_a^b x[f(x)-h(x)]dx",
+          "evidence": "$$ P = \\rho g \\int _ { a } ^ { b } x [ f ( x ) - h ( x ) ] \\mathrm { d } x , $$"
+        },
+        {
+          "level": "primary",
+          "statement": "细棒与质点间引力：F=∫_{-l}^0 Gmμ/(a-x)^2 dx",
+          "evidence": "则质点M与细棒之间的引力的大小为 $\\int_{-l}^{0} \\frac{G m \\mu}{(a-x)^2}   dx$"
+        },
+        {
+          "level": "secondary",
+          "statement": "功的微元dW=F(x)dx，几何上为小矩形条面积，累加得总功",
+          "evidence": "功的微元 $\\mathrm{d}W = F(x)\\mathrm{d}x$表示小的矩形条的面积(从a到b进行累加.表示总功)"
+        },
+        {
+          "level": "secondary",
+          "statement": "抽水做功微元dW=ρgxA(x)dx，关键是确定截面面积A(x)",
+          "evidence": "求解这类问题的关键是确定x处的水平截面面积 $A(x)$ ，其余的量都是固定的."
+        },
+        {
+          "level": "secondary",
+          "statement": "压力微元dP=ρgx[f(x)-h(x)]dx，x为水深，f(x)-h(x)为矩形条宽度",
+          "evidence": "压力微元 $\\mathrm{d}P = \\rho g x [ f(x) - h(x) ] \\mathrm{d}x$ ，即图中矩形条所受到的压力.x表示水深， $f(x) - h(x)$ 是矩形条的宽度，dx是矩形条的高度"
+        }
+      ],
+      "role": "重中之重",
+      "tier": "high",
+      "tier_reason": "定积分物理应用是考研常考题型，变力做功与抽水做功尤为高频，静水压力偶有出现。"
+    },
+    {
+      "name": "三心与古鲁金定理",
+      "evidence": "与公式(12-2)比较，得 r(\\bar{x}, \\bar{y}) = \\frac{M_{L_0}}{M} = \\frac{2\\pi M_{L_0}}{2\\pi M} = \\frac{A}{2\\pi \\bullet l}",
+      "nodes": [
+        {
+          "name": "质心/形心/重心概念",
+          "evidence": "其中 $r(\\overline{x},   \\overline{y})$ 为形心(x，y)到直线L的距离.",
+          "examples": [],
+          "children": [
+            {
+              "name": "形心坐标公式",
+              "evidence": "r ( \\bar { x } , \\bar { y } ) = \\frac { M _ { L _ { 0 } } } { M } = \\frac { \\iint \\limits _ { D } \\frac { \\left| a x + b y + c \\right| } { \\sqrt { a ^ { 2 } + b ^ { 2 } } } \\mathrm { d } \\sigma } { \\iint \\limits _ { D } \\mathrm { d } \\sigma }"
+            },
+            {
+              "name": "质心与形心的区别",
+              "evidence": "当质量系统为连续可求面积的平面有界闭区域时，有"
+            },
+            {
+              "name": "补充 r(x̄,ȳ)=M_{L0}/M=∬_D |ax+by+c|/√(a²+b²)dσ /…",
+              "evidence": "r ( \\bar { x } ,   \\bar { y } ) = \\frac { M _ { L _ { 0 } } } { M } = \\frac { \\iint \\limits _ { D } \\frac { \\left| a x + b y + c \\right| } { \\sqrt { a ^ { 2 } + b ^ { 2 } } } \\mathrm { d } \\sigma } { \\iint \\limits _ { D } \\mathrm { d } \\sigma }",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "旋转轴与曲线不相交时可直接用古鲁金定理，r取形心到轴的距离；",
+              "evidence": "注例 曲线 $x^{2} + y^{2} = 1$ 绕直线x=2旋转一周所成的旋转体的表面积为",
+              "children": [],
+              "source": "critic"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "本讲例题均为定积分在物理、经济中的应用（变力做功、抽水做功、水压力、成本与需求弹性），没有主要考查质心/形心/重心概念的"
+        },
+        {
+          "name": "质心与力矩计算公式",
+          "evidence": "记 $\\lambda = \\max_{i} \\{ \\Delta \\sigma_{i} \\}$ ，则总力矩为",
+          "examples": [],
+          "children": [
+            {
+              "name": "离散质点系力矩公式",
+              "evidence": "\\Delta M _ { i } = \\rho ( \\xi _ { i } , \\eta _ { i } ) \\Delta \\sigma _ { i } , \\Delta M _ { i L _ { 0 } } = r _ { i } \\rho ( \\xi _ { i } , \\eta _ { i } ) \\Delta \\sigma _ { i }"
+            },
+            {
+              "name": "连续平面薄片力矩公式",
+              "evidence": "M_{I_0} = \\lim_{\\lambda \\to 0} \\sum_{i=1}^n \\Delta M_{I_0} = \\lim_{\\lambda \\to 0} \\sum_{i=1}^n r_i \\rho(\\xi_i, \\eta_i) \\Delta \\sigma_i = \\iint_D r(x, y) \\rho(x, y) \\mathrm{d}\\sigma"
+            },
+            {
+              "name": "质心坐标与力矩关系",
+              "evidence": "r(\\bar{x}, \\bar{y}) = \\frac{M_{L_0}}{M}"
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "四道例题分别考查变力做功、抽水做功、水压力和边际成本/需求弹性，均非质心或力矩计算，故本讲无主要考该知识点的例题。"
+        },
+        {
+          "name": "古鲁金第一定理（旋转体体积/表面积）",
+          "evidence": "故曲线段L绕直线 $L _ { 0 }$ 旋转一周的侧面积为",
+          "examples": [],
+          "children": [
+            {
+              "name": "易错点：旋转轴与曲线不相交",
+              "evidence": "曲线 $x^{2} + y^{2} = 1$ 绕直线x=2旋转一周所成的旋转体的表面积为"
+            },
+            {
+              "name": "在结论中注明 l 为曲线段L的长度，A为绕L0旋转一周所得侧面积",
+              "evidence": "r(\\bar{x}, \\bar{y}) = \\frac{M_{L_0}}{M} = \\frac{2\\pi M_{L_0}}{2\\pi M} = \\frac{A}{2\\pi \\bullet l}",
+              "children": [],
+              "source": "critic"
+            },
+            {
+              "name": "侧面积 S = 2π·(形心纵坐标)·(弧长)",
+              "evidence": "古鲁金",
+              "children": []
+            },
+            {
+              "name": "体积 V = 2π·(形心横坐标)·(面积)",
+              "evidence": "古鲁金",
+              "children": []
+            },
+            {
+              "name": "适用：平面图形绕不与它相交的轴旋转",
+              "evidence": "古鲁金",
+              "children": []
+            }
+          ],
+          "no_example": true,
+          "no_example_reason": "清单中的例题分别涉及功、水压力和经济应用，没有主要考古鲁金第一定理（旋转体体积/表面积）的例题。"
+        }
+      ],
+      "conclusions": [
+        {
+          "level": "secondary",
+          "statement": "形心到直线L的距离r(\\bar{x},\\bar{y})等于曲线段对L的静力矩M_{L0}除以质量M，也等于旋转体侧面积A除以2πl。",
+          "evidence": "r(\\bar{x}, \\bar{y}) = \\frac{M_{L_0}}{M} = \\frac{2\\pi M_{L_0}}{2\\pi M} = \\frac{A}{2\\pi \\bullet l}"
+        },
+        {
+          "level": "secondary",
+          "statement": "当密度为常数时，平面薄片的形心到直线L的距离等于薄片对L的静力矩除以面积。",
+          "evidence": "r ( \\bar { x } , \\bar { y } ) = \\frac { M _ { L _ { 0 } } } { M } = \\frac { \\iint \\limits _ { D } \\frac { \\left| a x + b y + c \\right| } { \\sqrt { a ^ { 2 } + b ^ { 2 } } } \\mathrm { d } \\sigma } { \\iint \\limits _ { D } \\mathrm { d } \\sigma }"
+        }
+      ],
+      "role": "高频",
+      "tier": "edge",
+      "tier_reason": "质心公式偶有考查，古鲁金定理属大纲边缘内容，了解即可。"
+    }
+  ],
+  "excluded_examples": [
+    {
+      "id": "例12.4",
+      "reason": "经济应用，仅数三，数一不考"
+    }
+  ]
+}

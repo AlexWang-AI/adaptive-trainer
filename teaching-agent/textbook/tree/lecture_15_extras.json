@@ -1,0 +1,68 @@
+{
+  "lecture": 15,
+  "title": "常微分方程",
+  "items": [
+    {
+      "name": "一阶线性公式速写",
+      "type": "秒杀技巧",
+      "when": "标准形式 y'+P(x)y=Q(x)，求通解或特解",
+      "how": "y=e^{-∫P dx}[∫Q e^{∫P dx}dx+C]，先算 μ=e^{∫P dx}，再 y=(∫Qμ dx+C)/μ",
+      "risk": "P、Q 前系数须化为 1；∫P dx 不加常数",
+      "source": "external",
+      "enhances": "一阶线性微分方程（公式法）"
+    },
+    {
+      "name": "伯努利换元降阶",
+      "type": "秒杀技巧",
+      "when": "y'+P(x)y=Q(x)y^n，n≠0,1",
+      "how": "令 z=y^{1-n}，化为 z'+(1-n)Pz=(1-n)Q，再用一阶线性公式",
+      "risk": "n=0 或 1 时退化，勿套；注意 y=0 可能是解",
+      "source": "external",
+      "enhances": "伯努利方程（仅数一）"
+    },
+    {
+      "name": "全微分凑微分速判",
+      "type": "秒杀技巧",
+      "when": "P dx+Q dy=0 且 P_y=Q_x，求通解",
+      "how": "凑 d(xy)、d(y/x)、d(ln(y/x)) 等；或 u=∫P dx+∫(Q-P_y积分)dy=C",
+      "risk": "P_y≠Q_x 时须先找积分因子，不能直接凑",
+      "source": "external",
+      "enhances": "全微分方程（仅数一）"
+    },
+    {
+      "name": "特解形式速写表",
+      "type": "秒杀技巧",
+      "when": "常系数非齐次右端为 e^{λx}P_m(x) 或三角型",
+      "how": "设 y*=x^k e^{λx}Q_m(x)，k 为 λ 作特征根重数；三角型取 λ=α±iβ 判 k",
+      "risk": "右端为多项叠加须拆开分别设；共振时漏乘 x^k",
+      "source": "external"
+    },
+    {
+      "name": "欧拉方程换元速化",
+      "type": "特殊结论",
+      "when": "x²y''+pxy'+qy=f(x)，x>0",
+      "how": "令 x=e^t，则 xy'=D y，x²y''=D(D-1)y，D=d/dt，化为常系数",
+      "risk": "x<0 时令 x=-e^t；换元后须回代 t=ln|x|",
+      "source": "external",
+      "enhances": "欧拉方程 x²y''+pxy'+qy=f(x)（仅数一）"
+    },
+    {
+      "name": "降阶 p=y' 分型",
+      "type": "常见陷阱",
+      "when": "y''=f(x,y') 或 y''=f(y,y') 缺项型",
+      "how": "缺 y 令 p=y'(x)；缺 x 令 p=y'(y)，y''=p dp/dy，再分离变量",
+      "risk": "两类令法不可混；缺 x 时须把 p 视为 y 的函数",
+      "source": "external",
+      "enhances": "y''=f(x,y') 型（令 p=y'）"
+    },
+    {
+      "name": "微分算子法求特解",
+      "type": "秒杀技巧",
+      "when": "常系数非齐次方程右端是 e^{αx}P(x) 型，求特解",
+      "how": "把方程写成 F(D)y=P(x)e^{αx}，则 y*=e^{αx}·P(D+α)^{−1}·1；F(α)≠0 时直接 y*=e^{αx}P(x)/F(α)",
+      "risk": "F(α)=0 时需乘 x^k（k 为 α 作为特征根的重数），不能直接代",
+      "source": "external",
+      "enhances": "一阶线性微分方程（公式法）"
+    }
+  ]
+}
