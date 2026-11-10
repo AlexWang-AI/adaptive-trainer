@@ -1,4 +1,4 @@
-"""LangSmith 追踪接入（可选，缺 key 时全链路自动降级为 no-op）。
+﻿"""LangSmith 追踪接入（可选，缺 key 时全链路自动降级为 no-op）。
 
 原理：
 - `langsmith.wrappers.wrap_openai` 包住 openai 客户端 → 每次 LLM 调用（完整 prompt + 完整响应）
@@ -8,7 +8,7 @@
 
 配置（backend/.env）：
     LANGSMITH_TRACING=true
-    LANGSMITH_API_KEY=lsv2_pt_xxx
+    LANGSMITH_API_KEY=<your-langsmith-key>
     LANGSMITH_PROJECT=mathneuron-planner
     LANGSMITH_ENDPOINT=https://api.smith.langchain.com
 """
@@ -82,3 +82,4 @@ def trace_url(run_id: str) -> str:
     if "api.smith" in base:
         base = "https://smith.langchain.com"
     return f"{base}/o/default/projects/p/{project()}/r/{run_id}"
+

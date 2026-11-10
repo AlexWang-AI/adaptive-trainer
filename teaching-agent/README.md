@@ -1,4 +1,4 @@
-# MathNeuron · 讲课智能体系统
+﻿# MathNeuron · 讲课智能体系统
 
 > 从教材知识树到「讲一层 → 练三题 → 确定性判题 → 跨会话掌握度」的完整代码、架构与新人指导。
 >
@@ -70,7 +70,7 @@ npm install
 复制 `.env.example` 为 `backend/.env`，填：
 
 ```ini
-DEEPSEEK_API_KEY=sk-...
+DEEPSEEK_API_KEY=<your-deepseek-key>
 DEEPSEEK_BASE_URL=https://api.deepseek.com/v1
 DEEPSEEK_CHAT_MODEL=deepseek-v4-flash
 ```
@@ -221,3 +221,4 @@ node scripts/stream_quality.mjs
 ## 9. License
 
 未声明开源许可证。代码与教材数据的使用权归项目作者；公开分发前请先确认教材内容的授权范围。
+

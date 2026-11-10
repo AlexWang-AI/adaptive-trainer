@@ -443,7 +443,7 @@ C:\Users\明\Desktop\claude deepseek\ai_math_institute\.env
 
 ```powershell
 $env:DEEPSEEK_ENV_PATH = "C:\path\to\your\.env"
-$env:DEEPSEEK_API_KEY  = "sk-..."          # 不建议写在命令行历史里
+$env:DEEPSEEK_API_KEY  = "<your-deepseek-key>"          # 不建议写在命令行历史里
 $env:DEEPSEEK_BASE_URL = "https://api.deepseek.com/v1"
 $env:DEEPSEEK_MODEL    = "deepseek-v4-flash"
 ```
@@ -451,7 +451,7 @@ $env:DEEPSEEK_MODEL    = "deepseek-v4-flash"
 `.env` 里至少要有：
 
 ```ini
-DEEPSEEK_API_KEY=sk-...
+DEEPSEEK_API_KEY=<your-deepseek-key>
 DEEPSEEK_BASE_URL=https://api.deepseek.com/v1
 DEEPSEEK_CHAT_MODEL=deepseek-v4-flash
 ```
@@ -2613,4 +2613,5 @@ Get-Content "$ROOT\backend\runs\trace.jsonl" -Tail 5
 > **手册完。**
 >
 > 如果你只记住一句话：**先跑通、再读懂、再改一个点、每天留下证据。**
+
 

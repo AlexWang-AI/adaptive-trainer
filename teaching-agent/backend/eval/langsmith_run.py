@@ -1,11 +1,11 @@
-"""把四个版本跑一遍并上报到 LangSmith，供人肉眼评审。
+﻿"""把四个版本跑一遍并上报到 LangSmith，供人肉眼评审。
 
 前置（一次性）：
     1. 打开 https://smith.langchain.com 登录（GitHub/Google 均可，免费额度够）
-    2. Settings → API Keys → Create API Key，复制 lsv2_pt_xxx
+    2. Settings → API Keys → Create API Key，复制 <your-langsmith-key>
     3. 写进 backend/.env：
            LANGSMITH_TRACING=true
-           LANGSMITH_API_KEY=lsv2_pt_xxx
+           LANGSMITH_API_KEY=<your-langsmith-key>
            LANGSMITH_PROJECT=mathneuron-planner
 
 用法（backend/ 目录下）：
@@ -68,7 +68,7 @@ def main(argv: list[str] | None = None) -> int:
         print("LangSmith 状态：", "已启用" if enabled() else "未启用")
         print("需要 backend/.env 里设置：")
         print("  LANGSMITH_TRACING=true")
-        print("  LANGSMITH_API_KEY=lsv2_pt_xxx   （去 https://smith.langchain.com → Settings → API Keys 生成）")
+        print("  LANGSMITH_API_KEY=<your-langsmith-key>   （去 https://smith.langchain.com → Settings → API Keys 生成）")
         if args.check:
             return 0 if enabled() else 2
         print("\n（未启用也继续本地跑，只是不上报）")
@@ -107,3 +107,4 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
