@@ -205,7 +205,7 @@ node scripts/stream_quality.mjs
 | **live v3core 无 pytest** | 回归靠 `scripts/` 脚本 | 迁移到 `backend/tests/` + CI |
 | **教材数据版权** | `textbook/tree` 来自教辅抽取，未授权公开再分发 | 保持私有；公开前替换/脱敏 |
 
-本仓库默认按**私有**用途整理；如果要公开，请先处理上表第 1、3、6 条。
+本仓库当前是 **public**；`textbook/tree` 与 `backend/curriculum_data.json` 含教材抽取内容，公开再分发前请确认授权。若暂无授权，请把仓库改为 private，或删除这两个数据目录。上表第 1、3、6 条也建议在公开前处理。
 
 ---
 
