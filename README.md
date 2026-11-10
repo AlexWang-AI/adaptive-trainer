@@ -4,6 +4,8 @@
 
 把学习从“靠意志力硬扛”变成“有路径、有反馈、有进度”的系统工程：先做标准化诊断，再由多智能体协同完成规划、讲解、练习、反馈与 90 分验收，让学习者从零开始也能清晰看到自己的位置和下一步。
 
+[![teaching-agent-ci](https://github.com/AlexWang-AI/adaptive-trainer/actions/workflows/teaching-agent-ci.yml/badge.svg)](https://github.com/AlexWang-AI/adaptive-trainer/actions/workflows/teaching-agent-ci.yml)
+
 ---
 
 ## 0. 2026-11 汇总：`teaching-agent/`

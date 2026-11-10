@@ -15,6 +15,7 @@
 | 文档 | 内容 |
 |---|---|
 | [`STREAMING_CONTRACT.md`](STREAMING_CONTRACT.md) | 流式体验契约（滚动/节流/长任务） |
+| [`PUBLISHING.md`](PUBLISHING.md) | 发布/可见性/教材数据版权/CI 说明 |
 | [`ACCEPTANCE.md`](ACCEPTANCE.md) / [`ACCEPTANCE_v2.md`](ACCEPTANCE_v2.md) / [`ACCEPTANCE_v3.md`](ACCEPTANCE_v3.md) | 三轮验收 |
 | [`HANDOFF.md`](HANDOFF.md) | 项目交接：资产、工具链、已知限制 |
 | [`RECOVERY.md`](RECOVERY.md) | 恢复/构建注意事项 |
